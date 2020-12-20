@@ -7,6 +7,11 @@
       "dotnet48",
       "corefonts"
     ],
+    "Parameters": {
+        "dxvk": true,
+        "esync": true,
+        "discrete_gpu": true
+    },
     "Steps": {
       "install_msi": {
           "file_name": "EpicGamesLauncherInstaller.msi",
