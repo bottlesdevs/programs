@@ -12,11 +12,18 @@
         "esync": true,
         "discrete_gpu": true
     },
-    "Steps": {
-      "install_msi": {
+    "Executables": [
+        {
+            "file": "EpicGamesLauncher.exe",
+            "arguments": "-opengl -SkipBuildPatchPrereq"
+        }
+    ],
+    "Steps": [
+      {
+          "action": "install_msi",
           "file_name": "EpicGamesLauncherInstaller.msi",
           "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
           "file_checksum": "398eb661ee3829b4b5486074604bf19a"
       }
-    }
+    ]
 }
