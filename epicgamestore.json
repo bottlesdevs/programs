@@ -12,12 +12,10 @@
         "esync": true,
         "discrete_gpu": true
     },
-    "Executables": [
-        {
-            "file": "EpicGamesLauncher.exe",
-            "arguments": "-opengl -SkipBuildPatchPrereq"
-        }
-    ],
+    "Executable": {
+        "file": "EpicGamesLauncher.exe",
+        "arguments": "-opengl -SkipBuildPatchPrereq"
+    },
     "Steps": [
       {
           "action": "install_msi",
