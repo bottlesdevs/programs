@@ -6,5 +6,12 @@
       "dotnet40",
       "dotnet48",
       "corefonts"
-    ]
+    ],
+    "Steps": {
+      "install_msi": {
+          "file_name": "EpicGamesLauncherInstaller.msi",
+          "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+          "file_checksum": "398eb661ee3829b4b5486074604bf19a"
+      }
+    }
 }
