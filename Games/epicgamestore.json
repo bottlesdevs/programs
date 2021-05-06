@@ -13,6 +13,7 @@
         "discrete_gpu": true
     },
     "Executable": {
+        "icon": "epicgamestore.svg",
         "file": "EpicGamesLauncher.exe",
         "arguments": "-opengl -SkipBuildPatchPrereq"
     },
