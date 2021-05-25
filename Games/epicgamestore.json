@@ -1,6 +1,7 @@
 {
     "Name": "epicgamestore",
     "Description": "The official Epic Games launcher.",
+    "Grade": "Gold",
     "Dependencies": [
       "vcredist2019",
       "dotnet40",
