@@ -1,19 +1,24 @@
 Name: epicgamestore
 Description: The official Epic Games launcher.
 Grade: Gold
+
 Dependencies:
 - vcredist2019
 - dotnet40
 - dotnet48
 - corefonts
+
 Parameters:
   dxvk: true
   esync: true
   discrete_gpu: true
+  
 Executable:
   icon: epicgamestore.svg
   file: EpicGamesLauncher.exe
-  arguments: "-opengl -SkipBuildPatchPrereq"
+  path: Program Files (x86)/Epic Games/Launcher/Portal/Binaries/Win32/EpicGamesLauncher.exe
+  arguments: -opengl -SkipBuildPatchPrereq
+  
 Steps:
 - action: install_msi
   file_name: EpicGamesLauncherInstaller.msi
