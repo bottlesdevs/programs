@@ -3,7 +3,13 @@ apbreloaded:
     you to choose between two sides of the law.
   Grade: Broken
   Category: Games
+  
 epicgamestore:
   Description: The official Epic Games launcher.
   Grade: Gold
   Category: Games
+  
+amazonmusic:
+  Description: The official Amazon Music Desktop app.
+  Grade: Silver
+  Category: Software
