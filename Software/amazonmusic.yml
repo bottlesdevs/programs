@@ -1,0 +1,22 @@
+Name: amazonmusic
+Description: The official Amazon Music Desktop app.
+Grade: Silver
+
+Dependencies: []
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  icon: amazonmusic.svg
+  lnk: Amazon Music.lnk
+  path: users/mirko/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Amazon Music
+  arguments: []
+  
+Steps:
+- action: install_exe
+  file_name: AmazonMusicInstaller.exe
+  url: link
+  file_checksum: 1a9b10eb44e11529d7faa64b335c292c
