@@ -5,6 +5,7 @@ Grade: Gold
 Dependencies:
 - dotnet48
 - vcredist2019
+- riched20
 - allfonts
 
 Parameters:
