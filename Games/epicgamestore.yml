@@ -5,7 +5,6 @@ Grade: Gold
 Dependencies:
 - vcredist2019
 - allfonts
-- d3dx9
 
 Parameters:
   dxvk: true
