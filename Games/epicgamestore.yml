@@ -3,6 +3,7 @@ Description: The official Epic Games launcher.
 Grade: Gold
 
 Dependencies:
+- dotnet48
 - vcredist2019
 - allfonts
 
