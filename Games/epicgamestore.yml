@@ -4,6 +4,7 @@ Grade: Gold
 
 Dependencies:
 - dotnet48
+- d3dx9
 - vcredist2019
 - msls31
 - riched20
