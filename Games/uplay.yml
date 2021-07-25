@@ -16,7 +16,7 @@ Parameters:
   
 Executable:
   name: Uplay
-  icon: uplay.svg
+  icon: uplay.png
   file: Uplay.exe
   path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher
   
