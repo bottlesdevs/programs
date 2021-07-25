@@ -1,0 +1,29 @@
+Name: steam
+Description: The official Steam launcher.
+Grade: Gold
+
+Dependencies:
+- d3dx9
+- msls31
+- riched20
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Steam
+  icon: steam.svg
+  file: Steam.exe
+  path: Program Files (x86)/Steam
+  
+Steps:
+- action: install_exe
+  file_name: SteamSetup.exe
+  url: https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe
+  file_checksum: 29a0d4f99b2ad92bc67d276c0c43d603
+  arguments: /S
