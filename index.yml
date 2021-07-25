@@ -3,15 +3,18 @@ epicgamestore:
   Description: The official Epic Games launcher.
   Grade: Gold
   Category: Games
+  Icon: epicgamestore.svg
 
 uplay:
   Name: Ubisoft Connect (Uplay)
   Description: The official Ubisoft Uplay launcher.
   Grade: Gold
   Category: Games
+  Icon: uplay.png
 
 steam:
   Name: Steam
   Description: The official Steam launcher.
   Grade: Gold
   Category: Games
+  Icon: steam.svg
