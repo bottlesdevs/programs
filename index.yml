@@ -7,3 +7,8 @@ uplay:
   Description: The official Ubisoft Uplay launcher.
   Grade: Gold
   Category: Games
+
+steam:
+  Description: The official Steam launcher.
+  Grade: Gold
+  Category: Games
