@@ -74,5 +74,6 @@ Since any software has different behaviors, we cannot define common tests, but w
 - Does it show graphical glitches?
 - Does it require some tweaking in order to work properly? (Out of normal software configuration)
 - Did it crash during tests execution?
+- Is it usable?
 
 
