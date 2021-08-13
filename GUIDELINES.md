@@ -3,7 +3,7 @@
 # Guide lines
 This document show the guide lines with all methods for writing and propose new installers in Bottles.
 
-Each installer need a manifest in YAML format to be interpreted by Bootles.
+Each installer need a manifest in YAML format to be interpreted by Bottles.
 
 ## Example
 These manifest can be used as examples:
