@@ -16,7 +16,7 @@ Each manifest has 5 sections:
 - header
 - dependencies
 - executable
-- parameters
+- parameters (need documentation)
 - steps
 
 ### Header
