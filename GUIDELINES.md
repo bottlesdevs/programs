@@ -77,4 +77,6 @@ Since any software has different behaviors, we cannot define common tests, but w
 - Is it usable?
 - Final grade? (the lower evaluation from previous questions)
 
+These questions should be answered in a file named as the installer name and placed in the `Reviews` directory of this repository. [This review](https://github.com/bottlesdevs/programs/blob/main/Reviews/epicgamestore.md) can be used as template.
 
+The maintainer can also provide additional notes to other maintainers and users.
