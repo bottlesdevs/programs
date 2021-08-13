@@ -12,7 +12,7 @@ These manifests can be used as example:
 - https://github.com/bottlesdevs/programs/blob/main/Games/uplay.yml
 
 ## Structure
-Each manifest has 5 sections:
+Each manifest has 4 sections:
 - header
 - dependencies
 - executable
