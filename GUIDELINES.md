@@ -80,3 +80,8 @@ Since any software has different behaviors, we cannot define common tests, but w
 These questions should be answered in a file named as the installer name and placed in the `Reviews` directory of this repository. [This review](https://github.com/bottlesdevs/programs/blob/main/Reviews/epicgamestore.md) can be used as template.
 
 The maintainer can also provide additional notes to other maintainers and users.
+
+## Data
+In the repository root there is a `data` directroy which can be used to store specific installer files (e.g. the icon for the desktop entry).
+
+Each installer should have a directory inside `data` named as the installer itself. [This](https://github.com/bottlesdevs/programs/tree/main/data/epicgamestore) can be used as example.
