@@ -6,7 +6,7 @@ This document show the guide lines with all methods for writing and propose new 
 Each installer need a manifest in YAML format to be interpreted by Bottles.
 
 ## Example
-These manifest can be used as examples:
+These manifests can be used as example:
 - https://github.com/bottlesdevs/programs/blob/main/Games/epicgamestore.yml
 - https://github.com/bottlesdevs/programs/blob/main/Games/steam.yml
 - https://github.com/bottlesdevs/programs/blob/main/Games/uplay.yml
@@ -31,7 +31,7 @@ where:
 - **Grade** Broken|Bronze|Silver|Gold|Platinum this is NOT the grade declared in ProtonDB or WineHQ. Read the Grades section.
 
 ### Dependencies
-This is a list of dependencies needed by the software and that should be installed by the installer.
+This is a list of dependencies required by the software and that should be installed by the installer.
 
 ```yaml
 Dependencies:
@@ -68,11 +68,11 @@ where:
 The following metrics should be used to define the compatibility grade of the installer.
 
 ### Valuation tests
-As any software have different behaviors, we cannot define common tests, but we can provide questions for the maintainer to answer using a supported grade (broken, bronze, silver, gold, platinum):
-- The program boots up?
+Since any software has different behaviors, we cannot define common tests, but we can provide questions for the maintainer to answer using a supported grade (Broken, Bronze, Silver, Gold, Platinum):
+- Is the program properly opened?
 - Is it showing alerts or other warnings?
 - Does it show graphical glitches?
-- Does it require some tweaking before installation? (Out of normal software configuration)
+- Does it require some tweaking in order to work properly? (Out of normal software configuration)
 - Did it crash during tests execution?
 
 
