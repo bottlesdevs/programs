@@ -28,7 +28,7 @@ Grade: Gold
 
 where:
 - **Name** is the lowercased, special characters and white spaces free name of the software (generally the file name without the extension)
-- **Description** this is a short description fo the software
+- **Description** this is a short description of the software
 - **Grade** Broken|Bronze|Silver|Gold|Platinum this is NOT the grade declared in ProtonDB or WineHQ. Read the Grades section.
 
 ### Dependencies
