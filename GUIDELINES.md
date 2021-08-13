@@ -1,7 +1,7 @@
 > ⚠️ We will try to keep it updated but as this is an under [early development feature](https://usebottles.com/blog/release-2021.7.28/#what-are-installers), can be outdated.
 
 # Guide lines
-This document show the guide lines with all methods for writing and propose new instalers in Bottles.
+This document show the guide lines with all methods for writing and propose new installers in Bottles.
 
 Each installer need a manifest in YAML format to be interpreted by Bootles.
 
