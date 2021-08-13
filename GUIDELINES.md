@@ -64,6 +64,29 @@ where:
 - **path** path (inside the `bottle/drive_c` directory) to the executable (without the executable itself)
 - **arguments** optional arguments to pass to the executable on start
 
+### Steps
+These actions are interpreted and performed by Bottles to install the software.
+
+```yaml
+Steps:
+- action: install_exe
+  file_name: SteamSetup.exe
+  url: https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe
+  file_checksum: 29a0d4f99b2ad92bc67d276c0c43d603
+  arguments: /S
+```
+
+in the above example:
+- **action** is set to `install_exe`, then Bottles will install an executable
+- **file_name** is the name of the executable
+- **url** the full url to the executable
+- **file_checksum** the MD5 checksum for the executable
+- **arguments** optional arguments to pass to the executable
+
+#### Supported actions
+- **install_exe** to install .exe files
+- **install_msi** to install .msi files
+
 ## Grades
 The following metrics should be used to define the compatibility grade of the installer.
 
