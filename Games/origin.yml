@@ -1,0 +1,28 @@
+Name: origin
+Description: The official Origin launcher.
+Grade: Gold
+
+Dependencies:
+- d3dx9
+- riched20
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Origin
+  icon: origin.svg
+  file: Origin.exe
+  path: Program Files (x86)/Origin/Origin.exe
+  
+Steps:
+- action: install_exe
+  file_name: OriginSetup.exe
+  url: https://download.dm.origin.com/origin/live/OriginSetup.exe
+  file_checksum: 8f30625c9a71dee04e57634ac5b01984
+  arguments: /silent
