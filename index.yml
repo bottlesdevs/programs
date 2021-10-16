@@ -18,3 +18,10 @@ steam:
   Grade: Gold
   Category: Games
   Icon: steam.svg
+
+origin:
+  Name: Origin
+  Description: The official Origin launcher.
+  Grade: Gold
+  Category: Games
+  Icon: origin.svg
