@@ -25,3 +25,10 @@ origin:
   Grade: Gold
   Category: Games
   Icon: origin.svg
+
+gog:
+  Name: GOG Galaxy
+  Description: The official GOG Galaxy launcher.
+  Grade: Testing
+  Category: Games
+  Icon: gog.svg
