@@ -17,10 +17,11 @@ Executable:
   icon: gog.svg
   file: GalaxyClient.exe
   path: Program Files (x86)/GOG Galaxy/GalaxyClient.exe
+  arguments: /runWithoutUpdating /deelevated
   
 Steps:
 - action: install_exe
   file_name: setup_galaxy_2.0.43.71.exe
   url: https://content-system.gog.com/open_link/download?path=/open/galaxy/client/2.0.43.71/setup_galaxy_2.0.43.71.exe
   file_checksum: a5c54bec1c4558b4fbd11141233627e2
-  arguments: /runWithoutUpdating /deelevated
+  arguments: /s
