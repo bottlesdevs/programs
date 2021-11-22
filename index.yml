@@ -29,6 +29,13 @@ origin:
 gog:
   Name: GOG Galaxy
   Description: The official GOG Galaxy launcher.
-  Grade: Testing
+  Grade: Silver
   Category: Games
   Icon: gog.svg
+
+battlenet:
+  Name: Blizzard Battle.net
+  Description: The official Blizzard Battle.net launcher.
+  Grade: Gold
+  Category: Games
+  Icon: battlenet.png
