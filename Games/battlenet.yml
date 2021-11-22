@@ -1,0 +1,25 @@
+Name: battlenet
+Description: The official Blizzard Battle.net launcher.
+Grade: Gold
+
+Dependencies:
+- msls31
+- riched20
+- arial32
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Battle.net
+  icon: battlenet.png
+  file: Battle.net.exe
+  path: Program Files (x86)/Battle.net
+  
+Steps:
+- action: install_msi
+  file_name: Battle.net-Setup-enUS.exe
+  url: http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.exe
+  file_checksum: e413dfc296c3701416e3fe5af45aedbf
