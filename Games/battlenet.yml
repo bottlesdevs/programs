@@ -6,6 +6,7 @@ Dependencies:
 - msls31
 - riched20
 - arial32
+- vcredist2015
 
 Parameters:
   dxvk: true
