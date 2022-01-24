@@ -4,12 +4,11 @@ Grade: Gold
 
 Dependencies:
 - mono
+- gecko
 - d3dx9
-- riched20
 - allfonts
 - d3dcompiler_43
 - d3dcompiler_47
-- gecko
 
 Parameters:
   dxvk: true
