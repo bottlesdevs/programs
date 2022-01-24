@@ -26,6 +26,13 @@ origin:
   Category: Games
   Icon: origin.svg
 
+eaclient:
+  Name: EA Launcher
+  Description: The official EA launcher.
+  Grade: Gold
+  Category: Games
+  Icon: eaclient.png
+
 gog:
   Name: GOG Galaxy
   Description: The official GOG Galaxy launcher.
