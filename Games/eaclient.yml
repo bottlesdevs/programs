@@ -3,11 +3,13 @@ Description: The official EA launcher (beta).
 Grade: Gold
 
 Dependencies:
+- mono
 - d3dx9
 - riched20
 - allfonts
 - d3dcompiler_43
 - d3dcompiler_47
+- gecko
 
 Parameters:
   dxvk: true
