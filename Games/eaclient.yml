@@ -19,7 +19,7 @@ Parameters:
 Executable:
   name: EA Client
   icon: eaclient.png
-  file: EALauncher.exe
+  file: EADesktop.exe
   path: "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe"
   
 Steps:
