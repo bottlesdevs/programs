@@ -29,7 +29,7 @@ origin:
 eaclient:
   Name: EA Launcher
   Description: The official EA launcher.
-  Grade: Gold
+  Grade: Platinum
   Category: Games
   Icon: eaclient.png
 
