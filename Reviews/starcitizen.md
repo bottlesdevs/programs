@@ -4,31 +4,31 @@ Review for the star citizen installer.
 Maintainer: @evoxcx
 
 **Is the program properly opened?**  
-Grade: None  
+Grade: Platinum
 Additional notes: n/a
 
 **Is it showing alerts or other warnings?**  
-Grade: None  
+Grade: Platinum  
 Additional notes: n/a
 
 **Does it show graphical glitches?**  
-Grade: None  
+Grade: Bronze  
 Additional notes: Blank screen on launcher
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
-Grade: None  
+Grade: Bronze  
 Additional notes: The launcher itself only works after issuing 'winetricks libglesv2=builtin dxvk win10' (https://appdb.winehq.org/objectManager.php?sClass=version&iId=40083&iTestingId=111684)
 
 **Did it crash during tests execution?**  
-Grade: None  
+Grade: Platinum  
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: None  
-Additional notes: n/a
+Grade: Bronze  
+Additional notes: EAC not working for the moment
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: None  
+Grade: Bronze  
 Additional notes: n/a
 
 **Additional notes**  
