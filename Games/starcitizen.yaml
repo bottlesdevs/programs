@@ -1,0 +1,25 @@
+Name: starcitizen
+Description: The official Star Citizen launcher.
+Grade: None
+
+Dependencies:
+- allfonts
+- vcredist2019
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Star Citizen
+  icon: starcitizen.png
+  file: RSI Launcher.exe
+  path: Program Files/Roberts Space Industries/RSI Launcher/
+  
+Steps:
+- action: install_exe
+  file_name: RSI-Setup-1.5.4.exe
+  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.5.4.exe
+  file_checksum: 4ede3b88b33415ba5419280c82c2c4d3
+  arguments: /S
