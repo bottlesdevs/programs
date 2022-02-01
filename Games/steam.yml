@@ -19,7 +19,7 @@ Executable:
   name: Steam
   icon: steam.svg
   file: Steam.exe
-  path: Program Files (x86)/Steam
+  path: Program Files (x86)/Steam/Steam.exe
   
 Steps:
 - action: install_exe
