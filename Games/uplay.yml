@@ -18,7 +18,7 @@ Executable:
   name: Uplay
   icon: uplay.png
   file: Uplay.exe
-  path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher
+  path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher/Uplay.exe
   
 Steps:
 - action: install_exe
