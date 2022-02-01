@@ -1,6 +1,6 @@
 Name: starcitizen
 Description: The official Star Citizen launcher.
-Grade: None
+Grade: Bronze
 
 Dependencies:
 - allfonts
