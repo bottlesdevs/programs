@@ -16,6 +16,7 @@ Executable:
   icon: starcitizen.png
   file: RSI Launcher.exe
   path: Program Files/Roberts Space Industries/RSI Launcher/
+  arguments: WINEDLLOVERRIDES=libglesv2=b %command%
   
 Steps:
 - action: install_exe
