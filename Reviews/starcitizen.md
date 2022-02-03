@@ -12,15 +12,15 @@ Grade: Platinum
 Additional notes: n/a
 
 **Does it show graphical glitches?**  
-Grade: Bronze  
-Additional notes: Blank screen on launcher
+Grade: Platinum  
+Additional notes: n/a
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
-Grade: Bronze  
+Grade: Gold  
 Additional notes: The launcher itself only works after issuing 'winetricks libglesv2=builtin dxvk win10' (https://appdb.winehq.org/objectManager.php?sClass=version&iId=40083&iTestingId=111684)
 
 **Did it crash during tests execution?**  
-Grade: Platinum  
+Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
