@@ -1,6 +1,7 @@
 Name: eaclient
 Description: The official EA launcher (beta).
 Grade: Gold
+Arch: win64
 
 Dependencies:
 - mono

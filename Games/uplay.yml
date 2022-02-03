@@ -1,6 +1,7 @@
 Name: uplay
 Description: The official Ubisoft Uplay launcher.
 Grade: Gold
+Arch: win64
 
 Dependencies:
 - d3dx9

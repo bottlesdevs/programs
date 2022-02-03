@@ -1,6 +1,7 @@
 Name: origin
 Description: The official Origin launcher.
 Grade: Gold
+Arch: win64
 
 Dependencies:
 - d3dx9

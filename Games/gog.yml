@@ -1,6 +1,7 @@
 Name: gog
 Description: The official GOG Galaxy launcher.
 Grade: Silver
+Arch: win64
 
 Dependencies:
 - mediafoundation
