@@ -1,4 +1,5 @@
 epicgamestore:
+  Arch: win64
   Name: Epic Games Store
   Description: The official Epic Games launcher.
   Grade: Gold
@@ -6,6 +7,7 @@ epicgamestore:
   Icon: epicgamestore.svg
 
 uplay:
+  Arch: win64
   Name: Ubisoft Connect (Uplay)
   Description: The official Ubisoft Uplay launcher.
   Grade: Gold
@@ -13,6 +15,7 @@ uplay:
   Icon: uplay.png
 
 steam:
+  Arch: win64
   Name: Steam
   Description: The official Steam launcher.
   Grade: Gold
@@ -20,6 +23,7 @@ steam:
   Icon: steam.svg
 
 origin:
+  Arch: win64
   Name: Origin
   Description: The official Origin launcher.
   Grade: Gold
@@ -27,6 +31,7 @@ origin:
   Icon: origin.svg
 
 eaclient:
+  Arch: win64
   Name: EA Launcher
   Description: The official EA launcher.
   Grade: Platinum
@@ -34,6 +39,7 @@ eaclient:
   Icon: eaclient.png
 
 gog:
+  Arch: win64
   Name: GOG Galaxy
   Description: The official GOG Galaxy launcher.
   Grade: Silver
@@ -41,6 +47,7 @@ gog:
   Icon: gog.svg
 
 battlenet:
+  Arch: win64
   Name: Blizzard Battle.net
   Description: The official Blizzard Battle.net launcher.
   Grade: Gold
