@@ -12,8 +12,8 @@ Grade: Platinum
 Additional notes: n/a
 
 **Does it show graphical glitches?**  
-Grade: Gold  
-Additional notes: Some graphical glitches show up on page change.
+Grade: Platinum  
+Additional notes: n/a
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
 Grade: Platinum  
@@ -28,7 +28,7 @@ Grade: Platinum
 Additional notes: n/a
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Gold  
+Grade: Platinum  
 Additional notes: n/a
 
 **Additional notes**  

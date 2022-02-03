@@ -17,7 +17,7 @@ Executable:
   name: Battle.net
   icon: battlenet.png
   file: Battle.net.exe
-  path: Program Files (x86)/Battle.net
+  path: Program Files (x86)/Battle.net/Battle.net.exe
   
 Steps:
 - action: install_msi
