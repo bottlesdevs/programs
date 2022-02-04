@@ -1,6 +1,7 @@
 Name: battlenet
 Description: The official Blizzard Battle.net launcher.
 Grade: Gold
+Arch: win64
 
 Dependencies:
 - msls31
