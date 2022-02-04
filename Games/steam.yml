@@ -1,6 +1,7 @@
 Name: steam
 Description: The official Steam launcher.
 Grade: Gold
+Arch: win64
 
 Dependencies:
 - d3dx9
