@@ -1,6 +1,7 @@
 Name: enlisted
 Description: The official Enlisted launcher.
 Grade: Silver
+Arch: win64
 
 Dependencies:
 - d3dx9

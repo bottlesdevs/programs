@@ -1,6 +1,7 @@
 Name: starcitizen
 Description: The official Star Citizen launcher.
 Grade: Bronze
+Arch: win64
 
 Dependencies:
 - allfonts
