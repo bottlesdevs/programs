@@ -16,8 +16,8 @@ Grade: Platinum
 Additional notes: n/a
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
-Grade: Gold  
-Additional notes: The launcher itself only works after issuing 'winetricks libglesv2=builtin dxvk win10' (https://appdb.winehq.org/objectManager.php?sClass=version&iId=40083&iTestingId=111684)
+Grade: Platinum  
+Additional notes: n/a
 
 **Did it crash during tests execution?**  
 Grade: Platinum
