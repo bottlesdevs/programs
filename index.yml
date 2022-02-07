@@ -18,7 +18,7 @@ steam:
   Arch: win64
   Name: Steam
   Description: The official Steam launcher.
-  Grade: Gold
+  Grade: Silver
   Category: Games
   Icon: steam.svg
 
