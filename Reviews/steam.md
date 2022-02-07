@@ -1,5 +1,5 @@
-# GOG Galaxy
-Review for the gog installer.
+# Steam
+Review for the steam installer.
 
 Maintainer: @mirkobrombin
 
