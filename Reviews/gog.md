@@ -24,11 +24,11 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Bronze  
-Additional notes: It is usable, do not became unresponsive but the graphical problems waste the UX.
+Grade: Gold  
+Additional notes: It is usable, has very rare glitches like on window resize.
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Bronze  
+Grade: Gold  
 Additional notes: n/a
 
 **Additional notes**  
