@@ -1,10 +1,10 @@
 Name: gog
 Description: The official GOG Galaxy launcher.
-Grade: Bronze
+Grade: Gold
 Arch: win64
 
 Dependencies:
-- mediafoundation
+- vcredist2015
 - allfonts
 
 Parameters:
@@ -18,7 +18,7 @@ Executable:
   icon: gog.svg
   file: GalaxyClient.exe
   path: Program Files (x86)/GOG Galaxy/GalaxyClient.exe
-  arguments: /runWithoutUpdating /deelevated
+  arguments: --in-process-gpu /runWithoutUpdating /deelevated
   
 Steps:
 - action: install_exe
