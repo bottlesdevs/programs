@@ -42,7 +42,7 @@ gog:
   Arch: win64
   Name: GOG Galaxy
   Description: The official GOG Galaxy launcher.
-  Grade: Silver
+  Grade: Bronze
   Category: Games
   Icon: gog.svg
 
