@@ -24,11 +24,11 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Silver  
+Grade: Bronze  
 Additional notes: It is usable, do not became unresponsive but the graphical problems waste the UX.
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Silver  
+Grade: Bronze  
 Additional notes: n/a
 
 **Additional notes**  
