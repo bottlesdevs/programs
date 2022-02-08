@@ -24,11 +24,11 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Gold  
-Additional notes: It is usable, has very rare glitches like on window resize.
+Grade: Silver  
+Additional notes: It is usable, has very rare glitches like on window resize and some features doesn't works, like changing default Downloads path.
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Gold  
+Grade: Silver  
 Additional notes: n/a
 
 **Additional notes**  
