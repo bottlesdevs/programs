@@ -25,7 +25,7 @@ Additional notes: n/a
 
 **Is it usable?**  
 Grade: Silver  
-Additional notes: It is usable, has very rare glitches like on window resize and some features doesn't works, like changing default Downloads path.
+Additional notes: It is usable, has very rare glitches like on window resize and some features doesn't works, like changing default Downloads path. Sometimes it says it failed to install the game but restarting it is up and running (tried The Witcher).
 
 **Final grade? (the lower evaluation from previous questions)**  
 Grade: Silver  
