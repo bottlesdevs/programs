@@ -12,7 +12,7 @@ Dependencies:
 
 Parameters:
   dxvk: true
-  esync: true
+  sync: esync
   discrete_gpu: true
   
 Executable:
