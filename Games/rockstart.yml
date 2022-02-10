@@ -1,0 +1,27 @@
+Name: rockstart
+Description: The official Rockstar launcher.
+Grade: Unknown
+Arch: win64
+
+Dependencies:
+- riched20
+- vcredist2015
+- arial32
+- cjkfonts
+
+Parameters:
+  dxvk: true
+  sync: esync
+  discrete_gpu: true
+  
+Executable:
+  name: Rockstar Launcher
+  icon: rockstar.png
+  file: Launcher.exe
+  path: Program Files/Rockstar Games/Launcher/Launcher.exe
+  
+Steps:
+- action: install_exe
+  file_name: Rockstar-Games-Launcher.exe
+  url: https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe
+  file_checksum: 696548794fcfafa1cbf9251b255640a8
