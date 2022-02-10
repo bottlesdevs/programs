@@ -53,3 +53,11 @@ battlenet:
   Grade: Gold
   Category: Games
   Icon: battlenet.png
+
+rockstar:
+  Arch: win64
+  Name: Rockstar Launcher
+  Description: The official Rockstar launcher.
+  Grade: Platinum
+  Category: Games
+  Icon: rockstar.png
