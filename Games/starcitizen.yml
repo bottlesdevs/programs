@@ -18,10 +18,10 @@ Executable:
   file: RSI Launcher.exe
   path: Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe
   arguments: WINEDLLOVERRIDES=libglesv2=builtin %command%
+  ## DLL Override work too
   
 Steps:
 - action: install_exe
-  file_name: RSI-Setup-1.5.4.exe
-  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.5.4.exe
-  file_checksum: 4ede3b88b33415ba5419280c82c2c4d3
-  # arguments: /S
+  file_name: RSI-Setup-1.5.5.exe
+  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.5.5.exe
+  file_checksum: 2ac76cd94eee754fdaa56f233d7bfcac

@@ -54,6 +54,22 @@ battlenet:
   Category: Games
   Icon: battlenet.png
 
+starcitizen:
+  Arch: win64
+  Name: Star Citizen
+  Description: The official Star Citizen launcher.
+  Grade: Bronze
+  Category: Games
+  Icon: starcitizen.png
+
+enlisted:
+  Arch: win64
+  Name: Enlisted
+  Description: The official Enlisted launcher.
+  Grade: Silver
+  Category: Games
+  Icon: enlisted.svg
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher

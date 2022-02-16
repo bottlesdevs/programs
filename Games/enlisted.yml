@@ -16,7 +16,7 @@ Parameters:
   
 Executable:
   name: Enlisted
-  icon: enlisted.png
+  icon: enlisted.svg
   file: launcher.exe
   path: users/$USER/AppData/Local/Enlisted/launcher.exe
   
