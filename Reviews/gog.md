@@ -8,12 +8,12 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it showing alerts or other warnings?**  
-Grade: Gold  
-Additional notes: Despite it runs, comes with a warning that alerts the user about problems with the disk that is not in the NTFS filesystem.
+Grade: Platinum  
+Additional n/a
 
 **Does it show graphical glitches?**  
-Grade: Silver  
-Additional notes: Lag on scroll and animations but not int the Store page.
+Grade: Gold  
+Additional notes: Lag on launch but works smoothly after login.
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
 Grade: Platinum  
@@ -24,11 +24,11 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Silver  
-Additional notes: It is usable, has very rare glitches like on window resize and some features doesn't works, like changing default Downloads path. Sometimes it says it failed to install the game but restarting it is up and running (tried The Witcher).
+Grade: Platinum  
+Additional notes: n/a
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Silver  
+Grade: Gold  
 Additional notes: n/a
 
 **Additional notes**  
