@@ -1,5 +1,5 @@
-# GOG Galaxy
-Review for the gog installer.
+# Rockstar Launcher
+Review for the rockstar installer.
 
 Maintainer: @mirkobrombin
 
@@ -9,11 +9,11 @@ Additional notes: n/a
 
 **Is it showing alerts or other warnings?**  
 Grade: Platinum  
-Additional n/a
+Additional notes: n/a
 
 **Does it show graphical glitches?**  
-Grade: Gold  
-Additional notes: Lag on launch but works smoothly after login.
+Grade: Platinum  
+Additional notes: n/a
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
 Grade: Platinum  
@@ -28,8 +28,8 @@ Grade: Platinum
 Additional notes: n/a
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Gold  
+Grade: Platinum  
 Additional notes: n/a
 
 **Additional notes**  
-n/a
+Need to be tested to more games but the experience is very smooth.

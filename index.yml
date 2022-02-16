@@ -2,7 +2,7 @@ epicgamestore:
   Arch: win64
   Name: Epic Games Store
   Description: The official Epic Games launcher.
-  Grade: Gold
+  Grade: Platinum
   Category: Games
   Icon: epicgamestore.svg
 
@@ -18,7 +18,7 @@ steam:
   Arch: win64
   Name: Steam
   Description: The official Steam launcher.
-  Grade: Gold
+  Grade: Bronze
   Category: Games
   Icon: steam.svg
 
@@ -53,3 +53,11 @@ battlenet:
   Grade: Gold
   Category: Games
   Icon: battlenet.png
+
+#rockstar:
+#  Arch: win64
+#  Name: Rockstar Launcher
+#  Description: The official Rockstar launcher.
+#  Grade: Platinum
+#  Category: Games
+#  Icon: rockstar.png

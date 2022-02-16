@@ -9,10 +9,11 @@ Dependencies:
 - allfonts
 - d3dcompiler_43
 - faudio
+- vcredist2015
 
 Parameters:
   dxvk: true
-  esync: true
+  sync: esync
   discrete_gpu: true
   
 Executable:
@@ -27,3 +28,14 @@ Steps:
   url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UplayInstaller.exe
   file_checksum: 1c2d115033a6a5f422c2074a44ad23b9
   arguments: /S
+  
+- action: update_config
+  path: userdir/Local Settings/Application Data/Ubisoft Game Launcher/settings.yml
+  type: yaml
+  upd_keys: 
+    overlay:
+      enabled: false
+      forceunhookgame: false
+      warning_enabled: false
+    user:
+      closebehavior: CloseBehavior_Close

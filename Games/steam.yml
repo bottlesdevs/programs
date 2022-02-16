@@ -1,6 +1,6 @@
 Name: steam
 Description: The official Steam launcher.
-Grade: Gold
+Grade: Bronze
 Arch: win64
 
 Dependencies:
@@ -13,7 +13,7 @@ Dependencies:
 
 Parameters:
   dxvk: true
-  esync: true
+  sync: esync
   discrete_gpu: true
   
 Executable:
