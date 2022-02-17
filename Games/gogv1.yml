@@ -15,7 +15,7 @@ Parameters:
   
 Executable:
   name: GOG Galaxy
-  icon: gog.svg
+  icon: gog.png
   file: GalaxyClient.exe
   path: Program Files (x86)/GOG Galaxy/GalaxyClient.exe
   arguments: /runWithoutUpdating /deelevated
