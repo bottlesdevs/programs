@@ -8,8 +8,8 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it showing alerts or other warnings?**  
-Grade: Platinum  
-Additional n/a
+Grade: Gold  
+Additional Show a NTFS alert on launch.
 
 **Does it show graphical glitches?**  
 Grade: showing  
@@ -28,7 +28,7 @@ Grade: Platinum
 Additional notes: n/a
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Platinum  
+Grade: Gold  
 Additional notes: n/a
 
 **Additional notes**  
