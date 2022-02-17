@@ -52,7 +52,7 @@ gogv1:
   Description: The official v1 GOG Galaxy launcher.
   Grade: Gold
   Category: Games
-  Icon: gogv1.svg
+  Icon: gogv1.png
 
 battlenet:
   Arch: win64
