@@ -46,6 +46,14 @@ gog:
   Category: Games
   Icon: gog.svg
 
+gogv1:
+  Arch: win64
+  Name: GOG Galaxy v1
+  Description: The official v1 GOG Galaxy launcher.
+  Grade: Gold
+  Category: Games
+  Icon: gogv1.svg
+
 battlenet:
   Arch: win64
   Name: Blizzard Battle.net
