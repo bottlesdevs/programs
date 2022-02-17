@@ -1,0 +1,28 @@
+Name: gogv1
+Description: The official (v1) GOG Galaxy launcher.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- vcredist2015
+- allfonts
+
+Parameters:
+  dxvk: true
+  vkd3d: true
+  sync: esync
+  discrete_gpu: true
+  
+Executable:
+  name: GOG Galaxy
+  icon: gog.svg
+  file: GalaxyClient.exe
+  path: Program Files (x86)/GOG Galaxy/GalaxyClient.exe
+  arguments: /runWithoutUpdating /deelevated
+  
+Steps:
+- action: install_exe
+  file_name: setup_galaxy_1.2.67.58.exe
+  url: https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_1.2.67.58.exe
+  file_checksum: c3fadb2f8cd4c197e5a5d1f0fd69e156
+  arguments: /s
