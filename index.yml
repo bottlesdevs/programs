@@ -8,8 +8,8 @@ epicgamestore:
 
 uplay:
   Arch: win64
-  Name: Ubisoft Connect (Uplay)
-  Description: The official Ubisoft Uplay launcher.
+  Name: Ubisoft Connect
+  Description: The official Ubisoft Connect launcher.
   Grade: Gold
   Category: Games
   Icon: uplay.png
