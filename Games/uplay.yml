@@ -24,7 +24,7 @@ Executable:
   
 Steps:
 - action: install_exe
-  file_name: UplayInstaller.exe
+  file_name: UbisoftConnectInstaller.exe
   url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UbisoftConnectInstaller.exe
   file_checksum: 921b7fb84dfa059b10afe47aa31bdccc
   arguments: /S
