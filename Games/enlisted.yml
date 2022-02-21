@@ -18,7 +18,7 @@ Executable:
   name: Enlisted
   icon: enlisted.svg
   file: launcher.exe
-  path: users/$USER/AppData/Local/Enlisted/launcher.exe
+  path: userdir/AppData/Local/Enlisted/launcher.exe
   
 Steps:
 - action: install_exe
