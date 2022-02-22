@@ -1,5 +1,5 @@
 Name: uplay
-Description: The official Ubisoft Uplay launcher.
+Description: The official Ubisoft Connect launcher.
 Grade: Gold
 Arch: win64
 
@@ -17,16 +17,16 @@ Parameters:
   discrete_gpu: true
   
 Executable:
-  name: Uplay
+  name: Ubisoft Connect
   icon: uplay.png
-  file: Uplay.exe
-  path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher/Uplay.exe
+  file: UbisoftConnect.exe
+  path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe
   
 Steps:
 - action: install_exe
-  file_name: UplayInstaller.exe
-  url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UplayInstaller.exe
-  file_checksum: 1c2d115033a6a5f422c2074a44ad23b9
+  file_name: UbisoftConnectInstaller.exe
+  url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UbisoftConnectInstaller.exe
+  file_checksum: 921b7fb84dfa059b10afe47aa31bdccc
   arguments: /S
   
 - action: update_config
