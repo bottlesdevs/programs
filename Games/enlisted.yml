@@ -1,0 +1,27 @@
+Name: enlisted
+Description: The official Enlisted launcher.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- d3dx9
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Enlisted
+  icon: enlisted.svg
+  file: launcher.exe
+  path: userdir/AppData/Local/Enlisted/launcher.exe
+  
+Steps:
+- action: install_exe
+  file_name: enlisted_launcher_1.0.3.80.exe
+  url: https://aws-yup-distr-01.gaijinent.com/enlisted_launcher_1.0.3.80.exe
+  file_checksum: b88e84b09cec8a1b1d5ee0667f85060b

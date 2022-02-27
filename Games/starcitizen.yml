@@ -1,0 +1,27 @@
+Name: starcitizen
+Description: The official Star Citizen launcher.
+Grade: Bronze
+Arch: win64
+
+Dependencies:
+- allfonts
+- vcredist2019
+
+Parameters:
+  dxvk: true
+  esync: true
+  discrete_gpu: true
+  
+Executable:
+  name: Star Citizen
+  icon: starcitizen.png
+  file: RSI Launcher.exe
+  path: Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe
+  arguments: WINEDLLOVERRIDES=libglesv2=builtin %command%
+  ## DLL Override work too
+  
+Steps:
+- action: install_exe
+  file_name: RSI-Setup-1.5.5.exe
+  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.5.5.exe
+  file_checksum: 2ac76cd94eee754fdaa56f233d7bfcac
