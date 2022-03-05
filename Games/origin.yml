@@ -26,5 +26,5 @@ Steps:
 - action: install_exe
   file_name: OriginSetup.exe
   url: https://download.dm.origin.com/origin/live/OriginSetup.exe
-  file_checksum: 2ae7fa29d71f5037d72a6c40238e4b2e
+  file_checksum: b20305c830869009da174266180356d1
   arguments: /silent
