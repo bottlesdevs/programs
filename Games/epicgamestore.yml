@@ -26,6 +26,6 @@ Executable:
 Steps:
 - action: install_msi
   file_name: EpicGamesLauncherInstaller.msi
-  url: https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi
+  url: https://cdn.usebottles.com/programs/EpicGamesLauncherInstaller.msi
   file_checksum: ebde67191bc1a483fd821daf8e01ce46
   arguments: /q
