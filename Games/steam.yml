@@ -26,5 +26,5 @@ Steps:
 - action: install_exe
   file_name: SteamSetup.exe
   url: https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe
-  file_checksum: 29a0d4f99b2ad92bc67d276c0c43d603
+  file_checksum: 70f3bc193dfa56b78f3e6e4f800f701f
   arguments: /S
