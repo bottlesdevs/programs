@@ -1,0 +1,21 @@
+Name: flstudio
+Description: FL Studio is a digital audio workstation developed by the Belgian company Image-Line.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+- allfonts
+
+Executable:
+  name: FL Studio
+  icon: flstudio.png
+  file: FL64.exe
+  path: Program Files/Image-Line/FL Studio 20/FL64.exe
+  arguments: ""
+
+Steps:
+- action: install_exe
+  file_name: flstudio_win64_20.9.1.2826.exe
+  url: https://demodownload.image-line.com/flstudio/flstudio_win64_20.9.1.2826.exe
+  file_checksum: 30836e542c7a6d7500faa05cfff0c60d
+  arguments: ""

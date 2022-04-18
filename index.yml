@@ -78,6 +78,14 @@ enlisted:
   Category: Games
   Icon: enlisted.png
 
+flstudio:
+  Arch: win64
+  Name: FL Studio
+  Description: FL Studio is a digital audio workstation developed by the Belgian company Image-Line.
+  Grade: Gold
+  Category: Software
+  Icon: flstudio.png
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
