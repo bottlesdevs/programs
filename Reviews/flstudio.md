@@ -1,5 +1,5 @@
-# Epic Games Store
-Review for the epicgamestore installer.
+# FL Studio
+Review for the flstudio installer.
 
 Maintainers: @BobyMCbobs & @mirkobrombin
 
