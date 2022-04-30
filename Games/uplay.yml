@@ -26,7 +26,7 @@ Steps:
 - action: install_exe
   file_name: UbisoftConnectInstaller.exe
   url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UbisoftConnectInstaller.exe
-  file_checksum: e2cc235f284c816d70cb680e114953f1
+  file_checksum: 8b9f8ef7fc02662e53e6cf8483fbc714
   arguments: /S
   
 - action: update_config
