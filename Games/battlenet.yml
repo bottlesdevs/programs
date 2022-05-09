@@ -26,6 +26,9 @@ Steps:
   file_name: Battle.net-Setup-enUS.exe
   url: http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.exe
   file_checksum: e413dfc296c3701416e3fe5af45aedbf
+  monitoring:
+    - Battle.net-Setup-enUS.exe
+    - Battle.net-Setup.exe
   
 - action: update_config
   path: userdir/Documents/Overwatch/Settings/Settings_v0.ini
