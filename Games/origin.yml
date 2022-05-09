@@ -21,6 +21,7 @@ Executable:
   icon: origin.svg
   file: Origin.exe
   path: Program Files (x86)/Origin/Origin.exe
+  arguments: "STAGING_SHARED_MEMORY=0 %command%"
   
 Steps:
 - action: install_exe
