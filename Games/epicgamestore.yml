@@ -30,3 +30,8 @@ Steps:
   url: https://cdn.usebottles.com/programs/EpicGamesLauncherInstaller.msi
   file_checksum: ebde67191bc1a483fd821daf8e01ce46
   arguments: /q
+
+Checks:
+  files:
+    - Program Files (x86)/Epic Games/Launcher/Engine/Binaries/Win32/EpicGamesLauncher.exe
+  
