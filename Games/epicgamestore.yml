@@ -33,5 +33,5 @@ Steps:
 
 Checks:
   files:
-    - Program Files (x86)/Epic Games/Launcher/Engine/Binaries/Win32/EpicGamesLauncher.exe
+    - Program Files (x86)/Epic Games/Launcher/Portal/Binaries/Win32/EpicGamesLauncher.exe
   
