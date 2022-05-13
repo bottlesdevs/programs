@@ -6,6 +6,7 @@ Arch: win64
 Dependencies:
 - d3dx9
 - msls31
+- riched20
 - allfonts
 - d3dcompiler_43
 - d3dcompiler_47
@@ -26,3 +27,5 @@ Steps:
   file_name: GameforgeInstaller.exe
   url: https://github.com/Dansito/testfile/raw/main/test-foulder/GameforgeInstaller.exe
   file_checksum: 85a7bb66c099a7357686decbb71a81b2
+  monitoring:
+    - GameforgeInstaller.exe
