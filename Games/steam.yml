@@ -28,3 +28,7 @@ Steps:
   url: https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe
   file_checksum: 70f3bc193dfa56b78f3e6e4f800f701f
   arguments: /S
+
+Checks:
+  files:
+    - 'Program Files (x86)/Steam/Steam.exe'
