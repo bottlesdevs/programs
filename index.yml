@@ -86,13 +86,6 @@ flstudio:
   Category: Software
   Icon: flstudio.png
 
-gameforgeclient:
-  Arch: win64
-  Name: Gameforge Client
-  Description: The official Gameforge Client.
-  Grade: Platinum
-  Category: Games
-  Icon: gameforgeicon.png
 
 
 #rockstar:
