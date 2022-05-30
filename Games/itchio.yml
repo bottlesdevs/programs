@@ -26,6 +26,7 @@ Executable:
   icon: itchio.svg
   file: itch
   path: homedir/.itch/itch
+  is_native: true
   environment: 
     - PATH: bottle_path/integrations/itchio/:$PATH
   
