@@ -30,6 +30,9 @@ Executable:
     - PATH: !bottle_path/integrations/itchio/:$PATH
   
 Steps:
+- action: check_file_exist
+  path: homedir/.itch/itch
+  
 - action: run_script
   script: |
     cd !bottle_path
