@@ -28,7 +28,7 @@ Executable:
   path: homedir/.itch/itch
   is_native: true
   environment: 
-    - PATH: bottle_path/integrations/itchio/:$PATH
+    - PATH: drive_c/integrations/itchio/:$PATH
   
 Steps:
 - action: check_file_exist
@@ -36,7 +36,7 @@ Steps:
   
 - action: run_script
   script: |
-    cd !bottle_path
+    cd !bottle_drive
     mkdir -p integrations/itchio
     echo '#!/bin/sh\n!bottles-cli shell -b !bottle_name -i "$@"' > wine
     chmod +x wine
