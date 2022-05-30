@@ -1,0 +1,39 @@
+# This installer does nothing, it's just an integration concept
+
+Name: itchio
+Description: Bottles integration for the itch.io platform.
+Grade: Platinum
+Arch: win64
+Type: integration
+
+Dependencies:
+- d3dx9
+- msls31
+- riched20
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+- vcredist2015
+
+Parameters:
+  dxvk: true
+  vkd3d: true
+  sync: esync
+  discrete_gpu: true
+  
+Executable:
+  name: itch.io
+  icon: itchio.svg
+  file: itch
+  path: homedir/.itch/itch
+  environment: 
+    - PATH: !bottle_path/integrations/itchio/:$PATH
+  
+Steps:
+- action: run_script
+  script: |
+    cd !bottle_path
+    mkdir -p integrations/itchio
+    echo '#!/bin/sh\n!bottles-cli shell -b !bottle_name -i "$@"' > wine
+    chmod +x wine
+    
