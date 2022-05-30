@@ -27,7 +27,7 @@ Executable:
   file: itch
   path: homedir/.itch/itch
   environment: 
-    - PATH: !bottle_path/integrations/itchio/:$PATH
+    - PATH: bottle_path/integrations/itchio/:$PATH
   
 Steps:
 - action: check_file_exist
