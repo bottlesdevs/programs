@@ -25,5 +25,5 @@ Executable:
 Steps:
 - action: install_exe
   file_name: EAappInstaller.exe
-  url: https://cdn.usebottles.com/programs/EAappInstaller.exe
-  file_checksum: d907b024e5be3810ce660bf2748a9c69
+  url: https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe
+  file_checksum: d88875b6458000d5bd26a08e35ee6b5c
