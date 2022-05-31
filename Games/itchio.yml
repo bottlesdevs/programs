@@ -27,8 +27,7 @@ Executable:
   file: itch
   path: homedir/.itch/itch
   is_native: true
-  environment: 
-    - PATH: drive_c/integrations/itchio/:$PATH
+  arguments: PATH=drive_c/integrations/itchio/:$PATH %command%
   
 Steps:
 - action: check_file_exist
