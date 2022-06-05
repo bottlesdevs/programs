@@ -1,0 +1,20 @@
+Name: abletonlive
+Description: Ableton Live is a digital audio workstation developed by the Germany company Ableton.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- allfonts
+
+Executable:
+  name: Ableton Live
+  icon: abletonlive.png
+  file: Live.exe
+  path: Program Files\Ableton\Live\Live64.exe
+  arguments: ""
+
+Steps:
+- action: install_exe
+  file_name: Ableton Live Installer.exe
+  url: local
+  arguments: ""
