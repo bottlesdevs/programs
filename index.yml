@@ -86,6 +86,14 @@ flstudio:
   Category: Software
   Icon: flstudio.png
 
+abletonlive:
+  Arch: win64
+  Name: Ableton Live
+  Description: Live is a digital audio workstation developed by the German company Ableton.
+  Grade: Silver
+  Category: Software
+  Icon: abletonlive.png
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
