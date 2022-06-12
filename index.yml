@@ -1,3 +1,7 @@
+# Notes: 
+# - [Event] not implemented yet
+#   Will be used by Bottles to trigger an installer when the pattern matches
+
 epicgamestore:
   Arch: win64
   Name: Epic Games Store
@@ -5,6 +9,7 @@ epicgamestore:
   Grade: Platinum
   Category: Games
   Icon: epicgamestore.svg
+  Event: EpicGamesLauncherInstaller.msi
 
 uplay:
   Arch: win64
@@ -13,6 +18,7 @@ uplay:
   Grade: Gold
   Category: Games
   Icon: uplay.png
+  Event: UbisoftConnectInstaller.exe
 
 steam:
   Arch: win64
@@ -21,6 +27,7 @@ steam:
   Grade: Bronze
   Category: Games
   Icon: steam.svg
+  Event: SteamSetup.exe
 
 origin:
   Arch: win64
@@ -29,6 +36,7 @@ origin:
   Grade: Gold
   Category: Games
   Icon: origin.svg
+  Event: OriginSetup.exe
 
 eaclient:
   Arch: win64
@@ -37,6 +45,7 @@ eaclient:
   Grade: Platinum
   Category: Games
   Icon: eaclient.png
+  Event: EAappInstaller.exe
 
 gog:
   Arch: win64
@@ -45,6 +54,7 @@ gog:
   Grade: Silver
   Category: Games
   Icon: gog.svg
+  Event: setup_galaxy_2.*.exe
 
 gogv1:
   Arch: win64
@@ -53,6 +63,7 @@ gogv1:
   Grade: Gold
   Category: Games
   Icon: gogv1.png
+  Event: setup_galaxy_1.*.exe
 
 battlenet:
   Arch: win64
@@ -61,6 +72,7 @@ battlenet:
   Grade: Gold
   Category: Games
   Icon: battlenet.png
+  Event: Battle.net-Setup*.exe
 
 starcitizen:
   Arch: win64
@@ -69,6 +81,7 @@ starcitizen:
   Grade: Bronze
   Category: Games
   Icon: starcitizen.png
+  Event: RSI-Setup-*.exe
 
 enlisted:
   Arch: win64
@@ -77,6 +90,7 @@ enlisted:
   Grade: Silver
   Category: Games
   Icon: enlisted.png
+  Event: enlisted_launcher_*.exe
 
 flstudio:
   Arch: win64
@@ -85,6 +99,7 @@ flstudio:
   Grade: Gold
   Category: Software
   Icon: flstudio.png
+  Event: flstudio_win64_*.exe
 
 abletonlive:
   Arch: win64
@@ -93,6 +108,7 @@ abletonlive:
   Grade: Silver
   Category: Software
   Icon: abletonlive.png
+  Event: ableton*.exe
 
 #rockstar:
 #  Arch: win64
