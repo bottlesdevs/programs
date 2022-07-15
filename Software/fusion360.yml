@@ -25,6 +25,7 @@ Parameters:
   sync: esync
 
 Steps:
+# Workaround for current installer to function properly
 - action: run_script
   script: |
     cd !bottle_drive/windows/system32/
