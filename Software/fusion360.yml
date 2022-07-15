@@ -16,8 +16,8 @@ Executable:
   name: Autodesk Fusion 360
   icon: fusion360.png
   file: FusionLauncher.exe
-  path: "/users/public/Desktop/Autodesk Fusion 360.lnk"
-  arguments: ""
+  path: Users/Public/Desktop/Autodesk Fusion 360.lnk
+  arguments: WINEDLLOVERRIDES="dxgi,d3d11=n;d3d9=b;d3d10core=" %command%
 
 Parameters:
   dxvk: true
@@ -34,6 +34,6 @@ Steps:
   file_name: Fusion 360 Admin Install.exe
   url: https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Admin%20Install.exe
   rename: Fusion360installer.exe
-#  file_checksum: 4d7f2df94b6e87074dfdacf329e63ecb
+  file_checksum: cf2713e186448328f0add0371135f053
   arguments: -p deploy -g -f log.txt --quiet
   
