@@ -4,8 +4,8 @@ Review for the origin installer.
 Maintainer: @mirkobrombin
 
 **Is the program properly opened?**  
-Grade: Platinum  
-Additional notes: n/a
+Grade: Bronze  
+Additional notes: For some users it works perfectly, others don't get to login (with the same conf). Although at the moment there are more positive reports than negatives, I rate this a Bronze experience.
 
 **Is it showing alerts or other warnings?**  
 Grade: Platinum  
