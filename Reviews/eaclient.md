@@ -28,7 +28,7 @@ Grade: Platinum
 Additional notes: n/a
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Platinum  
+Grade: Bronze  
 Additional notes: n/a
 
 **Additional notes**  
