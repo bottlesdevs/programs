@@ -5,6 +5,7 @@ Arch: win64
 
 Dependencies:
 - d3dx9
+- d3dx11
 - riched20
 - allfonts
 - d3dcompiler_43
