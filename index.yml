@@ -113,7 +113,7 @@ abletonlive:
 fusion360:
  Arch: win64
  Name: Autodesk Fusion 360
- Description: Fusion 360 is a cloud-based 3D CAD, CAM & CAE design tool from Autodesk. It is available on a number of platforms including Windows, Mac & In-Browser.
+ Description: Fusion 360 is a cloud-based 3D CAD, CAM and CAE design tool from Autodesk. It is available on a number of platforms including Windows, Mac and In-Browser.
  Grade: Bronze
  Category: Software
  Icon: fusion360.png
