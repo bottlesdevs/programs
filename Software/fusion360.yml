@@ -35,6 +35,6 @@ Steps:
   file_name: Fusion 360 Admin Install.exe
   url: https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Admin%20Install.exe
   rename: Fusion360installer.exe
-  file_checksum: cf2713e186448328f0add0371135f053
+  file_checksum: False
   arguments: -p deploy -g -f log.txt --quiet
   
