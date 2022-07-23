@@ -26,4 +26,4 @@ Steps:
 - action: install_exe
   file_name: EAappInstaller.exe
   url: https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe
-  file_checksum: 25912ccda36de9fb47aa4e3a0decb2db
+  file_checksum: False
