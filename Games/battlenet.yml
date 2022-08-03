@@ -9,6 +9,7 @@ Dependencies:
 - arial32
 - arialb32
 - vcredist2015
+- vcredist2019
 
 Parameters:
   dxvk: true
