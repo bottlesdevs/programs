@@ -21,7 +21,7 @@ Executable:
   icon: steam.svg
   file: Steam.exe
   path: Program Files (x86)/Steam/Steam.exe
-  arguments: -no-browser +open steam://open/minigameslist
+  arguments: +open steam://open/minigameslist
   
 Steps:
 - action: install_exe
