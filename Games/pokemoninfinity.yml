@@ -1,0 +1,28 @@
+Name: Pokemon Infinity
+Description: Pokemon Infinity is a pokemon fangame made by AtomicReactor and the rest of the infinity team.
+Grade: Platinum
+Arch: win64
+
+Dependencies:
+- gmdls
+- gecko
+
+
+Parameters:
+  sync: Futex2
+  gamemode: True
+
+Executable:
+  name: Pokemon Infinity
+  icon: InfinityIcon.ico
+  file: Game.exe
+  path: "drive_c/Program Files/Pokemon Infinity 2.3.5/Game.exe"
+  arguments: ""
+
+Steps:
+- action: run_script
+  script: |
+    rm -rf drive_c/Program\ Files/Pokemon\ Infinity*
+    wget https://github.com/TeryVeneno/pokemon-infinity-base/releases/download/minor-update/Pokemon.Infinity.2.3.5.zip
+    unzip Pokemon.Infinity* -d drive_c/Program\ Files
+    rm Pokemon.Infinity*
