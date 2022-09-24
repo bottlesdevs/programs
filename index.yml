@@ -118,6 +118,14 @@ fusion360:
  Category: Software
  Icon: fusion360.png
  Event: fusion360.exe
+ 
+pokemoninfinity:
+ Arch: win64
+ Name: Pokemon Infinity
+ Description: Pokemon Infinity is a pokemon fangame made by AtomicReactor and the rest of the infinity team.
+ Grade: Platinum
+ Category: Games
+ Icon: InfinityIcon.ico 
 
 #rockstar:
 #  Arch: win64
