@@ -9,7 +9,7 @@ Dependencies:
 
 
 Parameters:
-  sync: Futex2
+  sync: futex2
   gamemode: True
 
 Executable:
@@ -22,7 +22,7 @@ Executable:
 Steps:
 - action: run_script
   script: |
-    rm -rf Program\ Files/Pokemon\ Infinity*
+    rm -rf drive_c/Program\ Files/Pokemon\ Infinity*
     wget https://github.com/TeryVeneno/pokemon-infinity-base/releases/download/minor-update/Pokemon.Infinity.2.3.5.zip
-    unzip Pokemon.Infinity* -d Program\ Files
+    unzip Pokemon.Infinity* -d drive_c/Program\ Files
     rm Pokemon.Infinity*
