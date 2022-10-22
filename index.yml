@@ -127,6 +127,14 @@ pokemoninfinity:
  Category: Games
  Icon: InfinityIcon.ico 
 
+remarkable:
+ Arch: win64
+ Name: reMarkable
+ Description: Desktop app for the reMarkable tablet.
+ Grade: Gold
+ Category: Software
+ Icon: remarkable.ico
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
