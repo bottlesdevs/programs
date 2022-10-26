@@ -1,0 +1,48 @@
+Name: lolstandard
+Description: League of Legends installer (no OCE).
+Grade: Undefined
+Arch: win64
+
+Dependencies:
+# Fonts
+- msls31
+- arial32
+- times32
+- courie32
+# Graphics
+- d3dx9
+- d3dx11
+- d3dcompiler_43
+- d3dcompiler_47
+
+Steps:
+- action: install_exe
+  file_name: Install League of Legends na.exe
+  url: https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe 
+  file_checksum: 9e4d2307ca1d124ea7ab3876a3df7c53
+  monitoring: 
+    - Install League.exe
+    - RiotClientServices.exe
+      
+Parameters:
+  dxvk: true
+  sync: fsync
+  gamemode: true
+  discrete_gpu: true
+  use_be_runtime: false
+  use_eac_runtime: false
+  dxvk_nvapi: false
+  vkd3d: false
+  runner: lutris-ge-lol-7.0-5-x86_64
+
+Executable:
+  name: League of Legends
+  icon: league.png
+  file: RiotClientServices.exe
+  path: Riot Games/Riot Client/RiotClientServices.exe
+  # Possibility to change locale from Bottles?
+  args: "WINEDLLOVERRIDES=d3d10=native,d3d11=native DXVK_LOG_LEVEL=none STAGING_SHARED_MEMORY=1 WINE_LARGE_ADDRESS_AWARE=1 %command% --locale=en_GB --launch-product=league_of_legends --launch-patchline=live"
+  # Unsure how to override
+  # DLL_Overrides:
+  #   - d3d10: native
+  #   - d3d11: navite
