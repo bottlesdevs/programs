@@ -4,6 +4,7 @@ Grade: Bronze
 Arch: win64
 
 Dependencies:
+- allfonts
 - atmlib
 - gdiplus
 - dotnet452
