@@ -24,11 +24,11 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Platinum  
-Additional notes: n/a
+Grade: Silver  
+Additional notes: GalaxyClientService.exe crashes often, bringing up an alert window and interrupting gameplay. The best way to go about it is to not dismiss the alert, just Alt+Tab back to the game, that way you won't get further interruptions from that alert.
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Gold  
+Grade: Silver  
 Additional notes: n/a
 
 **Additional notes**  
