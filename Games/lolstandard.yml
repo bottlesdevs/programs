@@ -21,13 +21,14 @@ Steps:
   url: https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe 
   file_checksum: 9e4d2307ca1d124ea7ab3876a3df7c53
   monitoring: 
-    - Install League.exe
+    - Install League
     - RiotClientServices.exe
       
 Parameters:
   dxvk: true
   sync: fsync
   gamemode: true
+  gamescope: false
   discrete_gpu: true
   use_be_runtime: false
   use_eac_runtime: false
@@ -41,8 +42,11 @@ Executable:
   file: RiotClientServices.exe
   path: Riot Games/Riot Client/RiotClientServices.exe
   # Possibility to change locale from Bottles?
-  args: "WINEDLLOVERRIDES=d3d10=native,d3d11=native DXVK_LOG_LEVEL=none STAGING_SHARED_MEMORY=1 WINE_LARGE_ADDRESS_AWARE=1 %command% --locale=en_GB --launch-product=league_of_legends --launch-patchline=live"
-  # Unsure how to override
+  # Env:
+  # DXVK_LOG_LEVEL=none 
+  # STAGING_SHARED_MEMORY=1 
+  # WINE_LARGE_ADDRESS_AWARE=1
   # DLL_Overrides:
   #   - d3d10: native
   #   - d3d11: navite
+  arguments: DXVK_LOG_LEVEL=none STAGING_SHARED_MEMORY=1 WINE_LARGE_ADDRESS_AWARE=1 WINEDLLOVERRIDES="d3d10=n,d3d11=n" %command% --locale=en_GB --launch-product=league_of_legends --launch-patchline=live

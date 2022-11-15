@@ -131,7 +131,7 @@ lolstandard:
  Arch: win64
  Name: League of Legends
  Description: League of Legends is a fast-paced, competitive online game that blends the speed and intensity of an RTS with RPG elements.
- Grade: Undefined
+ Grade: Bronze
  Category: Games
  Icon: league.png
  Event: Install League of Legends na.exe
