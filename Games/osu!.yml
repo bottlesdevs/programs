@@ -1,0 +1,30 @@
+Name: osu!
+Description: osu! is a free-to-play online rhythm game
+Grade: Gold
+Arch: win64
+
+Dependencies:
+- dotnet48
+- gdiplus
+- faudio
+- allfonts
+- cjkfonts
+
+Parameters:
+  dxvk: true
+  sync: esync
+  discrete_gpu: true
+  
+Executable:
+  name: osu!
+  icon: osu.png
+  file: osu!.exe
+  path: userdir/AppData/Local/osu!/osu!.exe  
+
+Steps:
+- action: install_exe
+  file_name: osu!install.exe
+  url: https://m1.ppy.sh/r/osu!install.exe
+  file_checksum: CDE0B4D636F0D764B2E6C8A2563F61B2
+  monitoring:
+    - osu!install.exe
