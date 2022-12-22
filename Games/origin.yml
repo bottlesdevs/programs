@@ -27,6 +27,6 @@ Executable:
 Steps:
 - action: install_exe
   file_name: OriginSetup.exe
-  url: https://cdn.usebottles.com/programs/OriginSetup.exe
+  url: https://proxy.usebottles.com/redistributable/programs/OriginSetup.exe
   file_checksum: b20305c830869009da174266180356d1
   arguments: /silent

@@ -27,7 +27,7 @@ Executable:
 Steps:
 - action: install_msi
   file_name: EpicGamesLauncherInstaller.msi
-  url: https://cdn.usebottles.com/programs/EpicGamesLauncherInstaller.msi
+  url: https://proxy.usebottles.com/redistributable/programs/EpicGamesLauncherInstaller.msi
   file_checksum: False
   arguments: /q
 
