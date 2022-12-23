@@ -126,6 +126,15 @@ pokemoninfinity:
  Grade: Platinum
  Category: Games
  Icon: InfinityIcon.ico 
+ 
+medal:
+ Arch: win64
+ Name: "Medal.tv"
+ Description: "Import, upload & share your favorite gaming moments in the click of a button with Medal.tv"
+ Grade: Silver
+ Category: Software
+ Icon: medal.png
+ Event: MedalSetup.exe
 
 #rockstar:
 #  Arch: win64
