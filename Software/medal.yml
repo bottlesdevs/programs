@@ -1,10 +1,10 @@
 Name: medal
-Description: "Import, upload & share your gaming moments using Medal.tv."
+Description: Import, upload  share your gaming moments using Medal.tv.
 Grade: Silver
 Arch: win64
 
 Dependencies:
-- dotnet462
+- dotnet472
 
 Executable:
   icon: medal.png

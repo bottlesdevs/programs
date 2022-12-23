@@ -129,8 +129,8 @@ pokemoninfinity:
  
 medal:
  Arch: win64
- Name: "Medal.tv"
- Description: "Import, upload & share your favorite gaming moments in the click of a button with Medal.tv"
+ Name: Medal.tv
+ Description: Import, upload and share your favorite gaming moments in the click of a button
  Grade: Silver
  Category: Software
  Icon: medal.png
