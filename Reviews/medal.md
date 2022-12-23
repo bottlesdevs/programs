@@ -16,8 +16,8 @@ Grade: Silver
 Additional notes: The navbar is a struggle to move if the window isn't big enough, but it does open and work
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
-Grade: Platinum  
-Additional notes: n/a
+Grade: Gold
+Additional notes: Worth noting that the best runner to use this with is Caffe as others give an administrator error.
 
 **Did it crash during tests execution?**  
 Grade: Gold  
@@ -32,7 +32,7 @@ Additional notes: The recorder and editor don't work, but importing/uploading/sh
 
 **Final grade? (the lower evaluation from previous questions)**  
 Grade: Gold
-Additional notes: The app overall works perfectly fine and you can use it as a gaming clip sharing client
+Additional notes: The app overall works perfectly fine and you can use the core features to share gaming moments.
 
 **Additional notes**  
 As mentioned above, the recorder and editor will not work. You're still able to import/upload/share content, though.
