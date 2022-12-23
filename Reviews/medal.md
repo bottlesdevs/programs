@@ -28,11 +28,11 @@ Relaunching Bottles should have the shortcut to the EXE preinstalled in the bott
 
 **Is it usable?**  
 Grade: Gold  
-Additional notes: The recorder doesn't work, but importing/uploading/sharing will still work
+Additional notes: The recorder and editor don't work, but importing/uploading/sharing will still work
 
 **Final grade? (the lower evaluation from previous questions)**  
 Grade: Gold
 Additional notes: The app overall works perfectly fine and you can use it as a gaming clip sharing client
 
 **Additional notes**  
-As mentioned above, the recorder will not work. You're still able to import/upload/share content, though.
+As mentioned above, the recorder and editor will not work. You're still able to import/upload/share content, though.
