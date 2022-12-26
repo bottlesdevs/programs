@@ -1,0 +1,18 @@
+Name: medal
+Description: Import, upload  share your gaming moments using Medal.tv.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- dotnet472
+
+Executable:
+  icon: medal.png
+  lnk: Medal.lnk
+  path: userdir/AppData/Local/Medal
+  arguments: []
+  
+Steps:
+- action: install_exe
+  file_name: MedalSetup.exe
+  url: https://storage.medal.tv/MedalSetup.exe
