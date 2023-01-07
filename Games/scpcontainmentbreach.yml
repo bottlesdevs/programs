@@ -1,0 +1,29 @@
+Name: scpcontainmentbreach
+Description: A free survival horror game based on the works of the SCP Foundation community. 
+Grade: Silver
+Arch: win64
+
+Dependencies:
+
+Parameters:
+  
+Executable:
+  name: SCP - Containment Breach
+  icon: SCPContainmentBreach.ico
+  file: SCP - Containment Breach.exe
+  path: Program Files/SCP Containment Breach/SCP - Containment Breach.exe
+  arguments: ""
+  
+Steps:
+- action: run_script
+  script: |
+    rm -rf drive_c/Program\ Files/SCP\ Containment\ Breach*
+    wget https://undertowgames.com/file/scp/SCP%20-%20Containment%20Breach%20v1.3.11.zip
+    unzip SCP\ -\ Containment\ Breach* -d drive_c/Program\ Files/SCP\ Containment\ Breach
+    rm SCP\ -\ Containment\ Breach*
+- action: update_config
+  path: drive_c/Program Files/SCP Containment Breach/options.ini
+  type: ini
+  upd_keys:
+    options:
+      play startup video: "false" # required to avoid crash due to missing gstreamer plugin

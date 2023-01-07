@@ -136,6 +136,14 @@ medal:
  Icon: medal.png
  Event: MedalSetup.exe
 
+scpcontainmentbreach:
+ Arch: win64
+ Name: SCP - Containment Breach
+ Description: A free survival horror game based on the works of the SCP Foundation community.
+ Grade: Silver
+ Category: Games
+ Icon: SCPContainmentBreach.ico
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
