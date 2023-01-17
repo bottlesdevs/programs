@@ -11,6 +11,7 @@ Dependencies:
 - d3dcompiler_43
 - d3dcompiler_47
 - vcredist2015
+- mono
 
 Parameters:
   dxvk: true
