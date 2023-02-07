@@ -16,6 +16,6 @@ Executable:
 Steps:
 - action: install_exe
   file_name: flstudio_win64_20.9.2.2963.exe
-  url: https://demodownload.image-line.com/flstudio/flstudio_win64_20.9.2.2963.exe
-  file_checksum: 52335aae9d46e5c3f3094fa709dd8188
+  url: https://demodownload.image-line.com/flstudio/flstudio_win64_21.0.2.3399.exe
+  file_checksum: 79ca2f7f18f431e6daf62c6b0948f3d45c89f90cacde8b9f9ca704ab5c93a6f1 # from fl studio website. idk which checksum bottles wants but this is SHA-256 
   arguments: ""
