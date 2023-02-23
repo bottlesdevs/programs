@@ -1,0 +1,18 @@
+Name: fridaserverx86
+Description: "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers - Windows x86 server"
+Grade: Platinum
+Arch: win32
+
+Executable:
+  name: Frida Server x86
+  icon: frida.png
+  path: Users/Public/Desktop/frida-server-x86.exe
+  file: frida-server-x86.exe
+  arguments: []
+
+Steps:
+- action: run_script
+  script: |
+    export FRIDA_URL=$(curl --silent "https://api.github.com/repos/frida/frida/releases/latest" | grep 'browser_download_url' | grep -o 'https://.*frida-server-.*-windows-x86.exe.xz')
+    wget "$FRIDA_URL" -O !bottle_drive/users/Public/Desktop/frida-server-x86.exe.xz
+    unxz !bottle_drive/users/Public/Desktop/frida-server-x86.exe.xz
