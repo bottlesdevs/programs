@@ -13,7 +13,7 @@ Additional n/a
 
 **Does it show graphical glitches?**  
 Grade: Gold  
-Additional notes: Lag on launch but works smoothly after login.
+Additional notes: Minor graphical issues, like the screen sometimes not updating until the mouse moves over an interactable element.
 
 **Does it require some tweaking in order to work properly? (Out of normal software configuration)**  
 Grade: Platinum  
@@ -24,11 +24,12 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Silver  
-Additional notes: GalaxyClientService.exe crashes often, bringing up an alert window and interrupting gameplay. The best way to go about it is to not dismiss the alert, just Alt+Tab back to the game, that way you won't get further interruptions from that alert.
+Grade: Gold  
+Additional notes: Some times installation of games fail. Retrying several times can often work around it.
+Cloud Sync of game saves fails often.
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Silver  
+Grade: Gold  
 Additional notes: n/a
 
 **Additional notes**  
