@@ -144,6 +144,22 @@ scpcontainmentbreach:
  Category: Games
  Icon: SCPContainmentBreach.ico
 
+fridaserverx86_64:
+ Arch: win64
+ Name: Frida Server x86_64
+ Description: Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers - Windows x64 server
+ Grade: Platinum
+ Category: Software
+ Icon: frida.png
+
+fridaserverx86:
+ Arch: win32
+ Name: Frida Server x86
+ Description: Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers - Windows x86 server
+ Grade: Platinum
+ Category: Software
+ Icon: frida.png
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
