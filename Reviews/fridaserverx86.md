@@ -1,5 +1,5 @@
-# Ableton Live
-Review for the Frida Server x86_64 installer.
+# Frida Server x86
+Review for the Frida Server x86 installer.
 
 Maintainers: @dzervas
 
