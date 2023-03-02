@@ -1,0 +1,19 @@
+Name: estlcam
+Description: "2D / 3D CAM"
+Grade: Platinum
+Arch: win64
+
+Executable:
+  name: Estlcam
+  icon: estlcam.png
+  path: Program Files (x86)\Estlcam11\Estlcam.exe
+  file: Estlcam.exe
+  arguments: []
+
+Steps:
+- action: install_exe
+  file_name: Estlcam_64_11244.exe
+  url: http://www.estlcam.de/downloads/Estlcam_64_11244.exe
+  rename: Estlcam11.exe
+  file_checksum: False
+  arguments: ""
