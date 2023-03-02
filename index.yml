@@ -160,6 +160,14 @@ fridaserverx86:
  Category: Software
  Icon: frida.png
 
+estlcam:
+ Arch: win64
+ Name: Estlcam
+ Description: 2D / 3D CAM
+ Grade: Platinum
+ Category: Software
+ Icon: estlcam.png
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
