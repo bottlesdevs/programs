@@ -3,6 +3,9 @@ Description: "2D / 3D CAM"
 Grade: Platinum
 Arch: win64
 
+Dependencies:
+- mono
+
 Executable:
   name: Estlcam
   icon: estlcam.png
