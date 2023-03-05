@@ -4,8 +4,9 @@ Grade: Bronze
 Arch: win64
 
 Dependencies:
-- allfonts
+- arial32
 - vcredist2019
+- mono
 
 Parameters:
   dxvk: true
@@ -22,6 +23,7 @@ Executable:
   
 Steps:
 - action: install_exe
-  file_name: RSI-Setup-1.5.5.exe
-  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.5.5.exe
-  file_checksum: 2ac76cd94eee754fdaa56f233d7bfcac
+  file_name: RSI-Setup-1.6.5.exe
+  arguments: /S
+  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.6.5.exe
+  file_checksum: acdc48032606bcf4e0913e15711b5fc2

@@ -32,4 +32,16 @@ Grade: Bronze
 Additional notes: n/a
 
 **Additional notes**  
-n/a
+SamPurple22@github
+
+After installing "RSI Installer", inside the prefix, the following folders need to be created manually, because the RSI Launcher fails to create them:
+"C:\Program Files\Roberts Space Industries\StarCitizen"
+"C:\Program Files\Roberts Space Industries\StarCitizen\LIVE"
+"C:\Program Files\Roberts Space Industries\StarCitizen\PTU"
+
+#inside /etc/hosts file, the following line needs to be added - WARNING - it will disable EAC for other games on the system, ex: The Division 2 via Ubisoft Connect.
+
+# /etc/hosts
+
+127.0.0.1 modules-cdn.eac-prod.on.epicgames.com #Star Citizen EAC workaround
+
