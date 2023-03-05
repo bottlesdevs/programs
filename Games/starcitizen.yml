@@ -27,3 +27,8 @@ Steps:
   arguments: /S
   url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.6.5.exe
   file_checksum: acdc48032606bcf4e0913e15711b5fc2
+- action: run_script
+  script: |
+    echo "Creating StarCitizen/LIVE,PTU folders in !bottle_drive"
+    mkdir -p !bottle_drive"/Program Files/Roberts Space Industries/StarCitizen/LIVE"
+    mkdir -p !bottle_drive"/Program Files/Roberts Space Industries/StarCitizen/PTU"
