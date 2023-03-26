@@ -1,0 +1,32 @@
+Name: mtgarena
+Description: 'The official Magic: The Gathering Arena launcher.'
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- arial32
+- d3dcompiler_47
+- dotnet48
+- msxml3
+- vcredist2019
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+
+Executable:
+  name: 'Magic: The Gathering Arena'
+  icon: mtgarena.png
+  file: MTGALauncher.exe
+  path: Program Files/Wizards of the Coast/MTGA/MTGALauncher/MTGALauncher.exe
+
+Steps:
+- action: install_msi
+  file_name: MTGAInstaller.exe
+  url: https://mtgarena.downloads.wizards.com/Live/Windows64/MTGAInstaller.exe
+  file_checksum: false
+  monitoring:
+    - MTGAInstaller.exe
+    - MTGALauncher.exe
+  arguments: /Q

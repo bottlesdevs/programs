@@ -168,6 +168,14 @@ estlcam:
  Category: Software
  Icon: estlcam.png
 
+mtgarena:
+ Arch: win64
+ Name: 'Magic: The Gathering Arena'
+ Description: 'The official Magic: The Gathering Arena launcher.'
+ Grade: Silver
+ Category: Games
+ Icon: mtgarena.png
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
