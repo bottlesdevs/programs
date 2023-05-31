@@ -19,6 +19,8 @@ Executable:
   file: FusionLauncher.exe
   path: Users/Public/Desktop/Autodesk Fusion 360.lnk
   arguments: WINEDLLOVERRIDES="dxgi,d3d11=n;d3d9=b;d3d10core=" %command%
+  environment:
+    FUSION_IDSDK: "false"
 
 Parameters:
   dxvk: true
