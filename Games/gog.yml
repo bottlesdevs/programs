@@ -4,7 +4,7 @@ Grade: Gold
 Arch: win64
 
 Dependencies:
-- vcredist2015
+- vcredist2019
 - allfonts
 
 Parameters:
