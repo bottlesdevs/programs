@@ -15,7 +15,7 @@ Executable:
 
 Steps:
 - action: install_exe
-  file_name: flstudio_win64_21.0.1.3348.exe
-  url: https://demodownload.image-line.com/flstudio/flstudio_win64_21.0.1.3348.exe
-  file_checksum: 7c757eb26b244a4a9265d7798c0d3b7e
+  file_name: flstudio_win64_21.0.3.3517.exe
+  url: https://demodownload.image-line.com/flstudio/flstudio_win64_21.0.3.3517.exe
+  file_checksum: 017018801046956f0ef758a897048140
   arguments: ""
