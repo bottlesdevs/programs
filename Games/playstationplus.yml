@@ -47,3 +47,15 @@ Steps:
   url: https://download-psplus.playstation.com/downloads/psplus/pc/latest
   file_checksum: False
   arguments: /noprereqs /exenoui /qn
+
+- action: set_register_key
+  key: HKEY_CURRENT_USER\\Software\\Sony Interactive Entertainment Inc.\\PlayStationPlus\\settings\\upscaler
+  value: on
+  data: true
+  type: REG_SZ
+
+- action: set_register_key
+  key: HKEY_CURRENT_USER\\Software\\Sony Interactive Entertainment Inc.\\PlayStationPlus\\settings\\render
+  value: angle
+  data: on
+  type: REG_SZ
