@@ -24,7 +24,7 @@ Steps:
   rename: vcredist2013_x64.exe
   file_checksum: 49b1164f8e95ec6409ea83cdb352d8da
   file_size: 7200744
-  arguments: /quiet /norestart
+  arguments: /noprereqs /exenoui /qn
 
 - action: override_dll
   dll: atl120
@@ -46,3 +46,4 @@ Steps:
   file_name: psplus.exe
   url: https://download-psplus.playstation.com/downloads/psplus/pc/latest
   file_checksum: False
+  arguments: 
