@@ -1,0 +1,48 @@
+Name: playstationplus
+Description: The PlayStation Plus client.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+
+Parameters:
+  dxvk: true
+  vkd3d: true
+  sync: fsync
+  renderer: vulkan
+
+Executable:
+  name: PlayStation Plus
+  icon: playstationplus.png
+  file: pspluslauncher.exe
+  path: "Program Files (x86)/PlayStationPlus/pspluslauncher.exe"
+  
+Steps:
+- action: install_exe
+  file_name: vcredist_x64.exe
+  url: https://download.visualstudio.microsoft.com/download/pr/10912041/cee5d6bca2ddbcd039da727bf4acb48a/vcredist_x64.exe
+  rename: vcredist2013_x64.exe
+  file_checksum: 49b1164f8e95ec6409ea83cdb352d8da
+  file_size: 7200744
+  arguments: /quiet /norestart
+
+- action: override_dll
+  dll: atl120
+  type: native,builtin
+
+- action: override_dll
+  dll: msvcp120
+  type: native,builtin
+
+- action: override_dll
+  dll: msvcr120
+  type: native,builtin
+  
+- action: override_dll
+  dll: vcomp120
+  type: native,builtin
+
+- action: install_exe
+  file_name: psplus.exe
+  url: https://download-psplus.playstation.com/downloads/psplus/pc/latest
+  file_checksum: False
