@@ -1,5 +1,5 @@
 Name: playstationplus
-Description: The PlayStation Plus client.
+Description: The official PlayStation Plus client. Disables hardware accelaration.
 Grade: Gold
 Arch: win64
 
@@ -8,7 +8,7 @@ Dependencies:
 Parameters:
   dxvk: true
   vkd3d: true
-  sync: fsync
+  sync: esync
   renderer: vulkan
 
 Executable:
@@ -18,44 +18,19 @@ Executable:
   path: "Program Files (x86)/PlayStationPlus/pspluslauncher.exe"
   
 Steps:
-- action: install_exe
-  file_name: vcredist_x64.exe
-  url: https://download.visualstudio.microsoft.com/download/pr/10912041/cee5d6bca2ddbcd039da727bf4acb48a/vcredist_x64.exe
-  rename: vcredist2013_x64.exe
-  file_checksum: 49b1164f8e95ec6409ea83cdb352d8da
-  file_size: 7200744
-  arguments: /quiet /norestart
+  - action: install_exe
+    file_name: psplus.exe
+    url: https://download-psplus.playstation.com/downloads/psplus/pc/latest
+    file_checksum: False
+    arguments: /noprereqs /exenoui /qn
 
-- action: override_dll
-  dll: atl120
-  type: native,builtin
-
-- action: override_dll
-  dll: msvcp120
-  type: native,builtin
-
-- action: override_dll
-  dll: msvcr120
-  type: native,builtin
-  
-- action: override_dll
-  dll: vcomp120
-  type: native,builtin
-
-- action: install_exe
-  file_name: psplus.exe
-  url: https://download-psplus.playstation.com/downloads/psplus/pc/latest
-  file_checksum: False
-  arguments: /noprereqs /exenoui /qn
-
-- action: set_register_key
-  key: HKEY_CURRENT_USER\\Software\\Sony Interactive Entertainment Inc.\\PlayStationPlus\\settings\\upscaler
-  value: on
-  data: true
-  type: REG_SZ
-
-- action: set_register_key
-  key: HKEY_CURRENT_USER\\Software\\Sony Interactive Entertainment Inc.\\PlayStationPlus\\settings\\render
-  value: angle
-  data: on
-  type: REG_SZ
+  - action: run_winecommand
+    commands:
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\upscaler" /v Adisable /d "false" -f
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\upscaler" /v Aenable /d "true" -f
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\upscaler" /v on /d "true" -f
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\render" /v angle /d "true" -f

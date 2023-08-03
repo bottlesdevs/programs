@@ -12,12 +12,11 @@ Dependencies:
 Parameters:
   dxvk: true
   vkd3d: true
-  sync: fsync
-  discrete_gpu: true
+  sync: esync
   renderer: vulkan
 
 Executable:
-  name: EA Client
+  name: EA App
   icon: eaclient.png
   file: EADesktop.exe
   path: "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe"
