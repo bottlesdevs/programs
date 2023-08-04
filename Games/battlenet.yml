@@ -25,8 +25,8 @@ Executable:
 Steps:
 - action: install_msi
   file_name: Battle.net-Setup-enUS.exe
-  url: http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.exe
-  file_checksum: e413dfc296c3701416e3fe5af45aedbf
+  url: https://www.battle.net/download/getInstallerForGame?os=win&version=LIVE&gameProgram=BATTLENET_APP
+  file_checksum: False
   monitoring:
     - Battle.net-Setup-enUS.exe
     - Battle.net-Setup.exe
