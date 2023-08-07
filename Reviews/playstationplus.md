@@ -1,11 +1,11 @@
-# EA Launcher
-Review for the origin installer.
+# PlayStation Plus
+Review for the PlayStation Plus installer.
 
-Maintainer: @mirkobrombin
+Maintainer: @domb84
 
 **Is the program properly opened?**  
-Grade: Bronze  
-Additional notes: For some users it works perfectly, others don't get to login (with the same conf). Although at the moment there are more positive reports than negatives, I rate this a Bronze experience.
+Grade: Silver  
+Additional notes: Seems to work perfectly within a desktop environment. When run on a Steam Deck the first time a game is launched a new session appears to open to a different game. Closing this window and starting again resumes normal operation.
 
 **Is it showing alerts or other warnings?**  
 Grade: Platinum  
@@ -28,8 +28,8 @@ Grade: Platinum
 Additional notes: n/a
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Bronze  
+Grade: Silver  
 Additional notes: n/a
 
 **Additional notes**  
-Need to be tested to more games but the experience is very smooth. Removed seemingly unnecessary dependencies. 
+Hardware acceleration does not work under Wine, but does not seem to affect performance. Added registry keys so that HW acceleration is disabled by default.
