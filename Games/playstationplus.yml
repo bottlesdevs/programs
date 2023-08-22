@@ -1,0 +1,36 @@
+Name: playstationplus
+Description: The official PlayStation Plus client. Disables hardware accelaration.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+
+Parameters:
+  dxvk: true
+  vkd3d: true
+  sync: esync
+  renderer: vulkan
+
+Executable:
+  name: PlayStation Plus
+  icon: playstationplus.png
+  file: pspluslauncher.exe
+  path: "Program Files (x86)/PlayStationPlus/pspluslauncher.exe"
+  
+Steps:
+  - action: install_exe
+    file_name: psplus.exe
+    url: https://download-psplus.playstation.com/downloads/psplus/pc/latest
+    file_checksum: False
+    arguments: /noprereqs /exenoui /qn
+
+  - action: run_winecommand
+    commands:
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\upscaler" /v Adisable /d "false" -f
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\upscaler" /v Aenable /d "true" -f
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\upscaler" /v on /d "true" -f
+      - command: reg
+        arguments: add "HKCU\Software\Sony Interactive Entertainment Inc.\PlayStationPlus\settings\render" /v angle /d "true" -f

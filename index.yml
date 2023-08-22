@@ -183,3 +183,11 @@ mtgarena:
 #  Grade: Platinum
 #  Category: Games
 #  Icon: rockstar.png
+
+playstationplus:
+ Arch: win64
+ Name: 'PlayStation Plus'
+ Description: 'The official PlayStation Plus client.'
+ Grade: Gold
+ Category: Games
+ Icon: playstationplus.png
