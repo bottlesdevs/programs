@@ -32,4 +32,4 @@ Grade: Bronze
 Additional notes: n/a
 
 **Additional notes**  
-Need to be tested to more games but the experience is very smooth. Removed seemingly unnecessary dependencies. 
+Need to be tested to more games but the experience is very smooth.
