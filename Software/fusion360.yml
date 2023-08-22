@@ -4,21 +4,14 @@ Grade: Bronze
 Arch: win64
 
 Dependencies:
-- allfonts
-- atmlib
-- gdiplus
-- dotnet452
-- msxml4
-- msxml6
-- vcredist2019
-- winhttp
+- arial32
 
 Executable:
   name: Autodesk Fusion 360
   icon: fusion360.png
   file: FusionLauncher.exe
   path: Users/Public/Desktop/Autodesk Fusion 360.lnk
-  arguments: WINEDLLOVERRIDES="dxgi,d3d11=n;d3d9=b;d3d10core=" %command%
+  arguments: FUSION_IDSDK="false" WINEDLLOVERRIDES="api-ms-win-crt-private-l1-1-0,api-ms-win-crt-conio-l1-1-0,api-ms-win-crt-convert-l1-1-0,api-ms-win-crt-environment-l1-1-0,api-ms-win-crt-filesystem-l1-1-0,api-ms-win-crt-heap-l1-1-0,api-ms-win-crt-locale-l1-1-0,api-ms-win-crt-math-l1-1-0,api-ms-win-crt-multibyte-l1-1-0,api-ms-win-crt-process-l1-1-0,api-ms-win-crt-runtime-l1-1-0,api-ms-win-crt-stdio-l1-1-0,api-ms-win-crt-string-l1-1-0,api-ms-win-crt-utility-l1-1-0,api-ms-win-crt-time-l1-1-0,atl140,concrt140,msvcp140,msvcp140_1,msvcp140_atomic_wait,ucrtbase,vcomp140,vccorlib140,vcruntime140,vcruntime140_1=n,b;adpclientservice.exe=" %command%
 
 Parameters:
   dxvk: true
@@ -26,12 +19,6 @@ Parameters:
   sync: esync
 
 Steps:
-# Workaround for current installer to function properly
-- action: run_script
-  script: |
-    cd !bottle_drive/windows/system32/
-    cp icinfo.exe ie4uinit.exe
-
 - action: install_exe
   file_name: Fusion 360 Admin Install.exe
   url: https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Admin%20Install.exe
