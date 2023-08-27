@@ -1,23 +1,22 @@
 Name: eaclient
-Description: The official EA launcher (beta).
+Description: The official EA App.
 Grade: Bronze
 Arch: win64
 
 Dependencies:
 - mono
 - gecko
-- d3dx9
 - allfonts
-- d3dcompiler_43
-- d3dcompiler_47
+- vcredist2010
 
 Parameters:
   dxvk: true
-  sync: fsync
-  discrete_gpu: true
-  
+  vkd3d: true
+  sync: esync
+  renderer: vulkan
+
 Executable:
-  name: EA Client
+  name: EA App
   icon: eaclient.png
   file: EADesktop.exe
   path: "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe"
