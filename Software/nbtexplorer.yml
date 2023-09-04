@@ -1,0 +1,24 @@
+Name: nbtexplorer
+Description: A graphical NBT editor for all Minecraft NBT data sources.
+Grade: Platinum
+Arch: win64
+
+Dependencies:
+- allfonts
+- mono
+
+Executable:
+  name: NBTExplorer
+  icon: Program Files (x86)/NBTExplorer/NBTExplorer.exe
+  file: NBTExplorer.exe
+  path: Program Files (x86)/NBTExplorer/NBTExplorer.exe
+
+Steps:
+- action: install_msi
+  file_name: NBTExplorer-2.8.0.msi
+  url: https://github.com/jaquadro/NBTExplorer/releases/download/v2.8.0-win/NBTExplorer-2.8.0.msi
+  file_checksum: EDE41E6FC72F51133A35C2E863E7EAE8
+
+Checks:
+  files:
+    - Program Files (x86)/NBTExplorer/NBTExplorer.exe

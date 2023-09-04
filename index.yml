@@ -191,3 +191,11 @@ playstationplus:
  Grade: Gold
  Category: Games
  Icon: playstationplus.png
+
+nbtexplorer:
+ Arch: win64
+ Name: NBTExplorer
+ Description: A graphical NBT editor for all Minecraft NBT data sources.
+ Grade: Platinum
+ Category: Software
+ Event: NBTExplorer-*.msi
