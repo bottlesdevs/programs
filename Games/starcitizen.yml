@@ -4,7 +4,8 @@ Grade: Bronze
 Arch: win64
 
 Dependencies:
-- allfonts
+- dotnet452
+- arial32
 - vcredist2019
 
 Parameters:
@@ -21,7 +22,25 @@ Executable:
   ## DLL Override work too
   
 Steps:
+- action: update_config
+  path: "!bottle_path/bottle.yml"
+  type: yaml
+  upd_keys:
+    Environment_Variables:
+      SteamGameId: "starcitizen"
+      DXVK_HUD: 0
+      __GL_SHADER_DISK_CACHE: 1
+      __GL_SHADER_DISK_CACHE_SIZE: 1073741824
+      __GL_THREADED_OPTIMIZATIONS: 1
+    DLL_Overrides:
+      libglesv2: b
+      nvapi,nvapi64: d
+      powershell.exe: d
+- action: run_script
+  script: |
+    cd !bottle_drive
+    mkdir -p Program\ Files/Roberts\ Space\ Industries/StarCitizen/{LIVE,PTU,EPTU}
 - action: install_exe
-  file_name: RSI-Setup-1.5.5.exe
-  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.5.5.exe
-  file_checksum: 2ac76cd94eee754fdaa56f233d7bfcac
+  file_name: RSI-Setup-1.6.9.exe
+  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.6.9.exe
+  file_checksum: f5fda87b2a0051499d329df189da1c78
