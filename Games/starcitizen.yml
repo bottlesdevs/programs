@@ -33,9 +33,9 @@ Steps:
       __GL_SHADER_DISK_CACHE_SIZE: 1073741824
       __GL_THREADED_OPTIMIZATIONS: 1
     DLL_Overrides:
-      libglesv2: b
-      nvapi,nvapi64: d
-      powershell.exe: d
+      libglesv2: builtin
+      nvapi,nvapi64: disabled
+      powershell.exe: disabled
 - action: run_script
   script: |
     cd !bottle_drive
