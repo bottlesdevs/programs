@@ -23,5 +23,5 @@ Executable:
 Steps:
 - action: install_exe
   file_name: enlisted_launcher_1.0.3.100.exe
-  url: https://aws-yup-distr-03.gaijinent.com/enlisted_launcher_1.0.3.100.exe
+  url: https://aws-yup-distr-04.gaijinent.com/enlisted_launcher_1.0.3.116.exe?distr=re2wv7x5r
   file_checksum: fe7f4da30d58a9ac82666662e01b6bf0
