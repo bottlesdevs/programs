@@ -191,3 +191,10 @@ playstationplus:
  Grade: Gold
  Category: Games
  Icon: playstationplus.png
+
+qobuz:
+ Arch: win64
+ Name: 'Qobuz'
+ Description: 'Qobuz is a French digital music store and streaming service'
+ Grade: Gold
+ Category: Software

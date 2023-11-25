@@ -1,0 +1,26 @@
+Name: qobuz
+Description: "Qobuz is a French digital music store and streaming service"
+Grade: Platinum
+Arch: win64
+
+Dependencies:
+- dotnet452
+- tahoma32
+
+Executable:
+  name: Qobuz
+  icon: qobuz.png
+  path: Users/Public/qobuz/lib/net45/Qobuz.exe
+  file: Qobuz.exe
+  arguments: ""
+
+Steps:
+- action: run_script
+  script: |
+    export QOBUZ_URL=https://desktop.qobuz.com/releases/win32/x64/windows7_8_10/7.1.3-b010/Qobuz_Installer.exe
+    export WORK_DIR=!bottle_drive/users/Public/qobuz
+    mkdir -p "$WORK_DIR"
+    wget "$QOBUZ_URL" -O "$WORK_DIR/qobuz_installer.exe"
+    cd "$WORK_DIR"
+    unzip "$WORK_DIR/qobuz_installer.exe"
+    unzip ./*.nupkg
