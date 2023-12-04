@@ -20,7 +20,7 @@ Executable:
   icon: battlenet.png
   file: Battle.net.exe
   path: Program Files (x86)/Battle.net/Battle.net.exe
-  arguments: WINEDLLOVERRIDES="locationapi=d" %command%
+  arguments: WINEDLLOVERRIDES="locationapi=d" WINE_SIMULATE_WRITECOPY=1 %command%
   
 Steps:
 - action: install_msi
