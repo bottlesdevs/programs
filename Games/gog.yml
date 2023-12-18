@@ -22,7 +22,7 @@ Executable:
   
 Steps:
 - action: install_exe
-  file_name: setup_galaxy_2.0.68.112.exe
-  url: https://content-system.gog.com/open_link/download?path=/open/galaxy/client/2.0.68.112/setup_galaxy_2.0.68.112.exe
-  file_checksum: 5859655b88491a4e0cf67b40d6387b00
+  file_name: setup_galaxy_2.0.73.27.exe
+  url: https://content-system.gog.com/open_link/download?path=/open/galaxy/client/2.0.73.27/setup_galaxy_2.0.73.27.exe
+  file_checksum: 1d6d6b76a8ed0d41a06771097a862e42
   arguments: /s

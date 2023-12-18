@@ -10,12 +10,12 @@ Executable:
   name: FL Studio
   icon: flstudio.png
   file: FL64.exe
-  path: Program Files/Image-Line/FL Studio 20/FL64.exe
+  path: Program Files/Image-Line/FL Studio 21/FL64.exe
   arguments: ""
 
 Steps:
 - action: install_exe
-  file_name: flstudio_win64_21.0.3.3517.exe
-  url: https://demodownload.image-line.com/flstudio/flstudio_win64_21.0.3.3517.exe
-  file_checksum: 017018801046956f0ef758a897048140
+  file_name: flstudio_win64_21.1.1.3750.exe
+  url: https://demodownload.image-line.com/flstudio/flstudio_win64_21.1.1.3750.exe
+  file_checksum: 30e6727eaec87bd7276f2b7e1180e531
   arguments: ""
