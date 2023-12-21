@@ -1,0 +1,21 @@
+Name: MEGAsync
+Description: MEGAsync client for mega.nz.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+
+Executable:
+  name: MEGAsync
+  icon: mega.png
+  file: MEGAsync.exe
+  path: userdir/AppData/Local/MEGAsync/MEGAsync.exe
+  arguments: ""
+
+Steps:
+- action: install_exe
+  file_name: MEGAsyncSetup64.exe
+  url: https://mega.nz/MEGAsyncSetup64.exe
+  rename: MEGAsyncSetup64.exe
+  file_checksum: False 
+  arguments: "/S"

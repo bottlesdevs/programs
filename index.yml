@@ -199,3 +199,11 @@ qobuz:
  Grade: Gold
  Category: Software
  Icon: qobuz.png
+
+mega:
+  Arch: win64
+  Name: 'MEGAsync'
+  Description: 'MEGAsync client for mega.nz'
+  Grade: Silver
+  Category: Software
+  Icon: mega.png
