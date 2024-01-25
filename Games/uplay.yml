@@ -8,7 +8,6 @@ Dependencies:
 - riched20
 - allfonts
 - d3dcompiler_43
-- faudio
 - vcredist2015
 
 Parameters:

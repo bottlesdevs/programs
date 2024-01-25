@@ -6,7 +6,6 @@ Arch: win64
 Dependencies:
 - dotnet48
 - gdiplus
-- faudio
 - allfonts
 - cjkfonts
 
