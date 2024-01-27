@@ -30,6 +30,7 @@ Steps:
   monitoring:
     - Battle.net-Setup-enUS.exe
     - Battle.net-Setup.exe
+  arguments: --lang=enUS --installpath="C:\Program Files (x86)\Battle.net"
   
 - action: update_config
   path: userdir/Documents/Overwatch/Settings/Settings_v0.ini
