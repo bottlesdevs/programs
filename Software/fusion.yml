@@ -5,6 +5,7 @@ Arch: win64
 
 Dependencies:
 - arial32
+- webview2
 
 Executable:
   name: Autodesk Fusion
@@ -19,13 +20,6 @@ Parameters:
   sync: esync
 
 Steps:
-- action: install_exe
-  file_name: MicrosoftEdgeWebView2RuntimeInstallerX64.exe
-  url: https://github.com/aedancullen/webview2-evergreen-standalone-installer-archive/releases/download/109.0.1518.78/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
-  rename: MicrosoftEdgeWebView2RuntimeInstallerX64.exe
-  file_checksum: 10de434605516b8ea70f49757ccc2ff8
-  file_size: 145772880
-  arguments: /silent
 - action: install_exe
   file_name: Fusion Admin Install.exe
   url: https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe
