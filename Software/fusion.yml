@@ -1,0 +1,29 @@
+Name: fusion
+Description: "Fusion is a cloud-based 3D CAD, CAM and CAE design tool from Autodesk. It is available on a number of platforms including Windows, Mac and In-Browser."
+Grade: Bronze
+Arch: win64
+
+Dependencies:
+- arial32
+- webview2
+
+Executable:
+  name: Autodesk Fusion
+  icon: fusion.png
+  file: FusionLauncher.exe
+  path: Users/Public/Desktop/Autodesk Fusion.lnk
+  arguments: WINEDEBUG=-all WINEDLLOVERRIDES="api-ms-win-crt-private-l1-1-0,api-ms-win-crt-conio-l1-1-0,api-ms-win-crt-convert-l1-1-0,api-ms-win-crt-environment-l1-1-0,api-ms-win-crt-filesystem-l1-1-0,api-ms-win-crt-heap-l1-1-0,api-ms-win-crt-locale-l1-1-0,api-ms-win-crt-math-l1-1-0,api-ms-win-crt-multibyte-l1-1-0,api-ms-win-crt-process-l1-1-0,api-ms-win-crt-runtime-l1-1-0,api-ms-win-crt-stdio-l1-1-0,api-ms-win-crt-string-l1-1-0,api-ms-win-crt-utility-l1-1-0,api-ms-win-crt-time-l1-1-0,atl140,concrt140,msvcp140,msvcp140_1,msvcp140_atomic_wait,ucrtbase,vcomp140,vccorlib140,vcruntime140,vcruntime140_1=n,b;adpclientservice.exe=" %command%
+
+Parameters:
+  dxvk: true
+  discrete_gpu: true
+  sync: esync
+
+Steps:
+- action: install_exe
+  file_name: Fusion Admin Install.exe
+  url: https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Admin%20Install.exe
+  rename: FusionInstaller.exe
+  file_checksum: False
+  arguments: -p deploy -g -f log.txt --quiet
+  
