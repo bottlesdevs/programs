@@ -11,7 +11,7 @@ Dependencies:
 - gdiplus
 - msxml4
 - msxml6
-- vcrun2017
+- vcrun2019
 - webview2
 - winhttp
 
