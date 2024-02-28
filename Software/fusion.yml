@@ -5,7 +5,15 @@ Arch: win64
 
 Dependencies:
 - arial32
+- atmlib
+- cjkfonts
+- dotnet452
+- gdiplus
+- msxml4
+- msxml6
+- vcrun2017
 - webview2
+- winhttp
 
 Executable:
   name: Autodesk Fusion
