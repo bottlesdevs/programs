@@ -32,6 +32,7 @@ Steps:
       __GL_SHADER_DISK_CACHE: 1
       __GL_SHADER_DISK_CACHE_SIZE: 1073741824
       __GL_THREADED_OPTIMIZATIONS: 1
+      EOS_USE_ANTICHEATCLIENTNULL: 1
     DLL_Overrides:
       libglesv2: builtin
       nvapi,nvapi64: disabled
@@ -39,8 +40,8 @@ Steps:
 - action: run_script
   script: |
     cd !bottle_drive
-    mkdir -p Program\ Files/Roberts\ Space\ Industries/StarCitizen/{LIVE,PTU,EPTU}
+    mkdir -p Program\ Files/Roberts\ Space\ Industries/StarCitizen/{LIVE,PTU,EPTU,TECH-PREVIEW}
 - action: install_exe
-  file_name: RSI-Setup-1.6.9.exe
-  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.6.9.exe
-  file_checksum: f5fda87b2a0051499d329df189da1c78
+  file_name: RSI-Setup-1.6.10.exe
+  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.6.10.exe
+  file_checksum: 30d67a906e502e3038bd7ae4b8bd4851
