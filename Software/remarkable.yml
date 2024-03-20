@@ -1,0 +1,21 @@
+Name: remarkable
+Description: Desktop app for the reMarkable tablet.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+- d3dcompiler_43
+
+Parameters: {}
+
+Executable:
+  name: reMarkable
+  icon: remarkable.ico
+  file: reMarkable.exe
+  path: Program Files (x86)/reMarkable/reMarkable.exe
+
+Steps:
+- action: install_exe
+  file_name: reMarkable-2.15.0.643-win32.exe
+  url: https://downloads.remarkable.com/desktop/production/win/reMarkable-2.15.0.643-win32.exe
+  file_checksum: 45df08e5c17b39c25a8968bf35a35441

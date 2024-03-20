@@ -176,6 +176,14 @@ mtgarena:
  Category: Games
  Icon: mtgarena.png
 
+remarkable:
+ Arch: win64
+ Name: reMarkable
+ Description: Desktop app for the reMarkable tablet.
+ Grade: Gold
+ Category: Software
+ Icon: remarkable.ico
+
 #rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
