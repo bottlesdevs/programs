@@ -8,7 +8,7 @@ Grade: Gold
 Additional notes: Eventually freeze on start for 2s. (This is typical behavior for FL. Same issue is present in the versions 11, 12, and 21.)
 
 **Is it showing alerts or other warnings?**  
-Grade: Gold
+Grade: Platinum
 Additional notes: n/a
 
 **Does it show graphical glitches?**  
@@ -21,7 +21,7 @@ Additional notes: Out of the box, no additional tweaking is required. However, s
 
 **Did it crash during tests execution?**  
 Grade: Platinum  
-Additional notes: So far crashes encountered during testing.
+Additional notes: So far no crashes encountered during testing.
 
 **Is it usable?**  
 Grade: Platinum  
