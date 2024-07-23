@@ -5,6 +5,7 @@ Arch: win64
 
 Dependencies:
 - allfonts
+- webview2
 
 Executable:
   name: FL Studio
