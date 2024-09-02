@@ -176,13 +176,22 @@ mtgarena:
  Category: Games
  Icon: mtgarena.png
 
-#rockstar:
+# rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
 #  Description: The official Rockstar launcher.
 #  Grade: Platinum
 #  Category: Games
 #  Icon: rockstar.png
+
+zenlesszonezero:
+  Arch: win64
+  Name: Zenless Zone Zero
+  Description: Installs HoYoPlay to install Zenless Zone Zero.
+  Grade: Gold
+  Category: Games
+  Icon: hoyoplay.png
+  Event: ZenlessZoneZero_install_ua_eed445983477.exe
 
 playstationplus:
  Arch: win64
