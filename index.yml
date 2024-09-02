@@ -184,14 +184,14 @@ mtgarena:
 #  Category: Games
 #  Icon: rockstar.png
 
-zenlesszonezero:
+hoyoplay:
   Arch: win64
-  Name: Zenless Zone Zero
-  Description: Installs HoYoPlay to install Zenless Zone Zero.
+  Name: HoYoPlay Launcher
+  Description: HoYoverse's One-Stop Game Platform
   Grade: Gold
   Category: Games
   Icon: hoyoplay.png
-  Event: ZenlessZoneZero_install_ua_eed445983477.exe
+  Event: HoYoPlay_install_ua_d2f9406575b2.exe
 
 playstationplus:
  Arch: win64
