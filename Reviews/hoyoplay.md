@@ -1,5 +1,5 @@
-# Zenless Zone Zero
-Review for the Zenless Zone Zero installer.
+# HoYoPlay
+Review for the HoYoPlay installer.
 
 Maintainer: @kotonbads
 
