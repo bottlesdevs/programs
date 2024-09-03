@@ -1,0 +1,36 @@
+Name: hoyoplay
+Description: HoYoPlay Launcher
+Grade: Gold
+Arch: win64
+
+# default from gaming bottle
+Dependencies: 
+- mono
+- gecko
+- vcredist2022
+- arial32
+- times32
+- courie32
+- msls31
+- d3dcompiler_43
+- d3dcompiler_47
+- d3dx9
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+
+Executable:
+  name: HoYoPlay Launcher
+  icon: hoyoplay.png
+  file: launcher.exe
+  path: Program Files/HoYoPlay/launcher.exe
+
+
+Steps:
+- action: install_exe
+  file_name: HoYoPlay_install_ua_d2f9406575b2.exe
+  url: https://download-porter.hoyoverse.com/download-porter/2024/08/26/VYTpXlbWo8_1.1.4.133_1_0_hyp_hoyoverse_prod_202408152031_ulMVEyOh%20%281%29.exe?trace_key=HoYoPlay_install_ua_d2f9406575b2
+  file_checksum: 4c85ad9fe691a1b6588d0e5964b36560
+  

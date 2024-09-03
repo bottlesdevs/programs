@@ -176,13 +176,22 @@ mtgarena:
  Category: Games
  Icon: mtgarena.png
 
-#rockstar:
+# rockstar:
 #  Arch: win64
 #  Name: Rockstar Launcher
 #  Description: The official Rockstar launcher.
 #  Grade: Platinum
 #  Category: Games
 #  Icon: rockstar.png
+
+hoyoplay:
+  Arch: win64
+  Name: HoYoPlay Launcher
+  Description: HoYoverse's One-Stop Game Platform
+  Grade: Gold
+  Category: Games
+  Icon: hoyoplay.png
+  Event: HoYoPlay_install_ua_d2f9406575b2.exe
 
 playstationplus:
  Arch: win64
