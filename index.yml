@@ -78,7 +78,7 @@ starcitizen:
   Arch: win64
   Name: Star Citizen
   Description: The official Star Citizen launcher.
-  Grade: Bronze
+  Grade: Platinum
   Category: Games
   Icon: starcitizen.png
   Event: RSI-Setup-*.exe

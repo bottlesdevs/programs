@@ -24,11 +24,11 @@ Grade: Platinum
 Additional notes: n/a
 
 **Is it usable?**  
-Grade: Bronze  
-Additional notes: EAC not working for the [moment](https://robertsspaceindustries.com/spectrum/community/SC/forum/190048/thread/star-citizen-alpha-3-15-1e-ptu-7876811-patch-notes) | [WorkAround](https://github.com/starcitizen-lug/lugWarning) (Warning a ban can be issued)
+Grade: Platinum  
+Additional notes: A workaround for the previous EAC issues is applied. [See here for more details](https://github.com/starcitizen-lug/knowledge-base/wiki/Tips-and-Tricks#automatic-configuration)
 
 **Final grade? (the lower evaluation from previous questions)**  
-Grade: Bronze  
+Grade: Platinum  
 Additional notes: n/a
 
 **Additional notes**  
