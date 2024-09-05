@@ -4,9 +4,7 @@ Grade: Bronze
 Arch: win64
 
 Dependencies:
-- dotnet452
-- arial32
-- vcredist2019
+- powershell
 
 Parameters:
   dxvk: true
@@ -18,8 +16,6 @@ Executable:
   icon: starcitizen.png
   file: RSI Launcher.exe
   path: Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe
-  arguments: WINEDLLOVERRIDES=libglesv2=builtin %command%
-  ## DLL Override work too
   
 Steps:
 - action: update_config
@@ -27,21 +23,17 @@ Steps:
   type: yaml
   upd_keys:
     Environment_Variables:
-      SteamGameId: "starcitizen"
+      GAMEID: "umu-starcitizen"
+      STORE: "none"
       DXVK_HUD: 0
       __GL_SHADER_DISK_CACHE: 1
       __GL_SHADER_DISK_CACHE_SIZE: 1073741824
       __GL_THREADED_OPTIMIZATIONS: 1
       EOS_USE_ANTICHEATCLIENTNULL: 1
-    DLL_Overrides:
-      libglesv2: builtin
-      nvapi,nvapi64: disabled
-      powershell.exe: disabled
-- action: run_script
-  script: |
-    cd !bottle_drive
-    mkdir -p Program\ Files/Roberts\ Space\ Industries/StarCitizen/{LIVE,PTU,EPTU,TECH-PREVIEW}
+      radv_zero_vram: "true"
+      WINE_HIDE_NVIDIA_GPU: 1
 - action: install_exe
-  file_name: RSI-Setup-1.6.10.exe
-  url: https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.6.10.exe
-  file_checksum: 30d67a906e502e3038bd7ae4b8bd4851
+  file_name: RSI Launcher-Setup-2.0.3.exe
+  url: https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.0.3.exe
+  file_checksum: 8c17638348ded727ae1595cccf112dc5
+  arguments: /S
