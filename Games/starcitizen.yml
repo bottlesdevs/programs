@@ -4,6 +4,7 @@ Grade: Platinum
 Arch: win64
 
 Dependencies:
+- allfonts
 - powershell
 
 Parameters:
