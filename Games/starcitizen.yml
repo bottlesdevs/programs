@@ -27,6 +27,10 @@ Executable:
     %command%
 
 Steps:
+  - action: set_windows
+    # Bump this if the system requirements change
+    # https://support.robertsspaceindustries.com/hc/en-us/articles/360042417374-Star-Citizen-Minimum-System-Requirements
+    version: win10
   - action: install_exe
     file_name: RSI Launcher-Setup-2.0.3.exe
     url: https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.0.3.exe
