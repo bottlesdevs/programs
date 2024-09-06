@@ -4,7 +4,8 @@ Grade: Platinum
 Arch: win64
 
 Dependencies:
-  - allfonts
+  - arial32
+  - tahoma32
   - powershell
 
 Parameters:
