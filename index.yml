@@ -81,7 +81,7 @@ starcitizen:
   Grade: Platinum
   Category: Games
   Icon: starcitizen.png
-  Event: RSI-Setup-*.exe
+  Event: RSI Launcher-Setup-*.exe
 
 enlisted:
   Arch: win64
