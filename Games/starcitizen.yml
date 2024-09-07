@@ -25,6 +25,7 @@ Executable:
     EOS_USE_ANTICHEATCLIENTNULL=1
     radv_zero_vram="true"
     WINE_HIDE_NVIDIA_GPU=1
+    WINEDLLOVERRIDES="libglesv2=builtin"
     %command%
 
 Steps:
