@@ -6,6 +6,7 @@ Arch: win64
 Dependencies:
   - arial32
   - tahoma32
+  - mono
   - powershell
 
 Parameters:
