@@ -9,6 +9,7 @@ Dependencies:
 - arial32
 - arialb32
 - vcredist2019
+- webview2
 
 Parameters:
   dxvk: true
