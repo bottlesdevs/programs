@@ -1,0 +1,24 @@
+Name: eveonline
+Description: The official Eve Online launcher.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+  - dotnet48
+  - vcredist2022
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  
+Executable:
+  name: Eve Online
+  icon: eveonline.png
+  file: eve-online.exe
+  path: users/user1/AppData/Local/eve-online/eve-online.exe
+
+Steps:
+- action: install_exe
+  file_name: eve-online-latest+Setup.exe
+  url: https://launcher.ccpgames.com/eve-online/release/win32/x64/eve-online-latest+Setup.exe
+  
