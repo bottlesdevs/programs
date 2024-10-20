@@ -216,3 +216,11 @@ mega:
   Grade: Silver
   Category: Software
   Icon: mega.png
+
+eveonline:
+  Arch: win64
+  Name: 'EVE Online'
+  Description: 'The official EVE Online Launcher.'
+  Grade: Gold
+  Category: Games
+  Icon: eveonline.png
