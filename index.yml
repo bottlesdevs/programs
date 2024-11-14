@@ -168,6 +168,14 @@ estlcam:
  Category: Software
  Icon: estlcam.png
 
+twentesim4c:
+ Arch: win64
+ Name: '20-sim 4C'
+ Description: 'Code generation, deployment and measurements for 20-sim. Prerequisite: 20-sim installed in the same bottle.'
+ Grade: Bronze
+ Category: Software
+ Icon: 20sim4C.png
+
 mtgarena:
  Arch: win64
  Name: 'Magic: The Gathering Arena'
