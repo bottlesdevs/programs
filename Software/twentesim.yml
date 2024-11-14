@@ -1,0 +1,22 @@
+Name: twentesim
+Description: 'Modeling and simulation software'
+Grade: Bronze
+Arch: win64
+
+Dependencies:
+- msxml6
+- gdiplus
+
+Executable:
+  name: '20-sim'
+  icon: 20sim.png
+  path: Program Files (x86)/20-sim 5.1/bin/20sim.exe
+  file: 20sim.exe
+  arguments: []
+
+Steps:
+- action: install_exe
+  file_name: 20sim.exe
+  url: https://www.20sim.com/downloads/files/20sim.exe
+  file_checksum: False
+  arguments: []
