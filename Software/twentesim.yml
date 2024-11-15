@@ -4,6 +4,8 @@ Grade: Bronze
 Arch: win64
 
 Dependencies:
+- courie32
+- arial32
 - msxml6
 - gdiplus
 
