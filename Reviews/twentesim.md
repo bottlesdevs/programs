@@ -1,7 +1,7 @@
 # 20-sim
 Review for the 20-sim 5.1 installer.
 
-Maintainers: @katepavlu
+Maintainers: @katepavlu, @20-sim, @margro
 
 **Is the program properly opened?**
 Grade: Platinum
