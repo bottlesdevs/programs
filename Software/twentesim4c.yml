@@ -1,9 +1,11 @@
 Name: twentesim4c
 Description: 'Code generation, deployment and measurements for 20-sim. Prerequisite: 20-sim installed in the same bottle.'
-Grade: Bronze
+Grade: Gold
 Arch: win64
 
 Dependencies:
+- arial32
+- courie32
 - msxml4
 
 Executable:

@@ -172,7 +172,7 @@ twentesim4c:
  Arch: win64
  Name: '20-sim 4C'
  Description: 'Code generation, deployment and measurements for 20-sim. Prerequisite: 20-sim installed in the same bottle.'
- Grade: Bronze
+ Grade: Gold
  Category: Software
  Icon: 20sim4C.png
 
