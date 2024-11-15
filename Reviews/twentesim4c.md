@@ -1,7 +1,7 @@
 # 20-sim 4C
 Review for the 20-sim 4C installer.
 
-Maintainers: @katepavlu
+Maintainers: @katepavlu, @20-sim, @margro
 
 **Is the program properly opened?**
 Grade: Platinum
