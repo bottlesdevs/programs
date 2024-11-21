@@ -20,12 +20,12 @@ Grade: Platinum
 Additional notes: n/a
 
 **Did it crash during tests execution?**
-Grade: Platinum
-Additional notes: n/a
+Grade: Gold
+Additional notes: The program occasionally crashes or freezes, tho it also does that on Windows.
 
 **Is it usable?**
-Grade: Platinum
-Additional notes: yes
+Grade: Gold
+Additional notes: The program does work for the intended purpose - code generation, uploading, taking meassurements.
 
 **Final grade? (the lower evaluation from previous questions)**
 Grade: Gold
