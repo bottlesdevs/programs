@@ -31,7 +31,7 @@ Executable:
 
 Steps:
 - action: install_exe
-  file_name: HoYoPlay_install_ua_f80a2dbab859.exe
-  url: https://download-porter.hoyoverse.com/download-porter/2024/10/16/VYTpXlbWo8_1.2.2.159_1_0_hyp_hoyoverse_prod_202410101639_pXThMoIQ.exe?trace_key=HoYoPlay_install_ua_f80a2dbab859
-  file_checksum: 6cb863ede7c6ad8e4427ba5187e0a20b
+  file_name: HoYoPlay_install_ua_ddcd18731175.exe
+  url: https://download-porter.hoyoverse.com/download-porter/2024/11/29/VYTpXlbWo8_1.3.3.182_1_0_hyp_hoyoverse_prod_202411221126_LdrRMaNn.exe?trace_key=HoYoPlay_install_ua_ddcd18731175
+  file_checksum: 7109c71e22efba27b136af7ae87d522a
   
