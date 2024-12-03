@@ -232,3 +232,12 @@ eveonline:
   Grade: Gold
   Category: Games
   Icon: eveonline.png
+
+guildwars2:
+  Arch: win64
+  Name: 'Guild Wars 2'
+  Description: 'The official Guild Wars 2 launcher.'
+  Grade: Platinum
+  Category: Games
+  Icon: guildwars2.png
+  Event: Gw2Setup-64.exe
