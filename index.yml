@@ -167,6 +167,14 @@ estlcam:
  Grade: Platinum
  Category: Software
  Icon: estlcam.png
+ 
+twentesim:
+ Arch: win64
+ Name: '20-sim'
+ Description: Modeling and simulation software
+ Grade: Bronze
+ Category: Software
+ Icon: 20sim.png
 
 mtgarena:
  Arch: win64
