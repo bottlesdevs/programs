@@ -1,0 +1,38 @@
+Name: KakaoTalk
+Description: The official KakaoTalk desktop client.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- cjkfonts
+- mono
+
+Parameters:
+  discrete_gpu: true
+  
+Executable:
+  name: KakaoTalk
+  icon: kakaotalk.png
+  file: KakaoTalk.exe
+  path: Program Files (x86)/Kakao/KakaoTalk.exe
+  
+Steps:
+- action: install_exe
+  file_name: KakaoTalk_Setup.exe
+  url: https://app-pc.kakaocdn.net/talk/win32/KakaoTalk_Setup.exe
+  file_checksum: False
+  monitoring:
+    - KakaoTalk_Setup.exe
+  
+- action: set_windows
+    # Bump this if the system requirements change
+    # KakaoTalk offers multiple versions, including a version of the installer for outdated versions of Windows.
+    version: win10
+
+- action: update_config
+  path: userdir/AppData/Local/Kakao/KakaoTalk/prefs.ini
+  type: ini
+  # The font here is captured from user-installed fonts. A future change might be to download a compatible CJK font and install it.
+  upd_keys: 
+    KAKAO_TALK:
+      CustomFontFaceName: "Source Han Sans"
