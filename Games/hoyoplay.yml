@@ -15,6 +15,7 @@ Dependencies:
 - d3dcompiler_43
 - d3dcompiler_47
 - d3dx9
+- webview2
 
 Parameters:
   dxvk: true
