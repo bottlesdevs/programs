@@ -167,6 +167,14 @@ estlcam:
  Grade: Platinum
  Category: Software
  Icon: estlcam.png
+ 
+twentesim:
+ Arch: win64
+ Name: '20-sim'
+ Description: Modeling and simulation software
+ Grade: Bronze
+ Category: Software
+ Icon: 20sim.png
 
 twentesim4c:
  Arch: win64
@@ -232,3 +240,12 @@ eveonline:
   Grade: Gold
   Category: Games
   Icon: eveonline.png
+
+guildwars2:
+  Arch: win64
+  Name: 'Guild Wars 2'
+  Description: 'The official Guild Wars 2 launcher.'
+  Grade: Platinum
+  Category: Games
+  Icon: guildwars2.png
+  Event: Gw2Setup-64.exe
