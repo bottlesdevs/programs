@@ -1,0 +1,22 @@
+Name: wargaminggamecenter
+Description: Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships...).
+#TODO
+#Grade: 
+
+Dependencies:
+- allfonts
+#- d3dx9
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+
+#Executable
+
+#TODO how to get correct region from user / system?
+Steps:
+- action: install_exe
+  file_name: Wargaming_Game_Center_Install_EU.exe
+  url: https://redirect.wargaming.net/WGC/Wargaming_Game_Center_Install_EU.exe
+  file_checksum: false
