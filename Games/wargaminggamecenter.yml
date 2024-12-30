@@ -9,6 +9,7 @@ Dependencies:
 
 Parameters:
   dxvk: true
+  vkd3d: true
   sync: fsync
   discrete_gpu: true
 
