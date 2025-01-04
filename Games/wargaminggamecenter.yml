@@ -5,7 +5,6 @@ Description: Wargaming.NET Game Center (World of Tanks, World of Warplanes, Worl
 
 Dependencies:
 - allfonts
-#- d3dx9
 
 Parameters:
   dxvk: true
@@ -22,7 +21,3 @@ Steps:
   file_name: Wargaming_Game_Center_Install_EU.exe
   url: https://redirect.wargaming.net/WGC/Wargaming_Game_Center_Install_EU.exe
   file_checksum: false
-
-#TODO check whether needed and maybe add DLL override xaudio2_7
-#DLL_Overrides:
-#    xaudio2_7: n,b
