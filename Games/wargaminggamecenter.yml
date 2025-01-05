@@ -16,7 +16,11 @@ Parameters:
   discrete_gpu: true
   sync: fsync
 
-#Executable
+Executable:
+  Name: Wargaming.NET Game Center
+  Icon: wargaming.png
+  File: wgc.exe
+  Path: Program Files (x86)/Wargaming.net/GameCenter/wgc.exe
 
 #TODO how to get correct region from user / system?
 Steps:
