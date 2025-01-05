@@ -13,5 +13,5 @@ Bottles is in no way affiliated with companies that hold the executables provide
 
 
 ## Need help?
-Reach us on our [Forums](https://forum.usebottles.com/), [Discord](https://discord.gg/wF4JAdYrTR), [Telegram](https://t.me/usebottles) or [Matrix](https://matrix.to/#/%23UseBottles:matrix.org).
+Reach us on our [Forums](https://github.com/orgs/bottlesdevs/discussions), [Discord](https://discord.gg/wF4JAdYrTR), [Telegram](https://t.me/usebottles) or [Matrix](https://matrix.to/#/%23UseBottles:matrix.org).
 
