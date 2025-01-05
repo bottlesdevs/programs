@@ -15,7 +15,6 @@ Parameters:
   vkd3d: true
   discrete_gpu: true
   sync: fsync
-  use_runtime: true
 
 #Executable
 
