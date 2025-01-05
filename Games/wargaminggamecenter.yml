@@ -1,7 +1,6 @@
 Name: wargaminggamecenter
 Description: Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships...).
-#TODO
-#Grade: 
+Grade: Platinum
 
 Dependencies:
 - allfonts
@@ -22,7 +21,6 @@ Executable:
   File: wgc.exe
   Path: Program Files (x86)/Wargaming.net/GameCenter/wgc.exe
 
-#TODO how to get correct region from user / system?
 Steps:
 - action: install_exe
   file_name: Wargaming_Game_Center_Install_EU.exe
