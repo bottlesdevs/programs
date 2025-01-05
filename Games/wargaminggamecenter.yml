@@ -5,6 +5,10 @@ Description: Wargaming.NET Game Center (World of Tanks, World of Warplanes, Worl
 
 Dependencies:
 - allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+- d3dx9
+- msls31
 
 Parameters:
   dxvk: true
