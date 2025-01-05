@@ -254,9 +254,6 @@ wargaminggamecenter:
   Arch: win64
   Name: 'Wargaming.NET Game Center'
   Description: 'Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships...).'
-  #TODO
-  #Grade: Gold
+  Grade: Platinum
   Category: Games
   Icon: wargaminggamecenter.png
-  #TODO Event?
-  #Event #TODO
