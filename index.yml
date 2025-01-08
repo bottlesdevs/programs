@@ -1,4 +1,4 @@
-# Notes: 
+# Notes:
 # - [Event] not implemented yet
 #   Will be used by Bottles to trigger an installer when the pattern matches
 
@@ -118,15 +118,15 @@ fusion:
  Category: Software
  Icon: fusion.png
  Event: fusion.exe
- 
+
 pokemoninfinity:
  Arch: win64
  Name: Pokemon Infinity
  Description: Pokemon Infinity is a pokemon fangame made by AtomicReactor and the rest of the infinity team.
  Grade: Platinum
  Category: Games
- Icon: InfinityIcon.ico 
- 
+ Icon: InfinityIcon.ico
+
 medal:
  Arch: win64
  Name: Medal.tv
@@ -167,7 +167,7 @@ estlcam:
  Grade: Platinum
  Category: Software
  Icon: estlcam.png
- 
+
 twentesim:
  Arch: win64
  Name: '20-sim'
@@ -249,3 +249,11 @@ guildwars2:
   Category: Games
   Icon: guildwars2.png
   Event: Gw2Setup-64.exe
+
+evernote:
+  Arch: win64
+  Name: 'Evernote'
+  Description: 'Evernote Note Taking App (Desktop Version)'
+  Grade: Silver
+  Category: Software
+  Icon: evernote.jpg
