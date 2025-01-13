@@ -16,13 +16,13 @@ Executable:
   name: Pokemon Infinity
   icon: InfinityIcon.ico
   file: Game.exe
-  path: "Program Files/Pokemon Infinity 2.3.5/Game.exe"
+  path: "Program Files/Infinity 3.1.1/Game.exe"
   arguments: ""
 
 Steps:
 - action: run_script
   script: |
     rm -rf drive_c/Program\ Files/Pokemon\ Infinity*
-    wget https://github.com/TeryVeneno/pokemon-infinity-base/releases/download/minor-update/Pokemon.Infinity.2.3.5.zip
-    unzip Pokemon.Infinity* -d drive_c/Program\ Files
-    rm Pokemon.Infinity*
+    wget https://github.com/TeryVeneno/pokemon-infinity-base/releases/download/major-update/Infinity.3.1.1.zip
+    unzip Infinity.* -d drive_c/Program\ Files
+    rm Infinity.*
