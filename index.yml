@@ -257,3 +257,11 @@ evernote:
   Grade: Silver
   Category: Software
   Icon: evernote.jpg
+
+wargaminggamecenter:
+  Arch: win64
+  Name: 'Wargaming.NET Game Center'
+  Description: 'Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships...)'
+  Grade: Platinum
+  Category: Games
+  Icon: wargaming.png
