@@ -5,6 +5,10 @@ Arch: win64
 
 Dependencies:
 - allfonts
+- tahoma32
+- dotnet35
+- dotnet452
+- d3dx9
 
 Executable:
   name: Ableton Live
