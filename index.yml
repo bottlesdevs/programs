@@ -265,3 +265,11 @@ wargaminggamecenter:
   Grade: Platinum
   Category: Games
   Icon: wargaming.png
+
+streamerbot:
+  Arch: win64
+  Name: 'StreamerBot'
+  Description: 'Supercharge your live stream with Streamer.bot.'
+  Grade: Gold
+  Category: Software
+  Icon: streamerbot.png
