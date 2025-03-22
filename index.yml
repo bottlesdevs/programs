@@ -290,3 +290,11 @@ roon:
   Category: Software
   Icon: roon.png
   Event: RoonInstaller64.exe
+
+hikvisionivms4200:
+  Arch: win64
+  Name: Hikvision iVMS-4200
+  Description: The official Hikvision iVMS-4200.
+  Grade: Gold
+  Category: Software
+  Icon: hikvisionivms4200.ico
