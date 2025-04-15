@@ -1,0 +1,33 @@
+Name: winuae
+Description: A Commodore Amiga emulator.
+Grade: Platinum
+Arch: win32
+
+Dependencies:
+- d3dx9
+- msls31
+- allfonts
+- d3dcompiler_43
+- d3dcompiler_47
+- dotnet40
+- dotnet45
+- mono
+- gecko
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+  
+Executable:
+  name: WinUAE
+  icon: winuae.svg
+  file: winuae.exe
+  path: Program Files (x86)/winuae/winuae.exe
+  
+Steps:
+- action: install_msi
+  file_name: InstallWinUAE5310.msi
+  url: https://download.abime.net/winuae/releases/InstallWinUAE5310.msi
+  file_cheksum: false
+  
