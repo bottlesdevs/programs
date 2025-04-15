@@ -21,7 +21,7 @@ Parameters:
   
 Executable:
   name: WinUAE_X64
-  icon: winuae.svg
+  icon: winuae.png
   file: winuae_x64.exe
   path: Program Files/winuae/winuae_x64.exe
   
