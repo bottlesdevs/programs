@@ -266,20 +266,12 @@ wargaminggamecenter:
   Category: Games
   Icon: wargaming.png
 
-winuae_x86:
-  Arch: win32
+winuae:
+  Arch: win64
   Name: 'WinUAE'
   Description: 'A Commodore Amiga emulator'
   Grade: Platinum
-  Category: Applications
-  Icon: winuae.png
-
-winuae_x64:
-  Arch: win64
-  Name: 'WinUAE_X64'
-  Description: 'A Commodore Amiga emulator'
-  Grade: Platinum
-  Category: Applications
+  Category: Software
   Icon: winuae.png
 
 streamerbot:
