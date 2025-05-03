@@ -1,0 +1,28 @@
+Name: hikvisionivms4200
+Description: The official Hikvision iVMS-4200.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+  - vcredist2008
+  - vcredist2010
+  - vcredist2013
+  - vcredist6
+
+Parameters:
+  dxvk: false
+
+Executable:
+  name: Hikvision iVMS-4200
+  icon: hikvisionivms4200.ico
+  file: iVMS-4200.Framework.C.exe
+  path: Program Files (x86)/iVMS-4200 Site/iVMS-4200 Client/Client/iVMS-4200.Framework.C.exe
+
+Steps:
+  - action: install_exe
+    file_name: iVMS-4200.exe
+    url: local
+
+Checks:
+  files:
+    - Program Files (x86)/iVMS-4200 Site/iVMS-4200 Client/Client/iVMS-4200.Framework.C.exe
