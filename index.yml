@@ -241,6 +241,14 @@ eveonline:
   Category: Games
   Icon: eveonline.png
 
+eveonlinesettingsmanager:
+  Arch: win64
+  Name: 'EVE Online Settings Manager'
+  Description: Open source tool Eve Online Settings Manager for EVE Online.
+  Grade: Gold
+  Icon: github-mark-white.png
+  Category: Games
+
 guildwars2:
   Arch: win64
   Name: 'Guild Wars 2'
