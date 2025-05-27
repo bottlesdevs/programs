@@ -1,4 +1,4 @@
-# Notes: 
+# Notes:
 # - [Event] not implemented yet
 #   Will be used by Bottles to trigger an installer when the pattern matches
 
@@ -51,7 +51,7 @@ gog:
   Arch: win64
   Name: GOG Galaxy
   Description: The official GOG Galaxy launcher.
-  Grade: Gold
+  Grade: Silver
   Category: Games
   Icon: gog.svg
   Event: setup_galaxy_2.*.exe
@@ -118,15 +118,15 @@ fusion:
  Category: Software
  Icon: fusion.png
  Event: fusion.exe
- 
+
 pokemoninfinity:
  Arch: win64
  Name: Pokemon Infinity
  Description: Pokemon Infinity is a pokemon fangame made by AtomicReactor and the rest of the infinity team.
  Grade: Platinum
  Category: Games
- Icon: InfinityIcon.ico 
- 
+ Icon: InfinityIcon.ico
+
 medal:
  Arch: win64
  Name: Medal.tv
@@ -167,6 +167,22 @@ estlcam:
  Grade: Platinum
  Category: Software
  Icon: estlcam.png
+
+twentesim:
+ Arch: win64
+ Name: '20-sim'
+ Description: Modeling and simulation software
+ Grade: Bronze
+ Category: Software
+ Icon: 20sim.png
+
+twentesim4c:
+ Arch: win64
+ Name: '20-sim 4C'
+ Description: 'Code generation, deployment and measurements for 20-sim. Prerequisite: 20-sim installed in the same bottle.'
+ Grade: Gold
+ Category: Software
+ Icon: 20sim4C.png
 
 mtgarena:
  Arch: win64
@@ -224,3 +240,44 @@ eveonline:
   Grade: Gold
   Category: Games
   Icon: eveonline.png
+
+guildwars2:
+  Arch: win64
+  Name: 'Guild Wars 2'
+  Description: 'The official Guild Wars 2 launcher.'
+  Grade: Platinum
+  Category: Games
+  Icon: guildwars2.png
+  Event: Gw2Setup-64.exe
+
+evernote:
+  Arch: win64
+  Name: 'Evernote'
+  Description: 'Evernote Note Taking App (Desktop Version)'
+  Grade: Silver
+  Category: Software
+  Icon: evernote.jpg
+
+wargaminggamecenter:
+  Arch: win64
+  Name: 'Wargaming.NET Game Center'
+  Description: 'Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships...)'
+  Grade: Platinum
+  Category: Games
+  Icon: wargaming.png
+
+winuae:
+  Arch: win64
+  Name: 'WinUAE'
+  Description: 'A Commodore Amiga emulator'
+  Grade: Platinum
+  Category: Software
+  Icon: winuae.png
+
+streamerbot:
+  Arch: win64
+  Name: 'StreamerBot'
+  Description: 'Supercharge your live stream with Streamer.bot.'
+  Grade: Gold
+  Category: Software
+  Icon: streamerbot.svg

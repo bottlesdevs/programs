@@ -1,0 +1,25 @@
+Name: guildwars2
+Description: The official Guild Wars 2 launcher.
+Grade: Platinum
+Arch: win64
+
+Dependencies:
+  - tahoma32
+  - trebuc32
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+
+Executable:
+  name: Guild Wars 2
+  icon: guildwars2.png
+  file: Gw2-64.exe
+  path: Program Files/Guild Wars 2/Gw2-64.exe
+
+Steps:
+  - action: install_exe
+    file_name: Gw2Setup-64.exe
+    url: https://s3.amazonaws.com/gw2cdn/client/branches/Gw2Setup-64.exe
+    file_checksum: False

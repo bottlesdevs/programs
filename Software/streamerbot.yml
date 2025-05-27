@@ -1,0 +1,33 @@
+Name: streamerbot
+Description: Supercharge your live stream with Streamer.bot.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+- allfonts
+- d3dcompiler_47
+- dotnet48
+- webview2
+
+Parameters:
+  dxvk: true
+  fsync: true
+  discrete_gpu: true
+
+Executable:
+  name: Streamer.bot
+  file: Streamer.bot.exe
+  icon: streamerbot.svg
+  path: users/Public/streamerbot/Streamer.bot.exe
+  arguments: ""
+
+Steps:
+- action: run_script
+  script: |
+    wget https://streamer.bot/api/releases/streamer.bot/latest/download
+    unzip download -d !bottle_drive/users/Public/streamerbot
+    rm download
+- action: run_winecommand
+  commands:
+      - command: reg
+        arguments: add "HKCU\Software\Wine\Appdefaults\msedgewebview2.exe" /v "Version" /t REG_SZ /d "win7" /f
