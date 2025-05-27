@@ -1,0 +1,29 @@
+Name: evernote
+Description: 'Evernote Note Taking App (Desktop Version)'
+Grade: Silver
+Arch: win64
+
+Dependencies:
+- allfonts
+- gecko
+- mono
+- msls31
+- webview2
+
+Parameters:
+  dxvk: false
+  vkd3d: false
+  discrete_gpu: false
+  sync: fsync
+
+Executable:
+  name: 'Evernote'
+  icon: evernote.jpg
+  path: Program Files (x86)/Evernote/Evernote.exe
+  file: Evernote.exe
+
+Steps:
+- action: install_exe
+  file_name: Evernote-latest.exe
+  url: https://win.desktop.evernote.com/builds/Evernote-latest.exe
+  file_checksum: false

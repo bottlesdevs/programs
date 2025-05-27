@@ -1,0 +1,23 @@
+Name: twentesim4c
+Description: 'Code generation, deployment and measurements for 20-sim. Prerequisite: 20-sim installed in the same bottle.'
+Grade: Gold
+Arch: win64
+
+Dependencies:
+- arial32
+- courie32
+- msxml4
+
+Executable:
+  name: '20-sim 4C'
+  icon: 20sim4C.png
+  path: Program Files (x86)/20-sim 4C 2.1/bin/20sim4C.exe
+  file: 20sim4C.exe
+  arguments: []
+
+Steps:
+- action: install_exe
+  file_name: 20sim4C.exe
+  url: https://www.20sim.com/downloads/files/20sim4C.exe
+  file_checksum: False
+  arguments: []

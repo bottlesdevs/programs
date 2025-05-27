@@ -1,0 +1,23 @@
+Name: winuae
+Description: A Commodore Amiga emulator.
+Grade: Platinum
+Arch: win64
+
+Dependencies:
+- allfonts
+
+Parameters:
+  dxvk: true
+  sync: fsync
+
+Executable:
+  name: WinUAE
+  icon: winuae.png
+  file: winuae_x64.exe
+  path: Program Files/WinUAE/winuae64.exe
+
+Steps:
+- action: install_msi
+  file_name: InstallWinUAE5310_x64.msi
+  url: https://download.abime.net/winuae/releases/InstallWinUAE5310_x64.msi
+  file_checksum: 6b938ea7b92886c1270dbe7517becb70
