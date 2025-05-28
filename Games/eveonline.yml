@@ -10,12 +10,13 @@ Dependencies:
 Parameters:
   dxvk: true
   sync: fsync
+  discrete_gpu: true
   
 Executable:
   name: Eve Online
   icon: eveonline.png
   file: eve-online.exe
-  path: users/user1/AppData/Local/eve-online/eve-online.exe
+  path: userdir/AppData/Local/eve-online/eve-online.exe
 
 Steps:
 - action: install_exe
