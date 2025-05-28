@@ -9,7 +9,7 @@ Parameters:
   
 Executable:
   name: Eve Online Settings Manager
-  icon: github-mark-white.png
+  icon: github-mark.png
   file: EVE.Settings.Manager.v1.1.2_windows.exe
   path: Program Files/EVE Settings Manager/EVE.Settings.Manager.v1.1.2_windows.exe
 

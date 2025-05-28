@@ -246,7 +246,7 @@ eveonlinesettingsmanager:
   Name: 'EVE Online Settings Manager'
   Description: Open source tool Eve Online Settings Manager for EVE Online.
   Grade: Gold
-  Icon: github-mark-white.png
+  Icon: github-mark.png
   Category: Games
 
 guildwars2:
