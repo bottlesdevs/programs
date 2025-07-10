@@ -1,5 +1,5 @@
 Name: fridaserverx86
-Description: "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers - Windows x86 server"
+Description: "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers - Windows 32-bit server."
 Grade: Platinum
 Arch: win32
 
