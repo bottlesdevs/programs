@@ -1,6 +1,7 @@
 Name: wargaminggamecenter
-Description: Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships...)
+Description: Wargaming.NET Game Center (World of Tanks, World of Warplanes, World of Battleships).
 Grade: Platinum
+Arch: win64
 
 Dependencies:
 - allfonts
