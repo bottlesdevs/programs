@@ -15,4 +15,4 @@ Executable:
 Steps:
 - action: install_exe
   file_name: MedalSetup.exe
-  url: https://install.medal.tv/?
+  url: https://install.medal.tv
