@@ -5,6 +5,7 @@ Arch: win64
 
 Dependencies:
 - dotnet481
+- mono
 
 Executable:
   icon: medal.png
