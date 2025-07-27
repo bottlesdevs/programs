@@ -4,7 +4,7 @@ Grade: Silver
 Arch: win64
 
 Dependencies:
-- dotnet472
+- dotnet481
 
 Executable:
   icon: medal.png
