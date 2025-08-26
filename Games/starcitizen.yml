@@ -35,6 +35,7 @@ Steps:
     version: win10
   - action: install_exe
     file_name: RSI Launcher-Setup-2.5.1.exe
-    url: https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.5.1.exe
-    file_checksum: 4e7d79b057d61858ff74ce27363d2325
+    # https://robertsspaceindustries.com/en/download
+    url: https://install.robertsspaceindustries.com/rel/2/RSI%20Launcher-Setup-2.7.1.exe
+    file_checksum: 49692115e3000b3cb7b9dab0827a3883
     arguments: /S
