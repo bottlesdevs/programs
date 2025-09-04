@@ -4,7 +4,8 @@ Grade: Silver
 Arch: win64
 
 Dependencies:
-- dotnet472
+- dotnet481
+- mono
 
 Executable:
   icon: medal.png
@@ -15,4 +16,4 @@ Executable:
 Steps:
 - action: install_exe
   file_name: MedalSetup.exe
-  url: https://storage.medal.tv/MedalSetup.exe
+  url: https://install.medal.tv/
