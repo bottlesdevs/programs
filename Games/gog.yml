@@ -4,7 +4,7 @@ Grade: Silver
 Arch: win64
 
 Dependencies:
-- vcredist2019
+- vcredist2022
 - allfonts
 
 Parameters:
@@ -22,7 +22,7 @@ Executable:
   
 Steps:
 - action: install_exe
-  file_name: setup_galaxy_2.0.86.13.exe
-  url: https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.86.13.exe
-  file_checksum: 1429cda4ccaffd28b70b179e6046ad0f
+  file_name: setup_galaxy_2.0.90.23.exe
+  url: https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.90.23.exe
+  file_checksum: 698e7ce413b3fd1a11199340865eeac7
   arguments: /s
