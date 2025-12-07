@@ -281,3 +281,12 @@ streamerbot:
   Grade: Gold
   Category: Software
   Icon: streamerbot.svg
+
+roon:
+  Arch: win64
+  Name: 'Roon'
+  Description: Everything about music – browsing, discovery, collecting, and listening – is 10x more engaging with Roon.
+  Grade: Gold
+  Category: Software
+  Icon: roon.png
+  Event: RoonInstaller64.exe
