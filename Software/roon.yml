@@ -4,7 +4,6 @@ Grade: Gold
 Arch: win64
 
 Dependencies:
-- dotnet472-nodeps
 - dotnetcoredesktop7
 
 Executable:
