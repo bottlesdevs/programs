@@ -4,6 +4,7 @@ Grade: Gold
 Arch: win64
 
 Dependencies:
+- dotnet472-nodeps
 - dotnetcoredesktop7
 
 Executable:
@@ -14,11 +15,6 @@ Executable:
   arguments: WINEDEBUG=fixme-all WINEDLLOVERRIDES="windows.media.mediacontrol=" %command%
 
 Steps:
-- action: install_exe
-# dotnet472 dependencies brings too many unneeded .NET versions so just install one
-  file_name: ndp472-kb4054530-x86-x64-allos-enu.exe
-  url: https://download.visualstudio.microsoft.com/download/pr/1f5af042-d0e4-4002-9c59-9ba66bcf15f6/089f837de42708daacaae7c04b7494db/ndp472-kb4054530-x86-x64-allos-enu.exe
-  arguments: /q
 - action: install_exe
   file_name: RoonInstaller64.exe
   url: https://download.roonlabs.net/builds/RoonInstaller64.exe
