@@ -6,7 +6,7 @@ Arch: win64
 Dependencies:
   - dotnet48
   - vcredist2022
-  - allfonts
+  - times32
 
 Parameters:
   dxvk: true
