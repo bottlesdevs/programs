@@ -1,4 +1,4 @@
-Name: uplay
+Name: ubisoftconnect
 Description: The official Ubisoft Connect launcher.
 Grade: Gold
 Arch: win64
@@ -17,7 +17,7 @@ Parameters:
   
 Executable:
   name: Ubisoft Connect
-  icon: uplay.png
+  icon: ubisoftconnect.png
   file: UbisoftConnect.exe
   path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe
   
