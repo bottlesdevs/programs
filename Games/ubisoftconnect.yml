@@ -8,7 +8,7 @@ Dependencies:
 - riched20
 - allfonts
 - d3dcompiler_43
-- vcredist2015
+- vcredist2022
 
 Parameters:
   dxvk: true
