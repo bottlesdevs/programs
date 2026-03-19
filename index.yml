@@ -11,13 +11,13 @@ epicgamestore:
   Icon: epicgamestore.svg
   Event: EpicGamesLauncherInstaller.msi
 
-uplay:
+ubisoftconnect:
   Arch: win64
   Name: Ubisoft Connect
   Description: The official Ubisoft Connect launcher.
   Grade: Gold
   Category: Games
-  Icon: uplay.png
+  Icon: ubisoftconnect.png
   Event: UbisoftConnectInstaller.exe
 
 steam:
