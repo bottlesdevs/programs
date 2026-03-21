@@ -5,6 +5,7 @@ Arch: win64
 
 Dependencies:
 - dotnetcoredesktop7
+- dotnetcoredesktop10
 
 Executable:
   name: Roon
