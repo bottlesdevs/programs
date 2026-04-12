@@ -1,5 +1,5 @@
 Name: pkhex
-Description: A Pokémon core series save editor.
+Description: A Pokémon core series save editor. After installation, add environment variable DOTNET_SYSTEM_GLOBALIZATION_USENLS=true in bottle settings to fix search functionality.
 Grade: Silver
 Arch: win64
 
@@ -11,7 +11,7 @@ Executable:
   name: PKHeX
   icon: pkhex.ico
   file: PKHeX.exe
-  path: Program Files/PKHeX/PKHeX.exe
+  path: PKHeX/PKHeX.exe
   arguments: ""
 
 Steps:
@@ -22,7 +22,7 @@ Steps:
   arguments: /install /quiet /norestart
 - action: run_script
   script: |
-    mkdir -p drive_c/Program\ Files/PKHeX
+    mkdir -p drive_c/PKHeX
 - action: install_exe
   file_name: PKHeX.exe
   url: local
@@ -32,8 +32,8 @@ Steps:
   script: |
     PKHEX_SRC=$(find ~ -maxdepth 5 -name "PKHeX.exe" -not -path "*/bottles/*" -not -path "*/.net/*" -type f 2>/dev/null | head -1)
     if [ -n "$PKHEX_SRC" ]; then
-        cp "$PKHEX_SRC" drive_c/Program\ Files/PKHeX/
+        cp "$PKHEX_SRC" drive_c/PKHeX/
     fi
 - action: run_script
   script: |
-    wine reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\Program Files\PKHeX\PKHeX.exe" /t REG_SZ /d "~ DPIUNAWARE" /f
+    wine reg add "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\PKHeX\PKHeX.exe" /t REG_SZ /d "~ DPIUNAWARE" /f
