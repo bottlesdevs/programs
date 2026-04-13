@@ -290,3 +290,12 @@ roon:
   Category: Software
   Icon: roon.png
   Event: RoonInstaller64.exe
+
+realtimecorruptor:
+  Arch: win64
+  Name: 'Real-Time Corruptor Launcher'
+  Description: 'Modified emulation enviornment for corrupting games and creating glitch art.'
+  Grade: Bronze
+  Category: Games
+  Icon: realtimecorruptor.png
+  Event: RTC_Launcher.exe
