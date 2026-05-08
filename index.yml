@@ -290,3 +290,11 @@ roon:
   Category: Software
   Icon: roon.png
   Event: RoonInstaller64.exe
+
+pkhex:
+  Arch: win64
+  Name: PKHeX
+  Description: A Pokémon core series save editor.
+  Grade: Silver
+  Category: Software
+  Icon: pkhex.ico
