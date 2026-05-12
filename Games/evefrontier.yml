@@ -1,0 +1,25 @@
+Name: evefrontier
+Description: The official EVE Frontier launcher.
+Grade: Gold
+Arch: win64
+
+Dependencies:
+  - dotnet48
+  - vcredist2022
+  - times32
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+  
+Executable:
+  name: Eve Frontier
+  icon: evefrontier.png
+  file: EVE Frontier.exe
+  path: userdir/AppData/Local/eve-frontier/eve-frontier.exe
+
+Steps:
+- action: install_exe
+  file_name: eve-online-latest+Setup.exe
+  url: https://launcher.ccpgames.com/eve-frontier/frontier/win32/x64/eve-frontier-latest%20Setup.exe
