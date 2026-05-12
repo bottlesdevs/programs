@@ -233,6 +233,14 @@ mega:
   Category: Software
   Icon: mega.png
 
+evefrontier:
+  Arch: win64
+  Name: 'EVE Frontier'
+  Description: 'The official EVE Frontier launcher.'
+  Grade: Gold
+  Category: Games
+  Icon: evefrontier.png
+
 eveonline:
   Arch: win64
   Name: 'EVE Online'
