@@ -1,5 +1,5 @@
 # Ubisoft Connect
-Review for the uplay installer.
+Review for the Ubisoft Connect installer.
 
 Maintainer: @mirkobrombin
 

@@ -1,5 +1,5 @@
 Name: hoyoplay
-Description: HoYoPlay Launcher
+Description: HoYoverse's One-Stop Game Platform.
 Grade: Gold
 Arch: win64
 
@@ -32,6 +32,6 @@ Executable:
 
 Steps:
 - action: install_exe
-  file_name: HoYoPlay_install_ua_e4958a289572.exe
-  url: https://download-porter.hoyoverse.com/download-porter/2025/02/21/VYTpXlbWo8_1.4.5.222_1_0_hyp_hoyoverse_prod_202502081529_XFGRLkBk.exe?trace_key=HoYoPlay_install_ua_e4958a289572
-  file_checksum: b2eaf012c3a92c86efdc8f804d6124b2
+  file_name: HoYoPlay_install.exe
+  url: https://download-porter.hoyoverse.com/download-porter/2026/03/30/VYTpXlbWo8_1.14.2.345_1_0_hyp_hoyoverse_prod_202603021207_dJyiMLNi.exe?trace_key=HoYoPlay_install
+  file_checksum: 2663b6ec8661e4b807979512dde9e45d

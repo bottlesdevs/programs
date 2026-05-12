@@ -1,4 +1,4 @@
-Name: uplay
+Name: ubisoftconnect
 Description: The official Ubisoft Connect launcher.
 Grade: Gold
 Arch: win64
@@ -8,7 +8,7 @@ Dependencies:
 - riched20
 - allfonts
 - d3dcompiler_43
-- vcredist2015
+- vcredist2022
 
 Parameters:
   dxvk: true
@@ -17,14 +17,14 @@ Parameters:
   
 Executable:
   name: Ubisoft Connect
-  icon: uplay.png
+  icon: ubisoftconnect.png
   file: UbisoftConnect.exe
   path: Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe
   
 Steps:
 - action: install_exe
   file_name: UbisoftConnectInstaller.exe
-  url: https://ubistatic3-a.akamaihd.net/orbit/launcher_installer/UbisoftConnectInstaller.exe
+  url: https://static3.cdn.ubi.com/orbit/launcher_installer/UbisoftConnectInstaller.exe
   file_checksum: False
   arguments: /S
   

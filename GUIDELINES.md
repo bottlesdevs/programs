@@ -9,7 +9,7 @@ Each installer need a manifest in YAML format to be interpreted by Bottles.
 These manifests can be used as example:
 - https://github.com/bottlesdevs/programs/blob/main/Games/epicgamestore.yml
 - https://github.com/bottlesdevs/programs/blob/main/Games/steam.yml
-- https://github.com/bottlesdevs/programs/blob/main/Games/uplay.yml
+- https://github.com/bottlesdevs/programs/blob/main/Games/ubisoftconnect.yml
 
 ## Structure
 Each manifest has 5 sections:
