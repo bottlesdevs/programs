@@ -290,3 +290,11 @@ roon:
   Category: Software
   Icon: roon.png
   Event: RoonInstaller64.exe
+
+steuersparerklaerung:
+  Arch: win64
+  Name: 'Steuersparerklaerung 2026'
+  Description: 'Steuersparerklaerung 2026 für das Steuerjahr 2025'
+  Grade: Silver
+  Category: Software
+  Icon: SSE.png
