@@ -21,5 +21,5 @@ Executable:
 
 Steps:
 - action: install_exe
-  file_name: eve-online-latest+Setup.exe
+  file_name: eve-frontier-latest+Setup.exe
   url: https://launcher.ccpgames.com/eve-frontier/frontier/win32/x64/eve-frontier-latest%20Setup.exe
