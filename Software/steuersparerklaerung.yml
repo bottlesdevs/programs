@@ -1,0 +1,31 @@
+Name: steuersparerklaerung
+Description: 'Steuersparerklaerung 2026 für das Steuerjahr 2025 (Recommended: Custom Bottle + kron4ek-wine-10.x-amd64)'
+Grade: Silver
+Arch: win64
+
+Dependencies:
+  - gecko
+  - mono
+  - vcredist2022
+#  - crypt32
+
+#Parameters
+#  dxvk: false
+#  vkd3d: false
+#  discrete_gpu: false
+#  sync: fsync
+
+Executable:
+  name: 'SteuertippsCenter'
+  icon: SSE.png
+  path: Program Files/Steuertipps/SteuerSparErklaerung/Steuerjahr 2025/SteuertippsCenter.exe
+  file: SteuertippsCenter.exe
+
+Steps:
+  - action: set_windows
+    version: win11
+  - action: use_windows
+    version: win11
+  - action: install_exe
+    file_name: Win-SteuerSparErklaerung_31.27.36.exe
+    url: https://steuertipps.blob.core.windows.net/software/sse/31/Win-SteuerSparErklaerung_31.27.36.exe
