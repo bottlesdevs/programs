@@ -2,6 +2,16 @@
 # - [Event] not implemented yet
 #   Will be used by Bottles to trigger an installer when the pattern matches
 
+microsoft365business:
+  Arch: win64
+  Name: Microsoft 365 Apps for business
+  Description: Microsoft 365 Apps for business.
+  Grade: Silver
+  Category: Software
+  Channel: unstable
+  Runners:
+  - soda-11.0-11-experimental
+
 epicgamestore:
   Arch: win64
   Name: Epic Games Store

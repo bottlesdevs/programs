@@ -1,0 +1,113 @@
+Name: microsoft365business
+Description: Microsoft 365 Apps for business.
+Grade: Silver
+Arch: win64
+Channel: unstable
+Runners:
+- soda-11.0-11-experimental
+
+Dependencies:
+- andale32
+- arial32
+- arialb32
+- comic32
+- courie32
+- georgi32
+- impact32
+- times32
+- trebuc32
+- verdan32
+- webdin32
+- gdiplus
+- msls31
+- msxml6
+- office-runtime
+- riched20
+- selawik
+
+Parameters:
+  dxvk: false
+  vkd3d: false
+  gamescope: false
+  renderer: gl
+  wayland: false
+
+Executables:
+- name: Microsoft Word
+  file: WINWORD.EXE
+  path: Program Files/Microsoft Office/root/Office16/WINWORD.EXE
+- name: Microsoft Excel
+  file: EXCEL.EXE
+  path: Program Files/Microsoft Office/root/Office16/EXCEL.EXE
+- name: Microsoft PowerPoint
+  file: POWERPNT.EXE
+  path: Program Files/Microsoft Office/root/Office16/POWERPNT.EXE
+- name: Microsoft Outlook
+  file: OUTLOOK.EXE
+  path: Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE
+- name: Microsoft OneNote
+  file: ONENOTE.EXE
+  path: Program Files/Microsoft Office/root/Office16/ONENOTE.EXE
+- name: Microsoft Access
+  file: MSACCESS.EXE
+  path: Program Files/Microsoft Office/root/Office16/MSACCESS.EXE
+- name: Microsoft Publisher
+  file: MSPUB.EXE
+  path: Program Files/Microsoft Office/root/Office16/MSPUB.EXE
+
+Steps:
+- action: run_script
+  script: |
+    cat > !bottle_drive/microsoft365business.xml <<EOF
+    <Configuration>
+      <Add OfficeClientEdition="64" Channel="Current">
+        <Product ID="O365BusinessRetail">
+          <Language ID="MatchOS" Fallback="en-us" />
+        </Product>
+      </Add>
+      <Display Level="None" AcceptEULA="TRUE" />
+      <Updates Enabled="FALSE" />
+    </Configuration>
+    EOF
+
+- action: run_winecommand
+  commands:
+  - command: sc
+    arguments: create ClickToRunSvc binPath= '"C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe" /service' DisplayName= 'Microsoft Office Click-to-Run Service' start= auto type= own error= normal
+    wait: true
+    minimal: true
+
+- action: run_winecommand
+  commands:
+  - command: C:/windows/temp/office-deployment-tool/setup.exe
+    arguments: /configure C:/microsoft365business.xml
+    wait: true
+    minimal: true
+
+- action: run_script
+  script: |
+    install -m 0644 "!bottle_drive/Program Files/Common Files/Microsoft Shared/ClickToRun/AppvIsvSubsystems64.dll" "!bottle_drive/Program Files/Microsoft Office/root/Office16/AppvIsvSubsystems64.dll"
+    install -m 0644 "!bottle_drive/Program Files/Common Files/Microsoft Shared/ClickToRun/C2R64.dll" "!bottle_drive/Program Files/Microsoft Office/root/Office16/C2R64.dll"
+
+- action: run_winecommand
+  commands:
+  - command: reg
+    arguments: add "HKCU\Software\Wine\DllOverrides" /v sppc /t REG_SZ /d native,builtin /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Direct2D" /v max_version_factory /t REG_DWORD /d 0 /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Direct3D" /v MaxVersionGL /t REG_DWORD /d 0x30002 /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Drivers" /v Graphics /t REG_SZ /d x11 /f
+    wait: true
+    minimal: true
+
+Checks:
+  files:
+  - Program Files/Microsoft Office/root/Office16/WINWORD.EXE
