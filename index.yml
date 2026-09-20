@@ -12,6 +12,16 @@ microsoft365business:
   Runners:
   - soda-11.0-11-experimental
 
+microsoft365enterprise:
+  Arch: win64
+  Name: Microsoft 365 Apps for enterprise
+  Description: Microsoft 365 Apps for enterprise.
+  Grade: Silver
+  Category: Software
+  Channel: unstable
+  Runners:
+  - soda-11.0-11-experimental
+
 epicgamestore:
   Arch: win64
   Name: Epic Games Store
