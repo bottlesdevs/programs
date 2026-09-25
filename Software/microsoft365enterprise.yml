@@ -5,6 +5,7 @@ Arch: win64
 Channel: unstable
 Runners:
 - soda-11.0-11-experimental
+- soda-11.0-12-experimental
 
 Dependencies:
 - andale32

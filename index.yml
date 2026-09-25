@@ -11,6 +11,7 @@ microsoft365business:
   Channel: unstable
   Runners:
   - soda-11.0-11-experimental
+  - soda-11.0-12-experimental
 
 microsoft365enterprise:
   Arch: win64
@@ -21,6 +22,7 @@ microsoft365enterprise:
   Channel: unstable
   Runners:
   - soda-11.0-11-experimental
+  - soda-11.0-12-experimental
 
 epicgamestore:
   Arch: win64
