@@ -31,30 +31,37 @@ Parameters:
   vkd3d: false
   gamescope: false
   renderer: gl
-  wayland: false
+  wayland: true
 
 Executables:
 - name: Microsoft Word
   file: WINWORD.EXE
   path: Program Files/Microsoft Office/root/Office16/WINWORD.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 - name: Microsoft Excel
   file: EXCEL.EXE
   path: Program Files/Microsoft Office/root/Office16/EXCEL.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 - name: Microsoft PowerPoint
   file: POWERPNT.EXE
   path: Program Files/Microsoft Office/root/Office16/POWERPNT.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 - name: Microsoft Outlook
   file: OUTLOOK.EXE
   path: Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 - name: Microsoft OneNote
   file: ONENOTE.EXE
   path: Program Files/Microsoft Office/root/Office16/ONENOTE.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 - name: Microsoft Access
   file: MSACCESS.EXE
   path: Program Files/Microsoft Office/root/Office16/MSACCESS.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 - name: Microsoft Publisher
   file: MSPUB.EXE
   path: Program Files/Microsoft Office/root/Office16/MSPUB.EXE
+  pre_script: '%BOTTLE_PATH%/drive_c/microsoft365-pre-launch.sh'
 
 Steps:
 - action: run_script
@@ -77,6 +84,7 @@ Steps:
     arguments: create ClickToRunSvc binPath= '"C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe" /service' DisplayName= 'Microsoft Office Click-to-Run Service' start= auto type= own error= normal
     wait: true
     minimal: true
+    success_codes: [0, 49]
 
 - action: run_winecommand
   commands:
@@ -84,11 +92,26 @@ Steps:
     arguments: /configure C:/microsoft365enterprise.xml
     wait: true
     minimal: true
+    skip_if_files_exist:
+    - Program Files/Microsoft Office/root/Office16/WINWORD.EXE
+    - Program Files/Microsoft Office/root/Office16/EXCEL.EXE
+    - Program Files/Microsoft Office/root/Office16/POWERPNT.EXE
+    - Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE
+    - Program Files/Microsoft Office/root/Office16/ONENOTE.EXE
+    - Program Files/Microsoft Office/root/Office16/MSACCESS.EXE
+    - Program Files/Microsoft Office/root/Office16/MSPUB.EXE
+    progress:
+      path: users/*/AppData/Local/Temp/CPAK-*.log
+      encoding: utf-16-le
+      pattern: 'ScenarioController::UpdateScenarioProgress.*=([0-9]+)'
 
 - action: run_script
   script: |
     install -m 0644 "!bottle_drive/Program Files/Common Files/Microsoft Shared/ClickToRun/AppvIsvSubsystems64.dll" "!bottle_drive/Program Files/Microsoft Office/root/Office16/AppvIsvSubsystems64.dll"
     install -m 0644 "!bottle_drive/Program Files/Common Files/Microsoft Shared/ClickToRun/C2R64.dll" "!bottle_drive/Program Files/Microsoft Office/root/Office16/C2R64.dll"
+    printf "%s\n" "#!/bin/sh" "locker=\"\$(dirname \"\$0\")/ProgramData/Microsoft/Office/ClickToRunPackageLocker\"" "test ! -e \"\$locker\" || chmod 0770 \"\$locker\"" > "!bottle_drive/microsoft365-pre-launch.sh"
+    chmod 0755 "!bottle_drive/microsoft365-pre-launch.sh"
+    test ! -e "!bottle_drive/ProgramData/Microsoft/Office/ClickToRunPackageLocker" || chmod 0770 "!bottle_drive/ProgramData/Microsoft/Office/ClickToRunPackageLocker"
 
 - action: run_winecommand
   commands:
@@ -104,11 +127,6 @@ Steps:
     arguments: add "HKCU\Software\Wine\Direct3D" /v MaxVersionGL /t REG_DWORD /d 0x30002 /f
     wait: true
     minimal: true
-  - command: reg
-    arguments: add "HKCU\Software\Wine\Drivers" /v Graphics /t REG_SZ /d x11 /f
-    wait: true
-    minimal: true
-
 Checks:
   files:
   - Program Files/Microsoft Office/root/Office16/WINWORD.EXE
