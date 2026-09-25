@@ -1,0 +1,27 @@
+Name: Real-Time Corruptor Launcher
+Description: The Realtime Corruptor is a modified emulation enviornment for applying corruptions to games and creating glitch art developed by Redscientist Labs.
+Arch: win64
+Grade: Bronze
+
+Dependencies:
+ - dotnet48
+ - dotnet40
+ - vcredist2019
+
+Executable:
+ name: RTC Launcher
+ icon: rtclauncher.png
+ file: RTC_Launcher.exe
+ path: Program Files\Redscientist Labs\RTCV\RTC_Launcher.exe
+ arguments: ""
+
+Parameters:
+ dxvk: true
+ discrete_gpu: true
+
+Steps:
+ - action: install_exe
+   file_name: RTC_Launcher.exe
+   url: https://redscientist.com/launcher/RTC_Launcher.exe
+   file_checksum: False
+   arguments: ""
