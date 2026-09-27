@@ -7,6 +7,8 @@ Runners:
 - soda-11.0-11-experimental
 - soda-11.0-12-experimental
 - soda-11.0-13-experimental
+- soda-11.0-14-experimental
+- soda-11.0-16-experimental
 
 Dependencies:
 - andale32
@@ -90,6 +92,7 @@ Steps:
 - action: run_winecommand
   commands:
   - command: C:/windows/temp/office-deployment-tool/setup.exe
+    label: Microsoft 365 setup
     arguments: /configure C:/microsoft365business.xml
     wait: true
     minimal: true
@@ -104,7 +107,7 @@ Steps:
     progress:
       path: users/*/AppData/Local/Temp/CPAK-*.log
       encoding: utf-16-le
-      pattern: 'ScenarioController::UpdateScenarioProgress.*=([0-9]+)'
+      pattern: 'ScenarioController::UpdateScenarioProgress - total progress is now ([0-9]+)'
 
 - action: run_script
   script: |
@@ -118,6 +121,10 @@ Steps:
   commands:
   - command: reg
     arguments: add "HKCU\Software\Wine\DllOverrides" /v sppc /t REG_SZ /d builtin,native /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Microsoft\Office\16.0\Common\Licensing\LicensingNext" /v O365BusinessRetail /t REG_DWORD /d 2 /f
     wait: true
     minimal: true
   - command: reg
