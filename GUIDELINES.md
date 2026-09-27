@@ -87,6 +87,33 @@ in the above example:
 #### Supported actions
 - **install_exe** to install .exe files
 - **install_msi** to install .msi files
+- **run_winecommand** to run commands through the bottle runner
+
+#### Observable commands
+Long-running `run_winecommand` steps can expose their current activity and
+progress in the Bottles installer dialog:
+
+```yaml
+- action: run_winecommand
+  commands:
+  - command: C:/installer/setup.exe
+    label: Application setup
+    arguments: /silent
+    wait: true
+    progress:
+      path: users/*/AppData/Local/Temp/installer-*.log
+      encoding: utf-16-le
+      pattern: 'total progress is now ([0-9]+)'
+      maximum: 100
+```
+
+- **label** is the activity shown while the command runs.
+- **wait** must be `true` so Bottles can observe the command until it exits.
+- **path** is a path or glob relative to the bottle's `drive_c` directory.
+- **pattern** is a regular expression whose first capture group is the current
+  numeric value.
+- **encoding** defaults to `utf-8`.
+- **maximum** defaults to `100`.
 
 ## Grades
 The following metrics should be used to define the compatibility grade of the installer.
