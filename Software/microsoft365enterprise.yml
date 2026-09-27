@@ -6,6 +6,7 @@ Channel: unstable
 Runners:
 - soda-11.0-11-experimental
 - soda-11.0-12-experimental
+- soda-11.0-13-experimental
 
 Dependencies:
 - andale32
@@ -27,7 +28,7 @@ Dependencies:
 - selawik
 
 Parameters:
-  dxvk: false
+  dxvk: true
   vkd3d: false
   gamescope: false
   renderer: gl
@@ -116,13 +117,14 @@ Steps:
 - action: run_winecommand
   commands:
   - command: reg
-    arguments: add "HKCU\Software\Wine\DllOverrides" /v sppc /t REG_SZ /d native,builtin /f
+    arguments: add "HKCU\Software\Wine\DllOverrides" /v sppc /t REG_SZ /d builtin,native /f
     wait: true
     minimal: true
   - command: reg
-    arguments: add "HKCU\Software\Wine\Direct2D" /v max_version_factory /t REG_DWORD /d 0 /f
+    arguments: delete "HKCU\Software\Wine\Direct2D" /v max_version_factory /f
     wait: true
     minimal: true
+    success_codes: [0, 1]
   - command: reg
     arguments: add "HKCU\Software\Wine\Direct3D" /v MaxVersionGL /t REG_DWORD /d 0x30002 /f
     wait: true
