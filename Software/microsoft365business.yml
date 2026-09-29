@@ -12,6 +12,8 @@ Runners:
 - soda-11.0-17-experimental
 - soda-11.0-18-experimental
 - soda-11.0-19-experimental
+- soda-11.0-20-experimental
+- soda-11.0-21-experimental
 
 Dependencies:
 - andale32
