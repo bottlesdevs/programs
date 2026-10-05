@@ -20,6 +20,11 @@ microsoft365business:
   - soda-11.0-19-experimental
   - soda-11.0-20-experimental
   - soda-11.0-21-experimental
+  - soda-11.0-22-experimental
+  - soda-11.0-23-experimental
+  - soda-11.0-24-experimental
+  - soda-11.0-25-experimental
+  - soda-11.0-26-experimental
 
 microsoft365enterprise:
   Arch: win64
@@ -39,6 +44,11 @@ microsoft365enterprise:
   - soda-11.0-19-experimental
   - soda-11.0-20-experimental
   - soda-11.0-21-experimental
+  - soda-11.0-22-experimental
+  - soda-11.0-23-experimental
+  - soda-11.0-24-experimental
+  - soda-11.0-25-experimental
+  - soda-11.0-26-experimental
 
 epicgamestore:
   Arch: win64
