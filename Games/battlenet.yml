@@ -4,42 +4,119 @@ Grade: Gold
 Arch: win64
 
 Dependencies:
-- msls31
-- riched20
-- arial32
-- arialb32
-- vcredist2019
-- webview2
+  - msls31
+  - riched20
+  - arial32
+  - arialb32
+  - vcredist2022
+  # NOTE: Battle.net's main UI uses CEF (Chromium), but Microsoft Edge WebView2
+  # for the login popup. Without WebView2, the login screen is blank and crashes.
+  - webview2
 
 Parameters:
   dxvk: true
   sync: fsync
   discrete_gpu: true
-  
+
 Executable:
   name: Battle.net
   icon: battlenet.png
   file: Battle.net.exe
-  path: Program Files (x86)/Battle.net/Battle.net.exe
-  arguments: WINEDLLOVERRIDES="locationapi=d" WINE_SIMULATE_WRITECOPY=1 %command%
-  
+  # NOTE: The intended entrypoint is "Battle.net Launcher.exe", which performs
+  # some health-checks and then launches the internal "Battle.net.exe".
+  path: Program Files (x86)/Battle.net/Battle.net Launcher.exe
+  # Launch tweaks:
+  # * Disable Wine's "locationapi" DLL to fix blank login for Mesa GPU drivers.
+  #   NOTE: May not be necessary anymore thanks to the "--in-process-gpu" argument.
+  # * Force CEF (Chromium) to run GPU acceleration in the main thread, which fixes
+  #   the blank screen when hardware accelerated UI rendering is enabled. Beware
+  #   that GE-Proton adds this flag automatically whenever it detects Battle.net,
+  #   if you're doing testing with other flags/solutions!
+  #   SEE: https://github.com/GloriousEggroll/proton-ge-custom/issues/427#issuecomment-4934123239
+  #   ALTERNATIVE: "--disable-gpu-sandbox" may also work (not tested).
+  # * We DON'T apply the old "WINE_SIMULATE_WRITECOPY=1" hack, since it was a very
+  #   buggy and unstable workaround for Wine's incomplete WRITECOPY implementation.
+  #   Chromium's V8 engine merged a patch to stop requiring perfect WRITECOPY
+  #   support in 2022, to fix Wine compatibility.
+  #   SEE: https://chromium-review.googlesource.com/c/v8/v8/+/4035093
+  #   SEE: https://bugs.winehq.org/show_bug.cgi?id=53835#c7
+  arguments: WINEDLLOVERRIDES="locationapi=d" %command% --in-process-gpu
+
 Steps:
-- action: install_msi
-  file_name: Battle.net-Setup-enUS.exe
-  url: https://www.battle.net/download/getInstallerForGame?os=win&version=LIVE&gameProgram=BATTLENET_APP
-  file_checksum: False
-  monitoring:
-    - Battle.net-Setup-enUS.exe
-    - Battle.net-Setup.exe
-  arguments: --lang=enUS --installpath="C:\Program Files (x86)\Battle.net"
-  
-- action: update_config
-  path: userdir/Documents/Overwatch/Settings/Settings_v0.ini
-  type: ini
-  upd_keys: 
-    WindowMode:
-      Render.13: "1"
-    Type:
-      MovieExport.1: "1"
-    UseHardware:
-      MovieExport.1: "0"
+  # Create Battle.net configuration file if missing or empty (0 bytes).
+  # NOTE: This is necessary because "update_config" can't create new files.
+  - action: run_script
+    script: |
+      BNET_CFG_DIR="!bottle_drive/users/${USER}/AppData/Roaming/Battle.net"
+      BNET_CFG="${BNET_CFG_DIR}/Battle.net.config"
+      mkdir -p "${BNET_CFG_DIR}"
+      if [ ! -s "${BNET_CFG}" ]; then echo "{}" > "${BNET_CFG}"; fi
+
+  # Reduce UI lag, increase stability and improve integration with Bottles/Linux.
+  # NOTE: If the config already exists (such as a reinstall), our changes are
+  # merged into the user's config.
+  # NOTE: We must do this *before* running the installer (since it auto-starts
+  # the launcher afterwards).
+  - action: update_config
+    path: userdir/AppData/Roaming/Battle.net/Battle.net.config
+    type: json
+    upd_keys:
+      # NOTE: Several outdated tweaks have been removed, so do not add these:
+      # * "StreamingEnabled": Toggles background downloads. Removed from Battle.net.
+      # * "DownloadLimitNextPatchInBps": Controls pre-release patches download speed.
+      # * "Games/s2:Displaymode": Tells Starcraft 2 to launch in windowed mode.
+      Client:
+        ## == APP ==
+        # "On Game Launch: Exit Battle.net completely", for game input focus
+        # and GPU performance.
+        GameLaunchWindowBehavior: "2"
+        # "On Startup, View: Last Viewed Game Page" to speed up access to games.
+        DefaultStartupScreen: "1"
+        # Disable "Allow multiple instances of Battle.net".
+        SingleInstance: "true"
+        # Enable "Use hardware acceleration" (very important).
+        # * Battle.net's main UI is a built-in CEF browser with hardware-accelerated
+        #   rendering. Disabling acceleration leads to a very sluggish, stuttery,
+        #   laggy interface which feels *awful* to use. Hardware acceleration
+        #   works very well on Linux with modern Wine/Proton and the GPU-related
+        #   launch arguments (see above).
+        HardwareAcceleration: "true"
+        ## == DOWNLOADS ==
+        GameSearch:
+          # Enable "Scan for Battle.net games in the background every time Battle.net
+          # launches", to automatically detect the list of installed games on disk.
+          BackgroundSearch: "true"
+        Install:
+          # Disable "Automatically create a desktop icon for games during installation",
+          # since it has no purpose in Bottles/Linux, and creates broken shortcuts
+          # that launch Battle.net without the REQUIRED compatibility launch flags.
+          # Furthermore, their shortcuts fail to auto-start the game after
+          # Battle.net has opened, so they are totally pointless.
+          CreateDesktopShortcut: "false"
+        ## == NOTIFICATIONS ==
+        Sound:
+          # Disable "Play Battle.net notification sounds" to reduce jarring
+          # annoyances. We still see toasts, but they won't obnoxiously ding.
+          # Users can toggle it in the Battle.net settings.
+          Enabled: "false"
+
+  # NOTE: Several community sources enable the "Use VAAPI for DXVA2" registry
+  # tweak, which forces hardware-accelerated video decoding through an unstable
+  # Wine feature. We skip that, since software CPU video decode is FAST, and
+  # we should NOT risk worse STABILITY just for slightly faster launcher trailers.
+
+  - action: install_msi
+    file_name: Battle.net-Setup.exe
+    url: https://www.battle.net/download/getInstallerForGame?os=win&version=LIVE&gameProgram=BATTLENET_APP
+    file_checksum: False
+    monitoring:
+      - Battle.net-Setup.exe
+    # Run the installer in automatic, unattended mode.
+    # NOTE: There are unfortunately no flags for "don't start launcher" or "fix
+    # launcher arguments". So the launcher will start with bad args after install.
+    arguments: --lang=enUS --installpath="C:\Program Files (x86)\Battle.net"
+
+  # NOTE: It's safe to login at first launch after installation is complete,
+  # if the runner is capable of rendering the user interface without our
+  # compatibility `arguments` mentioned above. Otherwise, the user has to close
+  # the window and start the installed launcher via the Bottles "Programs" list.
