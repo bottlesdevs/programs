@@ -90,6 +90,7 @@ Steps:
       <Add OfficeClientEdition="64" Channel="Current">
         <Product ID="O365BusinessRetail">
           <Language ID="MatchOS" Fallback="en-us" />
+          <Language ID="en-us" />
         </Product>
       </Add>
       <Display Level="None" AcceptEULA="TRUE" />
