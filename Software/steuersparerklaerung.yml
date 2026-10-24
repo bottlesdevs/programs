@@ -21,11 +21,14 @@ Executable:
   path: Program Files/Steuertipps/SteuerSparErklaerung/Steuerjahr 2025/SteuertippsCenter.exe
   file: SteuertippsCenter.exe
 
+#
+# Updates overview page https://www.steuertipps.de/support/updates
+#
 Steps:
   - action: set_windows
     version: win11
   - action: use_windows
     version: win11
   - action: install_exe
-    file_name: Win-SteuerSparErklaerung_31.27.36.exe
-    url: https://steuertipps.blob.core.windows.net/software/sse/31/Win-SteuerSparErklaerung_31.27.36.exe
+    file_name: Win-SteuerSparErklaerung_31.31.45.exe
+    url: https://steuertipps.blob.core.windows.net/software/sse/31/Win-SteuerSparErklaerung_31.31.45.exe
