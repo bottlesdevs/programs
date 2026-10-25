@@ -293,8 +293,8 @@ roon:
 
 steuersparerklaerung:
   Arch: win64
-  Name: 'Steuersparerklaerung 2026'
-  Description: 'Steuersparerklaerung 2026 für das Steuerjahr 2025 (Recommended: Custom Bottle + kron4ek-wine-10.x-amd64)'
+  Name: 'Steuersparerklaerung 2026 - 31.31.45'
+  Description: 'Steuersparerklaerung 2026 für das Steuerjahr 2025 [v31.31.45] (Recommended: Custom Bottle + kron4ek-wine-11.9-amd64)'
   Grade: Silver
   Category: Software
   Icon: SSE.png

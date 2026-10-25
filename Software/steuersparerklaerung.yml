@@ -1,5 +1,5 @@
 Name: steuersparerklaerung
-Description: 'Steuersparerklaerung 2026 für das Steuerjahr 2025 (Recommended: Custom Bottle + kron4ek-wine-10.x-amd64)'
+Description: 'Steuersparerklaerung 2026 für das Steuerjahr 2025 [v31.31.45] (Recommended: Custom Bottle + kron4ek-wine-11.19-amd64)'
 Grade: Silver
 Arch: win64
 
@@ -7,7 +7,7 @@ Dependencies:
   - gecko
   - mono
   - vcredist2022
-#  - crypt32
+#  - crypt32 # comes with kron4ek-wine
 
 #Parameters
 #  dxvk: false
@@ -25,10 +25,33 @@ Executable:
 # Updates overview page https://www.steuertipps.de/support/updates
 #
 Steps:
-  - action: set_windows
-    version: win11
-  - action: use_windows
-    version: win11
+  # set_windows/use_windows are not handled in installer manifests -> use winecfg
+  - action: run_winecommand
+    commands:
+      - command: winecfg
+        arguments: -v win11
+
+  - action: run_winecommand
+    commands:
+  # Qt WebEngine (Chromium) sandbox breaks dialog rendering under Wine
+      - command: reg
+        arguments: add "HKCU\Environment" /v QTWEBENGINE_DISABLE_SANDBOX /t REG_SZ /d "1" /f
+      - command: reg
+        arguments: add "HKCU\Environment" /v QTWEBENGINE_CHROMIUM_FLAGS /t REG_SZ /d "--no-sandbox --disable-gpu" /f
+      # prefer X11 (XWayland), fall back to Wayland if DISPLAY is not set - this is usally set from kron4ek per default
+      #- command: reg
+      #  arguments: add "HKCU\Software\Wine\Drivers" /v Graphics /t REG_SZ /d "x11,wayland" /f
+
   - action: install_exe
     file_name: Win-SteuerSparErklaerung_31.31.45.exe
     url: https://steuertipps.blob.core.windows.net/software/sse/31/Win-SteuerSparErklaerung_31.31.45.exe
+
+
+  - action: run_script
+    script: |
+      echo "MsgBox \"In case us UI glitches, you may want to make wine use the x11 display driver by setting DISPLAY=:0 in the bottle settings (Settings > Environment Variables).\", 64, \"Steuersparerklaerung\"" > "!bottle_drive/sse_hint.vbs"
+
+  - action: run_winecommand
+    commands:
+      - command: wscript
+        arguments: C:\sse_hint.vbs
