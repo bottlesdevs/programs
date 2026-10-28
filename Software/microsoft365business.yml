@@ -125,7 +125,7 @@ Steps:
     - Program Files/Microsoft Office/root/Office16/MSACCESS.EXE
     - Program Files/Microsoft Office/root/Office16/MSPUB.EXE
     progress:
-      path: users/*/AppData/Local/Temp/CPAK-*.log
+      path: users/*/AppData/Local/Temp/*-????????-????*.log
       encoding: utf-16-le
       pattern: 'ScenarioController::UpdateScenarioProgress - total progress is now ([0-9]+)'
 
