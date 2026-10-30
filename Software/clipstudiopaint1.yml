@@ -1,0 +1,43 @@
+Name: clipstudiopaint1
+Description: Digital illustration, comic and animation software.
+Grade: Silver
+Arch: win64
+Channel: unstable
+Runners:
+- soda-11.0-35-experimental
+- soda-11.0-36-experimental
+
+Dependencies:
+- gdiplus
+- msxml6
+- riched20
+
+Parameters:
+  dxvk: true
+  vkd3d: false
+  gamescope: false
+  renderer: gl
+  wayland: false
+
+Executable:
+  name: CLIP STUDIO PAINT
+  file: CLIPStudioPaint.exe
+  path: Program Files/CELSYS/CLIP STUDIO 1.5/CLIP STUDIO PAINT/CLIPStudioPaint.exe
+
+Steps:
+- action: run_winecommand
+  commands:
+  - command: reg
+    arguments: add "HKCU\Software\Wine" /v Version /t REG_SZ /d win81 /f
+    wait: true
+    minimal: true
+
+- action: install_exe
+  file_name: CSP_1132w_setup.exe
+  url: https://vd.clipstudio.net/clipcontent/paint/app/1132/CSP_1132w_setup.exe
+  file_checksum: 9143929c73817b0902641bbaf8d5c827
+  arguments: /s /v"/qn"
+
+Checks:
+  files:
+  - Program Files/CELSYS/CLIP STUDIO 1.5/CLIP STUDIO PAINT/CLIPStudioPaint.exe
