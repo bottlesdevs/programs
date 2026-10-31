@@ -1,0 +1,30 @@
+Name: zdaemon
+Description: Online Multiplayer Doom.
+Grade: Silver
+Arch: win64
+
+Dependencies:
+  - allfonts
+  - vcredist2022
+  - webview2
+
+Parameters:
+  dxvk: true
+  sync: fsync
+  discrete_gpu: true
+
+Executable:
+  name: ZLauncher
+  file: zlauncher.exe
+  path: userdir/AppData/Roaming/ZDaemon/zlauncher.exe
+
+Steps:
+  - action: install_exe
+    file_name: zdaemon-setup.exe
+    url: https://downloads.zdaemon.org/zdaemon-setup.exe
+    file_checksum: False
+    arguments: /S
+
+Checks:
+  files:
+    - 'userdir/AppData/Roaming/ZDaemon/zlauncher.exe'
