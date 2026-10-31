@@ -2,6 +2,74 @@
 # - [Event] not implemented yet
 #   Will be used by Bottles to trigger an installer when the pattern matches
 
+microsoft365business:
+  Arch: win64
+  Name: Microsoft 365 Apps for business
+  Description: Microsoft 365 Apps for business.
+  Grade: Silver
+  Category: Software
+  Channel: unstable
+  Runners:
+  - soda-11.0-11-experimental
+  - soda-11.0-12-experimental
+  - soda-11.0-13-experimental
+  - soda-11.0-14-experimental
+  - soda-11.0-16-experimental
+  - soda-11.0-17-experimental
+  - soda-11.0-18-experimental
+  - soda-11.0-19-experimental
+  - soda-11.0-20-experimental
+  - soda-11.0-21-experimental
+  - soda-11.0-22-experimental
+  - soda-11.0-23-experimental
+  - soda-11.0-24-experimental
+  - soda-11.0-25-experimental
+  - soda-11.0-26-experimental
+  - soda-11.0-27-experimental
+  - soda-11.0-28-experimental
+  - soda-11.0-29-experimental
+  - soda-11.0-30-experimental
+  - soda-11.0-31-experimental
+  - soda-11.0-32-experimental
+  - soda-11.0-33-experimental
+  - soda-11.0-34-experimental
+  - soda-11.0-35-experimental
+  - soda-11.0-36-experimental
+
+microsoft365enterprise:
+  Arch: win64
+  Name: Microsoft 365 Apps for enterprise
+  Description: Microsoft 365 Apps for enterprise.
+  Grade: Silver
+  Category: Software
+  Channel: unstable
+  Runners:
+  - soda-11.0-11-experimental
+  - soda-11.0-12-experimental
+  - soda-11.0-13-experimental
+  - soda-11.0-14-experimental
+  - soda-11.0-16-experimental
+  - soda-11.0-17-experimental
+  - soda-11.0-18-experimental
+  - soda-11.0-19-experimental
+  - soda-11.0-20-experimental
+  - soda-11.0-21-experimental
+  - soda-11.0-22-experimental
+  - soda-11.0-23-experimental
+  - soda-11.0-24-experimental
+  - soda-11.0-25-experimental
+  - soda-11.0-26-experimental
+  - soda-11.0-27-experimental
+  - soda-11.0-28-experimental
+  - soda-11.0-29-experimental
+  - soda-11.0-30-experimental
+  - soda-11.0-31-experimental
+  - soda-11.0-32-experimental
+  - soda-11.0-33-experimental
+  - soda-11.0-34-experimental
+  - soda-11.0-35-experimental
+  - soda-11.0-36-experimental
+
 epicgamestore:
   Arch: win64
   Name: Epic Games Store
@@ -233,6 +301,14 @@ mega:
   Category: Software
   Icon: mega.png
 
+evefrontier:
+  Arch: win64
+  Name: 'EVE Frontier'
+  Description: 'The official EVE Frontier launcher.'
+  Grade: Gold
+  Category: Games
+  Icon: evefrontier.png
+
 eveonline:
   Arch: win64
   Name: 'EVE Online'
@@ -298,3 +374,12 @@ steuersparerklaerung:
   Grade: Silver
   Category: Software
   Icon: SSE.png
+
+orcadx:
+  Arch: win64
+  Name: Cadence OrCAD X
+  Description: Schematic capture, PSpice simulation and PCB design. Requires OrCADXInstall.exe and a Cadence account.
+  Grade: Bronze
+  Category: Software
+  Icon: orcadx.svg
+  Event: OrCADXInstall.exe

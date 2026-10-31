@@ -1,0 +1,344 @@
+Name: orcadx
+Description: Cadence OrCAD X schematic capture, PSpice simulation and PCB design. Bring your own OrCADXInstall.exe and Cadence account.
+Grade: Bronze
+Arch: win64
+
+Dependencies:
+- arial32
+- times32
+- courie32
+- tahoma32
+- verdan32
+- consolas
+- lucon
+- selawik
+- gecko
+- vcredist2022
+- dotnet48
+- msxml6
+
+Parameters:
+  dxvk: true
+
+Steps:
+- action: run_winecommand
+  commands:
+  - command: reg
+    arguments: add "HKCU\Software\Microsoft\Avalon.Graphics" /v DisableHWAcceleration /t REG_DWORD /d 1 /f
+    wait: true
+    minimal: true
+
+- action: run_winecommand
+  commands:
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Fonts\Replacements" /v "Segoe UI" /t REG_SZ /d "Selawik" /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Fonts\Replacements" /v "Segoe UI Bold" /t REG_SZ /d "Selawik" /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Fonts\Replacements" /v "Segoe UI Light" /t REG_SZ /d "Selawik Light" /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Fonts\Replacements" /v "Segoe UI Semibold" /t REG_SZ /d "Selawik Semibold" /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\Fonts\Replacements" /v "Segoe UI Semilight" /t REG_SZ /d "Selawik Semilight" /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\AppDefaults\Capture.exe\DllOverrides" /v d2d1 /t REG_SZ /d "" /f
+    wait: true
+    minimal: true
+  - command: reg
+    arguments: add "HKCU\Software\Wine\AppDefaults\pspice.exe\DllOverrides" /v d2d1 /t REG_SZ /d "" /f
+    wait: true
+    minimal: true
+
+- action: install_exe
+  file_name: OrCADXInstall.exe
+  url: local
+  arguments: ""
+  environment:
+    LC_ALL: en_US.UTF-8
+  monitoring:
+  - OrCADXSetup.exe
+  - installsetup.exe
+  - InstallSetup.exe
+
+- action: run_script
+  script: |
+    cd "!bottle_drive" || exit 0
+    capture=$(find . -maxdepth 6 -type f -ipath "*/tools/bin/capture.exe" | sort -V | tail -n 1)
+    [ -n "$capture" ] || exit 0
+    root=${capture%/tools/bin/*}
+    mkdir -p Cadence
+    if [ -L Cadence/OrCADX ] || [ ! -e Cadence/OrCADX ]; then
+      ln -sfn "$(realpath --relative-to=Cadence "$root")" Cadence/OrCADX
+    fi
+
+- action: run_script
+  script: |
+    tool=$(mktemp)
+    cat >"$tool" <<"PSPICE_COM_FIX"
+
+    set -euo pipefail
+    export LC_ALL=C
+
+    FLATPAK_ID=com.usebottles.bottles
+    SERVERS="simmgr.exe pspice.exe pspiceaa.exe"
+    LINK_TARGET="\\Registry\\Machine\\Hardware\\Description\\System\\NoInprocHandler32"
+
+    usage() {
+    	cat <<EOF
+    Usage: ${0##*/} [options] [apply|remove|status]
+
+    Lets OrCAD X Capture run PSpice simulations under Wine (README.md, section
+    "PSpice simulations"). The bottle must not be running for apply and remove.
+
+      -n, --name NAME        Bottle name (default: OrCAD-X)
+      -d, --bottle-dir DIR   Bottle directory, for bottles outside the default path
+      -w, --wait SECONDS     Wait up to SECONDS for the bottle to stop
+      -s, --stop             Stop the bottle if it still runs after waiting
+      apply                  Apply the fix (default)
+      remove                 Undo it
+      status                 Show the classes and whether the fix is applied
+    EOF
+    }
+
+    die() {
+    	printf "Error: %s\n" "$*" >&2
+    	exit 1
+    }
+
+    REG_FILTER=$(
+    	cat <<"AWK"
+    function key_of(line) {
+    	line = tolower(line)
+    	sub(/ [0-9]+$/, "", line)
+    	return line
+    }
+    function clsid_of(key, sub_key,    prefix, rest) {
+    	prefix = "[software\\\\classes\\\\clsid\\\\{"
+    	if (index(key, prefix) != 1) return ""
+    	rest = substr(key, length(prefix) + 1)
+    	if (rest != substr(rest, 1, 36) "}\\\\" sub_key "]") return ""
+    	return substr(rest, 1, 36)
+    }
+    function flush(    i, line, joined, ours) {
+    	if (!nbuf) return 0
+    	joined = ""
+    	for (i = 1; i <= nbuf; i++) {
+    		line = buf[i]
+    		sub(/^ +/, "", line)
+    		sub(/\\$/, "", line)
+    		joined = joined line
+    	}
+    	nbuf = 0
+    	ours = index(joined, "#link") && index(joined, "=hex(6):" hex)
+    	if (pass == 1) {
+    		state[guid] = ours ? "applied" : "handler"
+    		return 0
+    	}
+    	if (ours || (mode == "apply" && guid in server)) return 0
+    	for (; blank > 0; blank--) print ""
+    	for (i = 1; i <= nlines; i++) print buf[i]
+    	return 1
+    }
+    function start(line) { nbuf = nlines = 1; buf[1] = line }
+    function add(line) { buf[++nbuf] = line; nlines = nbuf }
+    BEGIN {
+    	split(servers, s, " ")
+    	for (i in s) wanted[s[i]] = 1
+    	target = ENVIRON["LINK_TARGET"]
+    	for (i = 1; i < 128; i++) ord[sprintf("%c", i)] = i
+    	hex = ""
+    	for (i = 1; i <= length(target); i++)
+    		hex = hex (i > 1 ? "," : "") sprintf("%02x,00", ord[substr(target, i, 1)])
+    }
+    FNR == 1 { if (pass == 1) flush(); pass++ }
+    nbuf && /^\[/ { flush() }
+    pass == 1 && /^\[/ {
+    	key = key_of($0)
+    	in_ls = clsid_of(key, "localserver32")
+    	if ((g = clsid_of(key, "verb")) != "" || (g = clsid_of(key, "insertable")) != "") document[g] = 1
+    	guid = clsid_of(key, "inprochandler32")
+    	if (guid != "") start($0)
+    	next
+    }
+    pass == 1 && nbuf { if ($0 == "") flush(); else add($0); next }
+    pass == 1 && in_ls != "" && /^@=/ {
+    	exe = tolower($0)
+    	gsub(/\\"/, "", exe)
+    	if ((i = index(exe, ".exe"))) {
+    		n = split(substr(exe, 1, i + 3), part, /\\/)
+    		if (part[n] in wanted) server[in_ls] = part[n]
+    	}
+    	next
+    }
+    pass == 1 { next }
+    FNR == 1 {
+    	for (g in server) if (g in document) { skipped[g] = server[g]; delete server[g] }
+    	n = 0
+    	for (g in server) {
+    		for (i = ++n; i > 1 && order[i - 1] > g; i--) order[i] = order[i - 1]
+    		order[i] = g
+    	}
+    }
+    FNR == 1 && mode == "list" {
+    	for (i = 1; i <= n; i++) print toupper(order[i]), server[order[i]], (order[i] in state ? state[order[i]] : "missing")
+    	for (g in skipped) print toupper(g), skipped[g], (state[g] == "applied" ? "skipped,linked" : "skipped")
+    	exit
+    }
+    nbuf { if ($0 != "") add($0); else if (flush()) blank++; next }
+    /^\[/ && (guid = clsid_of(key_of($0), "inprochandler32")) != "" { start($0); next }
+    $0 == "" { blank++; next }
+    {
+    	for (; blank > 0; blank--) print ""
+    	print
+    }
+    END {
+    	if (mode == "list") exit
+    	flush()
+    	if (mode != "apply") exit
+    	for (i = 1; i <= n; i++) {
+    		print ""
+    		print "[Software\\\\Classes\\\\CLSID\\\\{" toupper(order[i]) "}\\\\InprocHandler32] " now
+    		print "#time=" filetime
+    		print "#link"
+    		print "\"SymbolicLinkValue\"=hex(6):" hex
+    	}
+    }
+    AWK
+    )
+
+    reg_filter() {
+    	local now
+    	now=$(date +%s)
+    	LINK_TARGET=$LINK_TARGET awk -v mode="$1" -v servers="$SERVERS" -v now="$now" \
+    		-v filetime="$(printf %x $(((now + 11644473600) * 10000000)))" \
+    		"$REG_FILTER" "$reg" "$reg"
+    }
+
+    print_status() {
+    	local classes guid server state
+    	classes=$(reg_filter list | sort -k2,2 -k1,1)
+    	if [[ -z $classes ]]; then
+    		echo "No PSpice COM classes found (is OrCAD X installed in this bottle?)."
+    		return
+    	fi
+    	while read -r guid server state; do
+    		printf "{%s} %-13s %s\n" "$guid" "$server" "$state"
+    	done <<<"$classes"
+    }
+
+    bottle_processes() {
+    	local proc exe
+    	for proc in /proc/[0-9]*; do
+    		{ tr "\0" "\n" <"$proc/environ" | grep -qxF "WINEPREFIX=$bottle_dir"; } 2>/dev/null || continue
+    		{ IFS= read -r -d "" exe <"$proc/cmdline"; } 2>/dev/null || exe="?"
+    		printf "%s %s\n" "${proc#/proc/}" "${exe##*[\\/]}"
+    	done
+    }
+
+    wait_stopped() {
+    	local deadline=$((SECONDS + $1))
+    	while [[ -n $(bottle_processes) ]]; do
+    		((SECONDS < deadline)) || return 1
+    		sleep 1
+    	done
+    }
+
+    stop_bottle() {
+    	local pid name
+    	while read -r pid name; do
+    		[[ $name == wineserver ]] || continue
+    		WINEPREFIX=$bottle_dir "$(readlink "/proc/$pid/exe")" -k 2>/dev/null || true
+    		return
+    	done < <(bottle_processes)
+    }
+
+    bottle_name=OrCAD-X
+    bottle_dir=""
+    action=apply
+    wait=0
+    stop=0
+    while (($#)); do
+    	case $1 in
+    	-n | --name)
+    		[[ $# -ge 2 ]] || die "$1 needs a value."
+    		bottle_name=$2
+    		shift
+    		;;
+    	-d | --bottle-dir)
+    		[[ $# -ge 2 ]] || die "$1 needs a value."
+    		bottle_dir=$2
+    		shift
+    		;;
+    	-w | --wait)
+    		[[ $# -ge 2 && $2 =~ ^[0-9]+$ ]] || die "$1 needs a number of seconds."
+    		wait=$2
+    		shift
+    		;;
+    	-s | --stop) stop=1 ;;
+    	apply | remove | status) action=$1 ;;
+    	-h | --help)
+    		usage
+    		exit 0
+    		;;
+    	*) die "Unknown argument: $1 (see --help)" ;;
+    	esac
+    	shift
+    done
+
+    if [[ -z $bottle_dir ]]; then
+    	for bottle_dir in \
+    		"$HOME/.var/app/$FLATPAK_ID/data/bottles/bottles/$bottle_name" \
+    		"${XDG_DATA_HOME:-$HOME/.local/share}/bottles/bottles/$bottle_name"; do
+    		[[ -f $bottle_dir/system.reg ]] && break
+    	done
+    fi
+    bottle_dir=${bottle_dir%/}
+    reg=$bottle_dir/system.reg
+    [[ -f $reg ]] || die "No bottle registry at $reg. Pass the bottle with --name or --bottle-dir."
+
+    if [[ $action == status ]]; then
+    	print_status
+    	exit 0
+    fi
+
+    if ! wait_stopped "$wait" && ! { ((stop)) && stop_bottle && wait_stopped 30; }; then
+    	die "The bottle is running: $(bottle_processes | cut -d " " -f 2 | sort -u | paste -sd " " -)
+    Close OrCAD X, then stop the bottle (Bottles: bottle menu > Force Stop all
+    Processes) and run this again."
+    fi
+
+    backup=$reg.before-pspice-com-fix
+    [[ -e $backup ]] || cp -p -- "$reg" "$backup"
+
+    tmp=$(mktemp "$reg.XXXXXX")
+    cleanup() { rm -f -- "$tmp"; }
+    trap cleanup EXIT
+    reg_filter "$action" >"$tmp"
+    chmod --reference="$reg" -- "$tmp"
+    mv -f -- "$tmp" "$reg"
+    trap - EXIT
+
+    print_status
+    PSPICE_COM_FIX
+    bash "$tool" --bottle-dir "!bottle_path" --wait 60 --stop apply
+    rm -f "$tool"
+
+Executable:
+  name: OrCAD X Capture
+  icon: orcadx.svg
+  file: Capture.exe
+  path: Cadence/OrCADX/tools/bin/Capture.exe
+
+Checks:
+  files:
+  - Cadence/OrCADX/tools/bin/Capture.exe
