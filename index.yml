@@ -236,6 +236,17 @@ estlcam:
  Category: Software
  Icon: estlcam.png
 
+clipstudiopaint1:
+ Arch: win64
+ Name: CLIP STUDIO PAINT 1.x
+ Description: Digital illustration, comic and animation software.
+ Grade: Silver
+ Category: Software
+ Channel: unstable
+ Runners:
+ - soda-11.0-35-experimental
+ - soda-11.0-36-experimental
+
 twentesim:
  Arch: win64
  Name: '20-sim'
