@@ -366,3 +366,12 @@ roon:
   Category: Software
   Icon: roon.png
   Event: RoonInstaller64.exe
+
+orcadx:
+  Arch: win64
+  Name: Cadence OrCAD X
+  Description: Schematic capture, PSpice simulation and PCB design. Requires OrCADXInstall.exe and a Cadence account.
+  Grade: Bronze
+  Category: Software
+  Icon: orcadx.svg
+  Event: OrCADXInstall.exe
