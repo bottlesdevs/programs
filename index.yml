@@ -242,6 +242,7 @@ clipstudiopaint1:
  Description: Digital illustration, comic and animation software.
  Grade: Silver
  Category: Software
+ Icon: clipstudiopaint1.png
  Channel: unstable
  Runners:
  - soda-11.0-35-experimental

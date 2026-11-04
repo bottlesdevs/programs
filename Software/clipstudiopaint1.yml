@@ -21,6 +21,7 @@ Parameters:
 
 Executable:
   name: CLIP STUDIO PAINT
+  icon: clipstudiopaint1.png
   file: CLIPStudioPaint.exe
   path: Program Files/CELSYS/CLIP STUDIO 1.5/CLIP STUDIO PAINT/CLIPStudioPaint.exe
 
