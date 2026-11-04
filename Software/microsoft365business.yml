@@ -3,6 +3,7 @@ Description: Microsoft 365 Apps for business.
 Grade: Silver
 Arch: win64
 Channel: unstable
+StopAfterInstall: true
 Runners:
 - soda-11.0-11-experimental
 - soda-11.0-12-experimental
