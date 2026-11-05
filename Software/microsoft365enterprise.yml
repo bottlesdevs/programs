@@ -55,7 +55,6 @@ Parameters:
   vkd3d: false
   gamescope: false
   renderer: gl
-  wayland: true
 
 Executables:
 - name: Microsoft Word
