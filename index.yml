@@ -408,5 +408,5 @@ zdaemon:
   Description: 'Online Multiplayer Doom.'
   Grade: Silver
   Category: Games
-  Icon: zdaemon.png
+  Icon: zdaemon.svg
   Event: zdaemon-setup.exe
