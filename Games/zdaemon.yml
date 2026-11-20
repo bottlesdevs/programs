@@ -10,7 +10,7 @@ Parameters:
 
 Executable:
   name: ZDaemon
-  icon: zdaemon.png
+  icon: zdaemon.svg
   file: zlauncher.exe
   path: userdir/AppData/Roaming/ZDaemon/zlauncher.exe
 
