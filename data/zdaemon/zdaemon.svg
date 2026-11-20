@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 256 256"
+   width="256"
+   height="256"
+   version="1.1"
+   id="svg29"
+   sodipodi:docname="zdaemon.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview29"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.2109375"
+     inkscape:cx="127.84428"
+     inkscape:cy="128"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg29" />
+  <defs
+     id="defs23">
+    <linearGradient
+       id="rimOuter"
+       x1="0.15"
+       y1="0.1"
+       x2="0.85"
+       y2="0.9">
+      <stop
+         offset="0"
+         stop-color="#ffd5bd"
+         id="stop1" />
+      <stop
+         offset="0.22"
+         stop-color="#e3946c"
+         id="stop2" />
+      <stop
+         offset="0.5"
+         stop-color="#7c361a"
+         id="stop3" />
+      <stop
+         offset="0.78"
+         stop-color="#f2aa82"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#b55934"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="rimInner"
+       x1="0.85"
+       y1="0.85"
+       x2="0.15"
+       y2="0.15">
+      <stop
+         offset="0"
+         stop-color="#ffdecb"
+         id="stop6" />
+      <stop
+         offset="0.4"
+         stop-color="#b85a35"
+         id="stop7" />
+      <stop
+         offset="0.75"
+         stop-color="#40170a"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="#e89a72"
+         id="stop9" />
+    </linearGradient>
+    <radialGradient
+       id="sphereBg"
+       cx="0.42"
+       cy="0.35"
+       r="0.65">
+      <stop
+         offset="0"
+         stop-color="#2b2b2b"
+         id="stop10" />
+      <stop
+         offset="0.55"
+         stop-color="#0d0d0d"
+         id="stop11" />
+      <stop
+         offset="1"
+         stop-color="#000000"
+         id="stop12" />
+    </radialGradient>
+    <linearGradient
+       id="glassHighlight"
+       x1="0.25"
+       y1="0"
+       x2="0.65"
+       y2="1">
+      <stop
+         offset="0"
+         stop-color="#ffffff"
+         stop-opacity="0.72"
+         id="stop13" />
+      <stop
+         offset="0.45"
+         stop-color="#d4d4d4"
+         stop-opacity="0.22"
+         id="stop14" />
+      <stop
+         offset="1"
+         stop-color="#ffffff"
+         stop-opacity="0"
+         id="stop15" />
+    </linearGradient>
+    <linearGradient
+       id="zBody"
+       x1="0.2"
+       y1="0.15"
+       x2="0.8"
+       y2="0.85">
+      <stop
+         offset="0"
+         stop-color="#ffcfb3"
+         id="stop16" />
+      <stop
+         offset="0.28"
+         stop-color="#f0824c"
+         id="stop17" />
+      <stop
+         offset="0.58"
+         stop-color="#c9491d"
+         id="stop18" />
+      <stop
+         offset="0.85"
+         stop-color="#f59867"
+         id="stop19" />
+      <stop
+         offset="1"
+         stop-color="#9e3210"
+         id="stop20" />
+    </linearGradient>
+    <linearGradient
+       id="zSpecular"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="1">
+      <stop
+         offset="0"
+         stop-color="#fff4ed"
+         id="stop21" />
+      <stop
+         offset="0.5"
+         stop-color="#ffaa7a"
+         id="stop22" />
+      <stop
+         offset="1"
+         stop-color="#ffd5bd"
+         id="stop23" />
+    </linearGradient>
+  </defs>
+  <circle
+     cx="128"
+     cy="128"
+     r="122"
+     fill="url(#rimOuter)"
+     id="circle23" />
+  <circle
+     cx="128"
+     cy="128"
+     r="113"
+     fill="url(#rimInner)"
+     id="circle24" />
+  <circle
+     cx="128"
+     cy="128"
+     r="108"
+     fill="url(#sphereBg)"
+     id="circle25" />
+  <path
+     d="M 32 132 C 28 68, 78 24, 142 26 C 174 27, 196 42, 204 54 C 166 46, 118 56, 84 86 C 56 110, 44 140, 42 164 C 35 154, 33 144, 32 132 Z"
+     fill="url(#glassHighlight)"
+     id="path25" />
+  <path
+     d="M 56 202 C 92 232, 164 232, 200 202 C 168 220, 88 220, 56 202 Z"
+     fill="#e38c62"
+     opacity="0.35"
+     id="path26" />
+  <path
+     d="M 48 111 C 76 79, 134 67, 212 71 C 178 101, 138 133, 96 163 C 138 157, 182 151, 224 145 C 192 179, 136 193, 52 189 C 88 157, 128 125, 168 95 C 122 97, 82 101, 48 111 Z"
+     fill="#000000"
+     opacity="0.65"
+     id="path27" />
+  <path
+     d="M 48 106 C 76 74, 134 62, 212 66 C 178 96, 138 128, 96 158 C 138 152, 182 146, 224 140 C 192 174, 136 188, 52 184 C 88 152, 128 120, 168 90 C 122 92, 82 96, 48 106 Z"
+     fill="url(#zBody)"
+     stroke="#5c1b06"
+     stroke-width="2"
+     stroke-linejoin="round"
+     id="path28" />
+  <path
+     d="M 60 100 C 88 76, 140 68, 201 70 C 168 96, 130 126, 86 162 C 132 156, 174 150, 212 145 C 182 170, 132 180, 65 178 C 98 148, 136 116, 178 86 C 132 88, 92 92, 60 100 Z"
+     fill="none"
+     stroke="url(#zSpecular)"
+     stroke-width="2.5"
+     opacity="0.85"
+     id="path29" />
+</svg>
