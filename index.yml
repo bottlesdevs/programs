@@ -37,6 +37,7 @@ microsoft365business:
   - soda-11.0-36-experimental
   - soda-11.0-37-experimental
   - soda-11.0-38-experimental
+  - soda-11.0-39-experimental
 
 microsoft365enterprise:
   Arch: win64
@@ -73,6 +74,7 @@ microsoft365enterprise:
   - soda-11.0-36-experimental
   - soda-11.0-37-experimental
   - soda-11.0-38-experimental
+  - soda-11.0-39-experimental
 
 epicgamestore:
   Arch: win64
