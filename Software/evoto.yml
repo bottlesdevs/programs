@@ -1,0 +1,30 @@
+Name: evoto
+Description: AI photo editor for portrait retouching and batch editing.
+Grade: Silver
+Arch: win64
+Runners:
+- soda-11.0-10
+
+Dependencies: []
+
+Parameters:
+  dxvk: true
+  vkd3d: true
+  discrete_gpu: true
+
+Executable:
+  name: Evoto
+  icon: evoto.png
+  file: Evoto.exe
+  path: Program Files/Evoto
+
+Steps:
+- action: install_exe
+  file_name: Evoto_Setup_8.1.0-422.exe
+  url: https://res.evoto.ai/package/8.1.0-422/Evoto_Setup_8.1.0-422.exe
+  file_checksum: e2174b2e789a1ef7301709ad56acd59b
+  arguments: /S
+
+Checks:
+  files:
+  - Program Files/Evoto/Evoto.exe
