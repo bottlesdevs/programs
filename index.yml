@@ -410,3 +410,13 @@ zdaemon:
   Category: Games
   Icon: zdaemon.svg
   Event: zdaemon-setup.exe
+
+evoto:
+  Arch: win64
+  Name: 'Evoto'
+  Description: 'AI photo editor for portrait retouching and batch editing.'
+  Grade: Silver
+  Category: Software
+  Icon: evoto.png
+  Runners:
+  - soda-11.0-10
